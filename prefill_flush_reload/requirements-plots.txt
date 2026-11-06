@@ -1,0 +1,2 @@
+# Optional dependency for publication figure export; acquisition stays stdlib-only.
+matplotlib>=3.7,<4

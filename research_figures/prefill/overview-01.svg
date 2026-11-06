@@ -1,0 +1,1770 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="486.49375pt" height="659.559531pt" viewBox="0 0 486.49375 659.559531" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-05T12:47:50.195366</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 659.559531 
+L 486.49375 659.559531 
+L 486.49375 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 88.69375 32.15847 
+L 479.29375 32.15847 
+L 479.29375 15.518906 
+L 88.69375 15.518906 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 104.112171 32.15847 
+L 106.681908 32.15847 
+L 106.681908 15.518906 
+L 104.112171 15.518906 
+z
+" clip-path="url(#p926a6477e8)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 266.005592 32.15847 
+L 268.575329 32.15847 
+L 268.575329 15.518906 
+L 266.005592 15.518906 
+z
+" clip-path="url(#p926a6477e8)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 327.679276 32.15847 
+L 330.249013 32.15847 
+L 330.249013 15.518906 
+L 327.679276 15.518906 
+z
+" clip-path="url(#p926a6477e8)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 353.376645 32.15847 
+L 355.946382 32.15847 
+L 355.946382 15.518906 
+L 353.376645 15.518906 
+z
+" clip-path="url(#p926a6477e8)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="26.878063" transform="rotate(-0 85.19375 26.878063)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m71452ef480" d="M 0 3.708099 
+L 0 -3.708099 
+" style="stroke: #000000; stroke-width: 0.8"/>
+    </defs>
+    <g clip-path="url(#p926a6477e8)">
+     <use xlink:href="#m71452ef480" x="105.959169" y="23.838688" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="268.013199" y="23.838688" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="328.402015" y="23.838688" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="353.537253" y="23.838688" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="12.518906" transform="rotate(-0 88.69375 12.518906)">prefill-2-rows — 2 rows, seed 420, start 0; sweep, stride 5, flush observed</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 88.69375 57.949793 
+L 479.29375 57.949793 
+L 479.29375 41.31023 
+L 88.69375 41.31023 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 104.112171 57.949793 
+L 106.681908 57.949793 
+L 106.681908 41.31023 
+L 104.112171 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 106.681908 57.949793 
+L 109.251645 57.949793 
+L 109.251645 41.31023 
+L 106.681908 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 191.483224 57.949793 
+L 194.052961 57.949793 
+L 194.052961 41.31023 
+L 191.483224 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 194.052961 57.949793 
+L 196.622697 57.949793 
+L 196.622697 41.31023 
+L 194.052961 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 263.435855 57.949793 
+L 266.005592 57.949793 
+L 266.005592 41.31023 
+L 263.435855 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 266.005592 57.949793 
+L 268.575329 57.949793 
+L 268.575329 41.31023 
+L 266.005592 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 325.109539 57.949793 
+L 327.679276 57.949793 
+L 327.679276 41.31023 
+L 325.109539 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 327.679276 57.949793 
+L 330.249013 57.949793 
+L 330.249013 41.31023 
+L 327.679276 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 330.249013 57.949793 
+L 332.81875 57.949793 
+L 332.81875 41.31023 
+L 330.249013 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 332.81875 57.949793 
+L 335.388487 57.949793 
+L 335.388487 41.31023 
+L 332.81875 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 350.806908 57.949793 
+L 353.376645 57.949793 
+L 353.376645 41.31023 
+L 350.806908 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 353.376645 57.949793 
+L 355.946382 57.949793 
+L 355.946382 41.31023 
+L 353.376645 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 355.946382 57.949793 
+L 358.516118 57.949793 
+L 358.516118 41.31023 
+L 355.946382 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 358.516118 57.949793 
+L 361.085855 57.949793 
+L 361.085855 41.31023 
+L 358.516118 41.31023 
+z
+" clip-path="url(#p73f3e8b494)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_2">
+     <g id="line2d_2"/>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="52.669386" transform="rotate(-0 85.19375 52.669386)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_22">
+    <path d="M 88.69375 83.741116 
+L 479.29375 83.741116 
+L 479.29375 67.101553 
+L 88.69375 67.101553 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 104.112171 83.741116 
+L 106.681908 83.741116 
+L 106.681908 67.101553 
+L 104.112171 67.101553 
+z
+" clip-path="url(#pa2be5d2c52)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 191.483224 83.741116 
+L 194.052961 83.741116 
+L 194.052961 67.101553 
+L 191.483224 67.101553 
+z
+" clip-path="url(#pa2be5d2c52)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 263.435855 83.741116 
+L 266.005592 83.741116 
+L 266.005592 67.101553 
+L 263.435855 67.101553 
+z
+" clip-path="url(#pa2be5d2c52)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 325.109539 83.741116 
+L 327.679276 83.741116 
+L 327.679276 67.101553 
+L 325.109539 67.101553 
+z
+" clip-path="url(#pa2be5d2c52)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 350.806908 83.741116 
+L 353.376645 83.741116 
+L 353.376645 67.101553 
+L 350.806908 67.101553 
+z
+" clip-path="url(#pa2be5d2c52)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_3">
+     <g id="line2d_3"/>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="78.46071" transform="rotate(-0 85.19375 78.46071)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_28">
+    <path d="M 88.69375 109.53244 
+L 479.29375 109.53244 
+L 479.29375 92.892876 
+L 88.69375 92.892876 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 104.112171 109.53244 
+L 106.681908 109.53244 
+L 106.681908 92.892876 
+L 104.112171 92.892876 
+z
+" clip-path="url(#pae697fb7bd)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 160.646382 109.53244 
+L 163.216118 109.53244 
+L 163.216118 92.892876 
+L 160.646382 92.892876 
+z
+" clip-path="url(#pae697fb7bd)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 248.017434 109.53244 
+L 250.587171 109.53244 
+L 250.587171 92.892876 
+L 248.017434 92.892876 
+z
+" clip-path="url(#pae697fb7bd)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 268.575329 109.53244 
+L 271.145066 109.53244 
+L 271.145066 92.892876 
+L 268.575329 92.892876 
+z
+" clip-path="url(#pae697fb7bd)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_7"/>
+   <g id="matplotlib.axis_8">
+    <g id="ytick_4">
+     <g id="line2d_4"/>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="104.252033" transform="rotate(-0 85.19375 104.252033)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_2">
+    <g clip-path="url(#pae697fb7bd)">
+     <use xlink:href="#m71452ef480" x="105.075822" y="101.212658" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="161.93125" y="101.212658" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="249.784128" y="101.212658" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="269.619285" y="101.212658" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="89.892876" transform="rotate(-0 88.69375 89.892876)">prefill-two-rows — 2 rows, seed 42, start 30; single, stride 4, flush all</text>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_33">
+    <path d="M 88.69375 135.323763 
+L 479.29375 135.323763 
+L 479.29375 118.6842 
+L 88.69375 118.6842 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 104.112171 135.323763 
+L 106.681908 135.323763 
+L 106.681908 118.6842 
+L 104.112171 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 160.646382 135.323763 
+L 163.216118 135.323763 
+L 163.216118 118.6842 
+L 160.646382 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 163.216118 135.323763 
+L 165.785855 135.323763 
+L 165.785855 118.6842 
+L 163.216118 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 248.017434 135.323763 
+L 250.587171 135.323763 
+L 250.587171 118.6842 
+L 248.017434 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 268.575329 135.323763 
+L 271.145066 135.323763 
+L 271.145066 118.6842 
+L 268.575329 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 271.145066 135.323763 
+L 273.714803 135.323763 
+L 273.714803 118.6842 
+L 271.145066 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 273.714803 135.323763 
+L 276.284539 135.323763 
+L 276.284539 118.6842 
+L 273.714803 118.6842 
+z
+" clip-path="url(#p29d1e06f3d)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_9"/>
+   <g id="matplotlib.axis_10">
+    <g id="ytick_5">
+     <g id="line2d_5"/>
+     <g id="text_7">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="130.043356" transform="rotate(-0 85.19375 130.043356)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_6">
+   <g id="patch_41">
+    <path d="M 88.69375 161.115086 
+L 479.29375 161.115086 
+L 479.29375 144.475523 
+L 88.69375 144.475523 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_42">
+    <path d="M 104.112171 161.115086 
+L 106.681908 161.115086 
+L 106.681908 144.475523 
+L 104.112171 144.475523 
+z
+" clip-path="url(#p755eb7ebfd)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_43">
+    <path d="M 160.646382 161.115086 
+L 163.216118 161.115086 
+L 163.216118 144.475523 
+L 160.646382 144.475523 
+z
+" clip-path="url(#p755eb7ebfd)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_44">
+    <path d="M 248.017434 161.115086 
+L 250.587171 161.115086 
+L 250.587171 144.475523 
+L 248.017434 144.475523 
+z
+" clip-path="url(#p755eb7ebfd)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_45">
+    <path d="M 268.575329 161.115086 
+L 271.145066 161.115086 
+L 271.145066 144.475523 
+L 268.575329 144.475523 
+z
+" clip-path="url(#p755eb7ebfd)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_11"/>
+   <g id="matplotlib.axis_12">
+    <g id="ytick_6">
+     <g id="line2d_6"/>
+     <g id="text_8">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="155.83468" transform="rotate(-0 85.19375 155.83468)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_7">
+   <g id="patch_46">
+    <path d="M 88.69375 186.90641 
+L 479.29375 186.90641 
+L 479.29375 170.266846 
+L 88.69375 170.266846 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_47">
+    <path d="M 104.112171 186.90641 
+L 106.681908 186.90641 
+L 106.681908 170.266846 
+L 104.112171 170.266846 
+z
+" clip-path="url(#p5ab3768a49)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_48">
+    <path d="M 266.005592 186.90641 
+L 268.575329 186.90641 
+L 268.575329 170.266846 
+L 266.005592 170.266846 
+z
+" clip-path="url(#p5ab3768a49)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_49">
+    <path d="M 327.679276 186.90641 
+L 330.249013 186.90641 
+L 330.249013 170.266846 
+L 327.679276 170.266846 
+z
+" clip-path="url(#p5ab3768a49)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_50">
+    <path d="M 353.376645 186.90641 
+L 355.946382 186.90641 
+L 355.946382 170.266846 
+L 353.376645 170.266846 
+z
+" clip-path="url(#p5ab3768a49)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_13"/>
+   <g id="matplotlib.axis_14">
+    <g id="ytick_7">
+     <g id="line2d_7"/>
+     <g id="text_9">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="181.626003" transform="rotate(-0 85.19375 181.626003)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_3">
+    <g clip-path="url(#p5ab3768a49)">
+     <use xlink:href="#m71452ef480" x="105.959169" y="178.586628" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="268.013199" y="178.586628" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="328.402015" y="178.586628" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="353.537253" y="178.586628" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="167.266846" transform="rotate(-0 88.69375 167.266846)">prefill-4-rows — 4 rows, seed 420, start 0; sweep, stride 5, flush observed</text>
+   </g>
+  </g>
+  <g id="axes_8">
+   <g id="patch_51">
+    <path d="M 88.69375 212.697733 
+L 479.29375 212.697733 
+L 479.29375 196.05817 
+L 88.69375 196.05817 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_52">
+    <path d="M 104.112171 212.697733 
+L 106.681908 212.697733 
+L 106.681908 196.05817 
+L 104.112171 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_53">
+    <path d="M 106.681908 212.697733 
+L 109.251645 212.697733 
+L 109.251645 196.05817 
+L 106.681908 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_54">
+    <path d="M 266.005592 212.697733 
+L 268.575329 212.697733 
+L 268.575329 196.05817 
+L 266.005592 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_55">
+    <path d="M 327.679276 212.697733 
+L 330.249013 212.697733 
+L 330.249013 196.05817 
+L 327.679276 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_56">
+    <path d="M 330.249013 212.697733 
+L 332.81875 212.697733 
+L 332.81875 196.05817 
+L 330.249013 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_57">
+    <path d="M 332.81875 212.697733 
+L 335.388487 212.697733 
+L 335.388487 196.05817 
+L 332.81875 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_58">
+    <path d="M 353.376645 212.697733 
+L 355.946382 212.697733 
+L 355.946382 196.05817 
+L 353.376645 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_59">
+    <path d="M 355.946382 212.697733 
+L 358.516118 212.697733 
+L 358.516118 196.05817 
+L 355.946382 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_60">
+    <path d="M 358.516118 212.697733 
+L 361.085855 212.697733 
+L 361.085855 196.05817 
+L 358.516118 196.05817 
+z
+" clip-path="url(#pc6d8367c25)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_15"/>
+   <g id="matplotlib.axis_16">
+    <g id="ytick_8">
+     <g id="line2d_8"/>
+     <g id="text_11">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="207.417326" transform="rotate(-0 85.19375 207.417326)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_9">
+   <g id="patch_61">
+    <path d="M 88.69375 238.489056 
+L 479.29375 238.489056 
+L 479.29375 221.849493 
+L 88.69375 221.849493 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_62">
+    <path d="M 104.112171 238.489056 
+L 106.681908 238.489056 
+L 106.681908 221.849493 
+L 104.112171 221.849493 
+z
+" clip-path="url(#p05b3488a4d)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_63">
+    <path d="M 266.005592 238.489056 
+L 268.575329 238.489056 
+L 268.575329 221.849493 
+L 266.005592 221.849493 
+z
+" clip-path="url(#p05b3488a4d)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_64">
+    <path d="M 327.679276 238.489056 
+L 330.249013 238.489056 
+L 330.249013 221.849493 
+L 327.679276 221.849493 
+z
+" clip-path="url(#p05b3488a4d)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_65">
+    <path d="M 353.376645 238.489056 
+L 355.946382 238.489056 
+L 355.946382 221.849493 
+L 353.376645 221.849493 
+z
+" clip-path="url(#p05b3488a4d)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_17"/>
+   <g id="matplotlib.axis_18">
+    <g id="ytick_9">
+     <g id="line2d_9"/>
+     <g id="text_12">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="233.20865" transform="rotate(-0 85.19375 233.20865)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_10">
+   <g id="patch_66">
+    <path d="M 88.69375 264.28038 
+L 479.29375 264.28038 
+L 479.29375 247.640816 
+L 88.69375 247.640816 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_67">
+    <path d="M 104.112171 264.28038 
+L 106.681908 264.28038 
+L 106.681908 247.640816 
+L 104.112171 247.640816 
+z
+" clip-path="url(#p203b28fa9d)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_68">
+    <path d="M 160.646382 264.28038 
+L 163.216118 264.28038 
+L 163.216118 247.640816 
+L 160.646382 247.640816 
+z
+" clip-path="url(#p203b28fa9d)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_69">
+    <path d="M 248.017434 264.28038 
+L 250.587171 264.28038 
+L 250.587171 247.640816 
+L 248.017434 247.640816 
+z
+" clip-path="url(#p203b28fa9d)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_70">
+    <path d="M 268.575329 264.28038 
+L 271.145066 264.28038 
+L 271.145066 247.640816 
+L 268.575329 247.640816 
+z
+" clip-path="url(#p203b28fa9d)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_19"/>
+   <g id="matplotlib.axis_20">
+    <g id="ytick_10">
+     <g id="line2d_10"/>
+     <g id="text_13">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="258.999973" transform="rotate(-0 85.19375 258.999973)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_4">
+    <g clip-path="url(#p203b28fa9d)">
+     <use xlink:href="#m71452ef480" x="105.075822" y="255.960598" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="161.93125" y="255.960598" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="249.784128" y="255.960598" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="269.619285" y="255.960598" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="244.640816" transform="rotate(-0 88.69375 244.640816)">prefill-four-rows — 4 rows, seed 42, start 0; sweep, stride 5, flush observed</text>
+   </g>
+  </g>
+  <g id="axes_11">
+   <g id="patch_71">
+    <path d="M 88.69375 290.071703 
+L 479.29375 290.071703 
+L 479.29375 273.43214 
+L 88.69375 273.43214 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_72">
+    <path d="M 104.112171 290.071703 
+L 106.681908 290.071703 
+L 106.681908 273.43214 
+L 104.112171 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_73">
+    <path d="M 106.681908 290.071703 
+L 109.251645 290.071703 
+L 109.251645 273.43214 
+L 106.681908 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_74">
+    <path d="M 160.646382 290.071703 
+L 163.216118 290.071703 
+L 163.216118 273.43214 
+L 160.646382 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_75">
+    <path d="M 163.216118 290.071703 
+L 165.785855 290.071703 
+L 165.785855 273.43214 
+L 163.216118 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_76">
+    <path d="M 165.785855 290.071703 
+L 168.355592 290.071703 
+L 168.355592 273.43214 
+L 165.785855 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_77">
+    <path d="M 248.017434 290.071703 
+L 250.587171 290.071703 
+L 250.587171 273.43214 
+L 248.017434 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_78">
+    <path d="M 268.575329 290.071703 
+L 271.145066 290.071703 
+L 271.145066 273.43214 
+L 268.575329 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_79">
+    <path d="M 271.145066 290.071703 
+L 273.714803 290.071703 
+L 273.714803 273.43214 
+L 271.145066 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_80">
+    <path d="M 273.714803 290.071703 
+L 276.284539 290.071703 
+L 276.284539 273.43214 
+L 273.714803 273.43214 
+z
+" clip-path="url(#pcc18584b8a)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_21"/>
+   <g id="matplotlib.axis_22">
+    <g id="ytick_11">
+     <g id="line2d_11"/>
+     <g id="text_15">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="284.791296" transform="rotate(-0 85.19375 284.791296)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_12">
+   <g id="patch_81">
+    <path d="M 88.69375 315.863026 
+L 479.29375 315.863026 
+L 479.29375 299.223463 
+L 88.69375 299.223463 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_82">
+    <path d="M 104.112171 315.863026 
+L 106.681908 315.863026 
+L 106.681908 299.223463 
+L 104.112171 299.223463 
+z
+" clip-path="url(#p962b82ca35)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_83">
+    <path d="M 160.646382 315.863026 
+L 163.216118 315.863026 
+L 163.216118 299.223463 
+L 160.646382 299.223463 
+z
+" clip-path="url(#p962b82ca35)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_84">
+    <path d="M 248.017434 315.863026 
+L 250.587171 315.863026 
+L 250.587171 299.223463 
+L 248.017434 299.223463 
+z
+" clip-path="url(#p962b82ca35)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_85">
+    <path d="M 268.575329 315.863026 
+L 271.145066 315.863026 
+L 271.145066 299.223463 
+L 268.575329 299.223463 
+z
+" clip-path="url(#p962b82ca35)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_23"/>
+   <g id="matplotlib.axis_24">
+    <g id="ytick_12">
+     <g id="line2d_12"/>
+     <g id="text_16">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="310.58262" transform="rotate(-0 85.19375 310.58262)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_13">
+   <g id="patch_86">
+    <path d="M 88.69375 341.65435 
+L 479.29375 341.65435 
+L 479.29375 325.014786 
+L 88.69375 325.014786 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_87">
+    <path d="M 104.112171 341.65435 
+L 106.681908 341.65435 
+L 106.681908 325.014786 
+L 104.112171 325.014786 
+z
+" clip-path="url(#p655c2b7535)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_88">
+    <path d="M 160.646382 341.65435 
+L 163.216118 341.65435 
+L 163.216118 325.014786 
+L 160.646382 325.014786 
+z
+" clip-path="url(#p655c2b7535)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_89">
+    <path d="M 248.017434 341.65435 
+L 250.587171 341.65435 
+L 250.587171 325.014786 
+L 248.017434 325.014786 
+z
+" clip-path="url(#p655c2b7535)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_90">
+    <path d="M 268.575329 341.65435 
+L 271.145066 341.65435 
+L 271.145066 325.014786 
+L 268.575329 325.014786 
+z
+" clip-path="url(#p655c2b7535)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_25"/>
+   <g id="matplotlib.axis_26">
+    <g id="ytick_13">
+     <g id="line2d_13"/>
+     <g id="text_17">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="336.373943" transform="rotate(-0 85.19375 336.373943)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_5">
+    <g clip-path="url(#p655c2b7535)">
+     <use xlink:href="#m71452ef480" x="105.075822" y="333.334568" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="161.93125" y="333.334568" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="249.784128" y="333.334568" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="269.619285" y="333.334568" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="322.014786" transform="rotate(-0 88.69375 322.014786)">prefill-8-rows — 8 rows, seed 42, start 0; sweep, stride 5, flush observed</text>
+   </g>
+  </g>
+  <g id="axes_14">
+   <g id="patch_91">
+    <path d="M 88.69375 367.445673 
+L 479.29375 367.445673 
+L 479.29375 350.80611 
+L 88.69375 350.80611 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_92">
+    <path d="M 104.112171 367.445673 
+L 106.681908 367.445673 
+L 106.681908 350.80611 
+L 104.112171 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_93">
+    <path d="M 160.646382 367.445673 
+L 163.216118 367.445673 
+L 163.216118 350.80611 
+L 160.646382 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_94">
+    <path d="M 163.216118 367.445673 
+L 165.785855 367.445673 
+L 165.785855 350.80611 
+L 163.216118 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_95">
+    <path d="M 165.785855 367.445673 
+L 168.355592 367.445673 
+L 168.355592 350.80611 
+L 165.785855 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_96">
+    <path d="M 248.017434 367.445673 
+L 250.587171 367.445673 
+L 250.587171 350.80611 
+L 248.017434 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_97">
+    <path d="M 268.575329 367.445673 
+L 271.145066 367.445673 
+L 271.145066 350.80611 
+L 268.575329 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_98">
+    <path d="M 271.145066 367.445673 
+L 273.714803 367.445673 
+L 273.714803 350.80611 
+L 271.145066 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_99">
+    <path d="M 273.714803 367.445673 
+L 276.284539 367.445673 
+L 276.284539 350.80611 
+L 273.714803 350.80611 
+z
+" clip-path="url(#p073226c2d5)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_27"/>
+   <g id="matplotlib.axis_28">
+    <g id="ytick_14">
+     <g id="line2d_14"/>
+     <g id="text_19">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="362.165266" transform="rotate(-0 85.19375 362.165266)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_15">
+   <g id="patch_100">
+    <path d="M 88.69375 393.236996 
+L 479.29375 393.236996 
+L 479.29375 376.597433 
+L 88.69375 376.597433 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_101">
+    <path d="M 104.112171 393.236996 
+L 106.681908 393.236996 
+L 106.681908 376.597433 
+L 104.112171 376.597433 
+z
+" clip-path="url(#pa1f79a08c6)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_102">
+    <path d="M 160.646382 393.236996 
+L 163.216118 393.236996 
+L 163.216118 376.597433 
+L 160.646382 376.597433 
+z
+" clip-path="url(#pa1f79a08c6)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_103">
+    <path d="M 248.017434 393.236996 
+L 250.587171 393.236996 
+L 250.587171 376.597433 
+L 248.017434 376.597433 
+z
+" clip-path="url(#pa1f79a08c6)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_104">
+    <path d="M 268.575329 393.236996 
+L 271.145066 393.236996 
+L 271.145066 376.597433 
+L 268.575329 376.597433 
+z
+" clip-path="url(#pa1f79a08c6)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_29"/>
+   <g id="matplotlib.axis_30">
+    <g id="ytick_15">
+     <g id="line2d_15"/>
+     <g id="text_20">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="387.95659" transform="rotate(-0 85.19375 387.95659)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_16">
+   <g id="patch_105">
+    <path d="M 88.69375 419.02832 
+L 479.29375 419.02832 
+L 479.29375 402.388756 
+L 88.69375 402.388756 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_106">
+    <path d="M 104.112171 419.02832 
+L 106.681908 419.02832 
+L 106.681908 402.388756 
+L 104.112171 402.388756 
+z
+" clip-path="url(#pf4bc8b6d0e)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_107">
+    <path d="M 160.646382 419.02832 
+L 163.216118 419.02832 
+L 163.216118 402.388756 
+L 160.646382 402.388756 
+z
+" clip-path="url(#pf4bc8b6d0e)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_108">
+    <path d="M 248.017434 419.02832 
+L 250.587171 419.02832 
+L 250.587171 402.388756 
+L 248.017434 402.388756 
+z
+" clip-path="url(#pf4bc8b6d0e)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_109">
+    <path d="M 268.575329 419.02832 
+L 271.145066 419.02832 
+L 271.145066 402.388756 
+L 268.575329 402.388756 
+z
+" clip-path="url(#pf4bc8b6d0e)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_31"/>
+   <g id="matplotlib.axis_32">
+    <g id="ytick_16">
+     <g id="line2d_16"/>
+     <g id="text_21">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="413.747913" transform="rotate(-0 85.19375 413.747913)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_6">
+    <g clip-path="url(#pf4bc8b6d0e)">
+     <use xlink:href="#m71452ef480" x="105.075822" y="410.708538" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="161.93125" y="410.708538" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="249.784128" y="410.708538" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="269.619285" y="410.708538" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="399.388756" transform="rotate(-0 88.69375 399.388756)">prefill-16-rows — 16 rows, seed 42, start 0; sweep, stride 5, flush observed</text>
+   </g>
+  </g>
+  <g id="axes_17">
+   <g id="patch_110">
+    <path d="M 88.69375 444.819643 
+L 479.29375 444.819643 
+L 479.29375 428.18008 
+L 88.69375 428.18008 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_111">
+    <path d="M 104.112171 444.819643 
+L 106.681908 444.819643 
+L 106.681908 428.18008 
+L 104.112171 428.18008 
+z
+" clip-path="url(#p6d3a6fc001)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_112">
+    <path d="M 160.646382 444.819643 
+L 163.216118 444.819643 
+L 163.216118 428.18008 
+L 160.646382 428.18008 
+z
+" clip-path="url(#p6d3a6fc001)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_113">
+    <path d="M 248.017434 444.819643 
+L 250.587171 444.819643 
+L 250.587171 428.18008 
+L 248.017434 428.18008 
+z
+" clip-path="url(#p6d3a6fc001)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_114">
+    <path d="M 268.575329 444.819643 
+L 271.145066 444.819643 
+L 271.145066 428.18008 
+L 268.575329 428.18008 
+z
+" clip-path="url(#p6d3a6fc001)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_33"/>
+   <g id="matplotlib.axis_34">
+    <g id="ytick_17">
+     <g id="line2d_17"/>
+     <g id="text_23">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="439.539236" transform="rotate(-0 85.19375 439.539236)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_18">
+   <g id="patch_115">
+    <path d="M 88.69375 470.610966 
+L 479.29375 470.610966 
+L 479.29375 453.971403 
+L 88.69375 453.971403 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_116">
+    <path d="M 104.112171 470.610966 
+L 106.681908 470.610966 
+L 106.681908 453.971403 
+L 104.112171 453.971403 
+z
+" clip-path="url(#p66eb4cb3f1)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_117">
+    <path d="M 160.646382 470.610966 
+L 163.216118 470.610966 
+L 163.216118 453.971403 
+L 160.646382 453.971403 
+z
+" clip-path="url(#p66eb4cb3f1)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_118">
+    <path d="M 248.017434 470.610966 
+L 250.587171 470.610966 
+L 250.587171 453.971403 
+L 248.017434 453.971403 
+z
+" clip-path="url(#p66eb4cb3f1)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_119">
+    <path d="M 268.575329 470.610966 
+L 271.145066 470.610966 
+L 271.145066 453.971403 
+L 268.575329 453.971403 
+z
+" clip-path="url(#p66eb4cb3f1)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_35"/>
+   <g id="matplotlib.axis_36">
+    <g id="ytick_18">
+     <g id="line2d_18"/>
+     <g id="text_24">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="465.33056" transform="rotate(-0 85.19375 465.33056)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_19">
+   <g id="patch_120">
+    <path d="M 88.69375 496.40229 
+L 479.29375 496.40229 
+L 479.29375 479.762726 
+L 88.69375 479.762726 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_121">
+    <path d="M 104.112171 496.40229 
+L 106.681908 496.40229 
+L 106.681908 479.762726 
+L 104.112171 479.762726 
+z
+" clip-path="url(#p889604f00f)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_122">
+    <path d="M 160.646382 496.40229 
+L 163.216118 496.40229 
+L 163.216118 479.762726 
+L 160.646382 479.762726 
+z
+" clip-path="url(#p889604f00f)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_123">
+    <path d="M 248.017434 496.40229 
+L 250.587171 496.40229 
+L 250.587171 479.762726 
+L 248.017434 479.762726 
+z
+" clip-path="url(#p889604f00f)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_124">
+    <path d="M 268.575329 496.40229 
+L 271.145066 496.40229 
+L 271.145066 479.762726 
+L 268.575329 479.762726 
+z
+" clip-path="url(#p889604f00f)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_37"/>
+   <g id="matplotlib.axis_38">
+    <g id="ytick_19">
+     <g id="line2d_19"/>
+     <g id="text_25">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="491.121883" transform="rotate(-0 85.19375 491.121883)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_7">
+    <g clip-path="url(#p889604f00f)">
+     <use xlink:href="#m71452ef480" x="105.075822" y="488.082508" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="161.93125" y="488.082508" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="249.784128" y="488.082508" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="269.619285" y="488.082508" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="476.762726" transform="rotate(-0 88.69375 476.762726)">prefill-32-rows — 32 rows, seed 42, start 0; sweep, stride 5, flush observed</text>
+   </g>
+  </g>
+  <g id="axes_20">
+   <g id="patch_125">
+    <path d="M 88.69375 522.193613 
+L 479.29375 522.193613 
+L 479.29375 505.554049 
+L 88.69375 505.554049 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_126">
+    <path d="M 104.112171 522.193613 
+L 106.681908 522.193613 
+L 106.681908 505.554049 
+L 104.112171 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_127">
+    <path d="M 160.646382 522.193613 
+L 163.216118 522.193613 
+L 163.216118 505.554049 
+L 160.646382 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_128">
+    <path d="M 163.216118 522.193613 
+L 165.785855 522.193613 
+L 165.785855 505.554049 
+L 163.216118 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_129">
+    <path d="M 165.785855 522.193613 
+L 168.355592 522.193613 
+L 168.355592 505.554049 
+L 165.785855 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_130">
+    <path d="M 248.017434 522.193613 
+L 250.587171 522.193613 
+L 250.587171 505.554049 
+L 248.017434 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_131">
+    <path d="M 268.575329 522.193613 
+L 271.145066 522.193613 
+L 271.145066 505.554049 
+L 268.575329 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_132">
+    <path d="M 271.145066 522.193613 
+L 273.714803 522.193613 
+L 273.714803 505.554049 
+L 271.145066 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_133">
+    <path d="M 273.714803 522.193613 
+L 276.284539 522.193613 
+L 276.284539 505.554049 
+L 273.714803 505.554049 
+z
+" clip-path="url(#p25c3490dea)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_39"/>
+   <g id="matplotlib.axis_40">
+    <g id="ytick_20">
+     <g id="line2d_20"/>
+     <g id="text_27">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="516.913206" transform="rotate(-0 85.19375 516.913206)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_21">
+   <g id="patch_134">
+    <path d="M 88.69375 547.984936 
+L 479.29375 547.984936 
+L 479.29375 531.345373 
+L 88.69375 531.345373 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_135">
+    <path d="M 104.112171 547.984936 
+L 106.681908 547.984936 
+L 106.681908 531.345373 
+L 104.112171 531.345373 
+z
+" clip-path="url(#pabf815c810)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_136">
+    <path d="M 160.646382 547.984936 
+L 163.216118 547.984936 
+L 163.216118 531.345373 
+L 160.646382 531.345373 
+z
+" clip-path="url(#pabf815c810)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_137">
+    <path d="M 248.017434 547.984936 
+L 250.587171 547.984936 
+L 250.587171 531.345373 
+L 248.017434 531.345373 
+z
+" clip-path="url(#pabf815c810)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_138">
+    <path d="M 268.575329 547.984936 
+L 271.145066 547.984936 
+L 271.145066 531.345373 
+L 268.575329 531.345373 
+z
+" clip-path="url(#pabf815c810)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_41"/>
+   <g id="matplotlib.axis_42">
+    <g id="ytick_21">
+     <g id="line2d_21"/>
+     <g id="text_28">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="542.70453" transform="rotate(-0 85.19375 542.70453)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_22">
+   <g id="patch_139">
+    <path d="M 88.69375 573.77626 
+L 479.29375 573.77626 
+L 479.29375 557.136696 
+L 88.69375 557.136696 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_140">
+    <path d="M 104.112171 573.77626 
+L 106.681908 573.77626 
+L 106.681908 557.136696 
+L 104.112171 557.136696 
+z
+" clip-path="url(#p7187ce6424)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_141">
+    <path d="M 160.646382 573.77626 
+L 163.216118 573.77626 
+L 163.216118 557.136696 
+L 160.646382 557.136696 
+z
+" clip-path="url(#p7187ce6424)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_142">
+    <path d="M 248.017434 573.77626 
+L 250.587171 573.77626 
+L 250.587171 557.136696 
+L 248.017434 557.136696 
+z
+" clip-path="url(#p7187ce6424)" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_143">
+    <path d="M 268.575329 573.77626 
+L 271.145066 573.77626 
+L 271.145066 557.136696 
+L 268.575329 557.136696 
+z
+" clip-path="url(#p7187ce6424)" style="fill: #d55e00"/>
+   </g>
+   <g id="matplotlib.axis_43"/>
+   <g id="matplotlib.axis_44">
+    <g id="ytick_22">
+     <g id="line2d_22"/>
+     <g id="text_29">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="568.495853" transform="rotate(-0 85.19375 568.495853)">Outlier Column</text>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_8">
+    <g clip-path="url(#p7187ce6424)">
+     <use xlink:href="#m71452ef480" x="105.075822" y="565.456478" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="161.93125" y="565.456478" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="249.784128" y="565.456478" style="stroke: #000000; stroke-width: 0.8"/>
+     <use xlink:href="#m71452ef480" x="269.619285" y="565.456478" style="stroke: #000000; stroke-width: 0.8"/>
+    </g>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="88.69375" y="554.136696" transform="rotate(-0 88.69375 554.136696)">prefill-all-rows — 64 rows, seed 42, start 0; sweep, stride 5, flush all</text>
+   </g>
+  </g>
+  <g id="axes_23">
+   <g id="patch_144">
+    <path d="M 88.69375 599.567583 
+L 479.29375 599.567583 
+L 479.29375 582.928019 
+L 88.69375 582.928019 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_145">
+    <path d="M 104.112171 599.567583 
+L 106.681908 599.567583 
+L 106.681908 582.928019 
+L 104.112171 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_146">
+    <path d="M 160.646382 599.567583 
+L 163.216118 599.567583 
+L 163.216118 582.928019 
+L 160.646382 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_147">
+    <path d="M 163.216118 599.567583 
+L 165.785855 599.567583 
+L 165.785855 582.928019 
+L 163.216118 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_148">
+    <path d="M 165.785855 599.567583 
+L 168.355592 599.567583 
+L 168.355592 582.928019 
+L 165.785855 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_149">
+    <path d="M 248.017434 599.567583 
+L 250.587171 599.567583 
+L 250.587171 582.928019 
+L 248.017434 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_150">
+    <path d="M 268.575329 599.567583 
+L 271.145066 599.567583 
+L 271.145066 582.928019 
+L 268.575329 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_151">
+    <path d="M 271.145066 599.567583 
+L 273.714803 599.567583 
+L 273.714803 582.928019 
+L 271.145066 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_152">
+    <path d="M 273.714803 599.567583 
+L 276.284539 599.567583 
+L 276.284539 582.928019 
+L 273.714803 582.928019 
+z
+" clip-path="url(#p7a0d08bcb2)" style="fill: #0072b2"/>
+   </g>
+   <g id="matplotlib.axis_45"/>
+   <g id="matplotlib.axis_46">
+    <g id="ytick_23">
+     <g id="line2d_23"/>
+     <g id="text_31">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="594.287176" transform="rotate(-0 85.19375 594.287176)">Raw candidates</text>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="axes_24">
+   <g id="patch_153">
+    <path d="M 88.69375 625.358906 
+L 479.29375 625.358906 
+L 479.29375 608.719343 
+L 88.69375 608.719343 
+z
+" style="fill: #f4f4f4"/>
+   </g>
+   <g id="patch_154">
+    <path d="M 104.112171 625.358906 
+L 106.681908 625.358906 
+L 106.681908 608.719343 
+L 104.112171 608.719343 
+z
+" clip-path="url(#pf31db9129b)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_155">
+    <path d="M 160.646382 625.358906 
+L 163.216118 625.358906 
+L 163.216118 608.719343 
+L 160.646382 608.719343 
+z
+" clip-path="url(#pf31db9129b)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_156">
+    <path d="M 248.017434 625.358906 
+L 250.587171 625.358906 
+L 250.587171 608.719343 
+L 248.017434 608.719343 
+z
+" clip-path="url(#pf31db9129b)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_157">
+    <path d="M 268.575329 625.358906 
+L 271.145066 625.358906 
+L 271.145066 608.719343 
+L 268.575329 608.719343 
+z
+" clip-path="url(#pf31db9129b)" style="fill: #009e73"/>
+   </g>
+   <g id="matplotlib.axis_47">
+    <g id="xtick_1">
+     <g id="line2d_24">
+      <defs>
+       <path id="mc1c1c605b9" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc1c1c605b9" x="88.69375" y="625.358906" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="88.69375" y="638.437031" transform="rotate(-0 88.69375 638.437031)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#mc1c1c605b9" x="168.998026" y="625.358906" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="168.998026" y="638.437031" transform="rotate(-0 168.998026 638.437031)">1000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#mc1c1c605b9" x="249.302303" y="625.358906" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="249.302303" y="638.437031" transform="rotate(-0 249.302303 638.437031)">2000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#mc1c1c605b9" x="329.606579" y="625.358906" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_35">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="329.606579" y="638.437031" transform="rotate(-0 329.606579 638.437031)">3000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#mc1c1c605b9" x="409.910855" y="625.358906" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_36">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="409.910855" y="638.437031" transform="rotate(-0 409.910855 638.437031)">4000</text>
+     </g>
+    </g>
+    <g id="text_37">
+     <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="283.99375" y="650.437656" transform="rotate(-0 283.99375 650.437656)">FFN intermediate feature column (group width = 32)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_48">
+    <g id="ytick_24">
+     <g id="line2d_29"/>
+     <g id="text_38">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end" x="85.19375" y="620.0785" transform="rotate(-0 85.19375 620.0785)">First-group guesses</text>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p926a6477e8">
+   <rect x="88.69375" y="15.518906" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p73f3e8b494">
+   <rect x="88.69375" y="41.31023" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pa2be5d2c52">
+   <rect x="88.69375" y="67.101553" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pae697fb7bd">
+   <rect x="88.69375" y="92.892876" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p29d1e06f3d">
+   <rect x="88.69375" y="118.6842" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p755eb7ebfd">
+   <rect x="88.69375" y="144.475523" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p5ab3768a49">
+   <rect x="88.69375" y="170.266846" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pc6d8367c25">
+   <rect x="88.69375" y="196.05817" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p05b3488a4d">
+   <rect x="88.69375" y="221.849493" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p203b28fa9d">
+   <rect x="88.69375" y="247.640816" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pcc18584b8a">
+   <rect x="88.69375" y="273.43214" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p962b82ca35">
+   <rect x="88.69375" y="299.223463" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p655c2b7535">
+   <rect x="88.69375" y="325.014786" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p073226c2d5">
+   <rect x="88.69375" y="350.80611" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pa1f79a08c6">
+   <rect x="88.69375" y="376.597433" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pf4bc8b6d0e">
+   <rect x="88.69375" y="402.388756" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p6d3a6fc001">
+   <rect x="88.69375" y="428.18008" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p66eb4cb3f1">
+   <rect x="88.69375" y="453.971403" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p889604f00f">
+   <rect x="88.69375" y="479.762726" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p25c3490dea">
+   <rect x="88.69375" y="505.554049" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pabf815c810">
+   <rect x="88.69375" y="531.345373" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p7187ce6424">
+   <rect x="88.69375" y="557.136696" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="p7a0d08bcb2">
+   <rect x="88.69375" y="582.928019" width="390.6" height="16.639563"/>
+  </clipPath>
+  <clipPath id="pf31db9129b">
+   <rect x="88.69375" y="608.719343" width="390.6" height="16.639563"/>
+  </clipPath>
+ </defs>
+</svg>
