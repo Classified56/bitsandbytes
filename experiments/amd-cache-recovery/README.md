@@ -16,7 +16,7 @@ The controlled CPU Flush+Reload experiment recovers all four injected cache-line
 | `matched-figure4/intel-reanalysis/` | Intel group scores recomputed using the same analyzer |
 | `matched-figure4/comparison.{json,csv}` | Machine-readable matched comparison and verification details |
 | `matched-figure4/figure4-*.{png,pdf,svg}` | Comparison and repeatability figures; vector formats can be used in a paper |
-| `matched-figure4/REPORT.txt` | Detailed Chinese report for the matched experiment |
+| `matched-figure4/REPORT.txt` | Detailed report for the matched experiment |
 | `matched-figure4/run_matched.py` | Execute the unchanged upstream protocol, with all settings explicit |
 | `matched-figure4/validate_and_plot.py` | Validate archived measurements and regenerate the matched plots |
 | `supplementary-20261107/` | Four earlier CPU cache experiments with different settings, clearly separated from Figure 4 |

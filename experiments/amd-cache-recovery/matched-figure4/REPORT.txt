@@ -1,23 +1,23 @@
-图 4 在 AMD 上的同设置复现实验与 Intel 原始记录比较
-日期：2026-11-09
+Figure 4 replication on AMD with matched settings and comparison to the original Intel record
+Date: 2026-11-09
 
-结论：AMD Ryzen 7 8700G 的 10 次采集中，全部在相同过滤后准确恢复 4 个真实缓存行分组。
-其中 5 次仅用行间投票即可恢复，另 5 次仍有 1 个相邻误报；相同过滤均消除了该误报。
-AMD 第一次采集的逐次探测 FPR 高于 Intel 原记录，但投票后误报分组更少。
-这验证了本合成实验在 AMD 上可以复现，不能证明 AMD 总体更好或预取器是唯一成因。
+Conclusion: all 10 acquisitions on the AMD Ryzen 7 8700G recovered the four true cache-line groups after the same filtering rule.
+Five were already exact after row consensus; five retained one adjacent false group, which the same filter removed.
+The first AMD acquisition had a higher raw probe FPR than the Intel record but fewer false groups after consensus.
+This establishes reproducibility for this synthetic input on AMD, not general AMD superiority or a uniquely identified prefetch cause.
 
-一、基线与代码
-上游：https://github.com/Classified56/bitsandbytes/tree/58cc1cc78f708c3a70c2f6cd969baa5f835ef957
-分支：shadow_outlier；固定提交见上述链接。AMD 测量代码未修改，17 个源文件逐一 SHA256 核对。
-Intel 基线：prefill_flush_reload/prefill-four-rows（英文 four，seed 42）。
-不是 prefill-4-rows（数字 4，seed 420），也不是论文表 III 的结果。
-论文图 4：四行、seed 42、sweep / observed；分组位置与上述记录吻合。
-Intel 原始文件逐字节核对上游保存文件。原始文件保存在 intel-original/；重新计分另存 intel-reanalysis/。
-Intel 平台信息来自论文：i7-10700，Ubuntu 22.04.5，16 GB DDR4。没有重新采集 Intel 数据。
-AMD 实测：Ryzen 7 8700G，Ubuntu 24.04.4，Linux 7.0.0-38-generic，Python 3.12.3，GCC 13.3.0。
-AMD 环境、亲和性、编译器、负载、每次运行命令、开始时间、退出码均在 amd/manifest.json。
+1. Baseline and code
+Upstream: https://github.com/Classified56/bitsandbytes/tree/58cc1cc78f708c3a70c2f6cd969baa5f835ef957
+Branch: shadow_outlier; the link identifies the pinned commit. AMD measurement code was unchanged; 17 source files were checked by SHA256.
+Intel baseline: prefill_flush_reload/prefill-four-rows (word four, seed 42).
+This is distinct from prefill-4-rows (digit 4, seed 420) and the results labeled as Table III in the manuscript.
+Figure 4 uses four rows, seed 42, sweep / observed; its group positions match the selected record.
+Original Intel files were checked byte-for-byte against the upstream files. Originals are in intel-original/; rescored outputs are in intel-reanalysis/.
+Intel platform information comes from the manuscript: i7-10700, Ubuntu 22.04.5, 16 GB DDR4. No new Intel measurements were collected.
+Measured AMD environment: Ryzen 7 8700G, Ubuntu 24.04.4, Linux 7.0.0-38-generic, Python 3.12.3, GCC 13.3.0.
+AMD environment, affinity, compiler, load, commands, start times, and exit codes are recorded in amd/manifest.json.
 
-二、相同参数与测量过程
+2. Matched parameters and measurement procedure
 {
   "tokens": 64,
   "intermediate": 4864,
@@ -36,33 +36,33 @@ AMD 环境、亲和性、编译器、负载、每次运行命令、开始时间�
   "seed": 42
 }
 
-64 × 4864 FP16 激活；4 个异常列为 204、912、2006、2253；隐藏维度为 896。
-对应 32 列分组的起点为 192、896、1984、2240；每行 152 个候选分组。
-每次仍执行全部 64 行的 gather，只 flush / reload 第 0–3 行。
-每种 case 有 5 次 trial；每次 trial 按 stride 5 分成 5 个交错 sweep，组内按固定 seed 打乱。
-case 顺序：no_outliers、injected_gather、injected_no_gather。
-每个 case 3040 条记录，每次采集共 9120 条；这不是单次 gather 的同时快照。
-flush、gather、reload 在同一进程中按阶段执行；是 CPU 上的受控合成实验。
-计时区间在矩阵乘法和数值校验之前，与原代码一致；这里没有执行 NPU / 实际 LLM 推理。
-native 编译参数：cc -O3 -mf16c -shared -fPIC kernels.c flush_reload_native.c -lm。
+64 x 4864 FP16 activations; four outlier columns at 204, 912, 2006, 2253; hidden dimension 896.
+The corresponding 32-column group starts are 192, 896, 1984, 2240; there are 152 candidate groups per row.
+The full 64-row gather executes each time; only rows 0-3 are flushed and reloaded.
+Each case has 5 trials; each trial is divided into 5 interleaved sweeps with stride 5 and a fixed-seed shuffle within each sweep.
+Case order: no_outliers, injected_gather, injected_no_gather.
+There are 3040 records per case and 9120 per acquisition; this is not a simultaneous snapshot of a single gather.
+Flush, gather, and reload are staged in one process in a controlled synthetic CPU experiment.
+The timing window precedes matrix multiplication and numerical verification, as in the original code. No NPU or real-LLM inference is executed here.
+Native build command: cc -O3 -mf16c -shared -fPIC kernels.c flush_reload_native.c -lm.
 
-异常激活阈值 threshold=32 固定。缓存命中计时阈值是另一个参数，由原代码在独立页上标定：
-100 次预热、2000 个训练样本选阈值、2000 个独立验证样本检查分类；不使用本实验异常列标签调阈值。
-命中判据为 latency_tsc_ticks < reload_threshold_tsc_ticks。
-Intel 阈值 119 TSC ticks；AMD 主采集阈值 253；AMD 十次范围 106–253。
-不同数值是相同标定算法的输出，不是修改实验设置；TSC ticks 不等同于 CPU 核心周期或纳秒。
-没有额外固定核心、调整 CPU governor、关闭预取器或修改系统设置。
+The outlier activation threshold=32 is fixed. The cache-hit timing cutoff is a separate parameter, calibrated by the original code on a separate page:
+100 warmup samples, 2000 training samples to choose the cutoff, and 2000 independent holdout samples for verification. Case/outlier labels are not used for tuning.
+A hit satisfies latency_tsc_ticks < reload_threshold_tsc_ticks.
+Intel cutoff: 119 TSC ticks; primary AMD cutoff: 253; range across ten AMD acquisitions: 106-253.
+These different values are outputs of the same calibration algorithm, not changed experiment settings. TSC ticks are not core cycles or nanoseconds.
+No additional core pinning, CPU governor tuning, prefetcher disabling, or system tuning was applied.
 
-三、三个统计层级（不要把图中 Raw groups 当成逐次探测结果）
-1. Raw probe：每次 reload 的二分类，尚未投票；precision = TP/(TP+FP)，FPR = FP/(FP+TN)。
-2. Consensus：同一行 5 次中至少 3 次命中；4 行中至少 2 行满足，判该分组为候选。
-3. Filtered：每段严格按 32 列相邻的候选分组，只保留起点最小的一个。
-主对比使用 consensus selector，与论文图 4 一致；不是 control_adjusted selector。
-对照调整结果仍完整保留在 JSON 和原始分析文件中。
-标签仅用于评分，不用于过滤决策。该启发式可能删掉真实相邻异常分组，本输入没有这种情况。
+3. Three scoring stages (Raw groups in the figure is not raw probe classification)
+1. Raw probe: classify each reload before consensus; precision = TP/(TP+FP), FPR = FP/(FP+TN).
+2. Consensus: a row must hit in at least 3 of 5 repeats; at least 2 of 4 rows must qualify for the group to become a candidate.
+3. Filtered: keep the lowest-start group from each strictly consecutive candidate run with a 32-column step.
+The primary comparison uses the consensus selector, matching Figure 4, rather than the control_adjusted selector.
+Control-adjusted results are also fully retained in the JSON and original analysis files.
+Labels are used only for scoring, not filtering decisions. This heuristic can suppress real adjacent outlier groups; this input has none.
 
-四、主对比：Intel 原记录 vs 事先指定的 AMD 第一次采集
-平台   阶段          TP    FP    FN    TN    Precision    Recall    FPR
+4. Primary comparison: historical Intel record versus the predesignated first AMD acquisition
+Platform Stage          TP    FP    FN    TN    Precision    Recall    FPR
 Intel  Raw probe      80   172     0  2788    31.7460% 100.0000%   5.8108%
 Intel  Consensus       4     5     0   143    44.4444% 100.0000%   3.3784%
 Intel  Filtered        4     0     0   148   100.0000% 100.0000%   0.0000%
@@ -70,19 +70,19 @@ AMD    Raw probe      80   277     0  2683    22.4090% 100.0000%   9.3581%
 AMD    Consensus       4     1     0   147    80.0000% 100.0000%   0.6757%
 AMD    Filtered        4     0     0   148   100.0000% 100.0000%   0.0000%
 
-分组起点：
+Group starts:
 Intel consensus: [192, 224, 896, 928, 960, 1984, 2240, 2272, 2304]
 Intel filtered:  [192, 896, 1984, 2240]
 AMD run-01 consensus: [192, 224, 896, 1984, 2240]
 AMD run-01 filtered:  [192, 896, 1984, 2240]
 
-对照 case 的逐次探测 FPR：
-平台   no_outliers   injected_no_gather
+Raw probe FPR in the control cases:
+Platform no_outliers   injected_no_gather
 Intel  3.1908%       3.2895%
 AMD    8.3553%       8.0263%
 
-五、AMD 十次采集（全部保留，无挑选或替换）
-采集     阈值(ticks)  Probe precision  Probe FPR   Consensus FP  Filtered FP
+5. Ten AMD acquisitions (all retained, without selection or replacement)
+Run      Cutoff(ticks) Probe precision  Probe FPR   Consensus FP  Filtered FP
 run-01          253         22.4090%    9.3581%              1            0
 run-02          232         27.7778%    7.0270%              0            0
 run-03          253         22.8571%    9.1216%              1            0
@@ -94,38 +94,38 @@ run-08          253         23.1214%    8.9865%              1            0
 run-09          253         22.4719%    9.3243%              0            0
 run-10          253         22.5352%    9.2905%              1            0
 
-每次每个阶段 recall 均为 100%；过滤后 precision 均为 100%。
-Probe FPR：均值 8.1622%；中位数 9.0203%；范围 5.1014%–9.3581%。
-这些是短时间内对同一 seed / 输入的重复测量，不是十种输入，也没有对称的 Intel 十次测量。
-与 Intel 原记录相比，AMD 多数采集的逐次误报更多，但通过行间投票的误报分组更少。
-因此不能只用一个层级的指标概括平台优劣；也没有因果实验证明差异来自特定预取器。
+Recall is 100% at every stage of every acquisition; filtered precision is always 100%.
+Probe FPR: mean 8.1622%; median 9.0203%; range 5.1014%-9.3581%.
+These are short-session repeated measurements of the same seed/input, not ten inputs; there is no matched ten-acquisition Intel sample.
+Compared with the Intel record, most AMD acquisitions have more individual false hits but fewer false groups surviving row consensus.
+A single metric level therefore cannot establish overall platform superiority; no causal experiment identifies a particular prefetcher.
 
-六、已完成的核对与限制
-共检查 100320 条记录：9120 条 Intel + 91200 条 AMD。
-每次的配置、case/trial/row/group 覆盖、完整探测顺序、期望标签均与 Intel 基线一致。
-从延迟重新计算命中；从 CSV 重新计算混淆矩阵；独立重算投票和过滤；均与保存结果吻合。
-AMD 的 outlier 列、数值验证指标与 Intel 记录一致；全部缓存检测和数值检测通过。
-证据保存在 comparison.json 的 validation 和 amd/manifest.json 中。
-历史 Intel 的编译器版本、原生二进制、系统调优细节没有记录；不能保证二进制及全部系统条件相同。
-因此准确说法是：固定现有上游实现、匹配原记录全部实验参数和探测顺序的跨平台复现。
-不能声称完成了只更换 CPU、其余系统因素完全受控的实验。
-Overleaf 没有修改。
+6. Completed checks and limitations
+Verified 100320 records: 9120 Intel records and 91200 AMD records.
+Each acquisition matches the Intel baseline in configuration, case/trial/row/group coverage, complete probe order, and expected labels.
+Hits were recomputed from latencies, confusion matrices from CSV, and consensus/filter decisions independently; all match the archived results.
+AMD outlier columns and numerical verification metrics match the Intel record; all cache and numerical checks pass.
+Evidence is recorded in the validation fields of comparison.json and in amd/manifest.json.
+Historical Intel compiler versions, native binaries, and system-tuning details are unavailable; identical binaries and all system conditions cannot be guaranteed.
+The supported description is a cross-platform replication using the pinned upstream implementation and matching all recorded experiment parameters and probe order.
+This is not an experiment in which only the CPU changed while all other system factors were fully controlled.
+Overleaf was not modified.
 
-七、文件与复现
-figure4-intel-amd.{png,pdf,svg}：与论文图 4 相同含义的三条分组带，Intel / AMD 对照。
-figure4-amd-repeatability.{png,pdf,svg}：十次波动和投票前后误报。
-comparison.csv：55 行指标记录；比例用 0–1 表示。comparison.json：完整计分与验证。
-amd/：原始 CSV、JSON、日志及环境；intel-original/：原始 Intel 基线；
-intel-reanalysis/：用同一上游分析函数对 Intel CSV 重新计分的结果。
-本归档不包含论文源文件；原始论文没有修改。
+7. Files and reproduction
+figure4-intel-amd.{png,pdf,svg}: three group bands with the same meaning as Figure 4, comparing Intel and AMD.
+figure4-amd-repeatability.{png,pdf,svg}: variation across ten acquisitions and false positives before/after consensus and filtering.
+comparison.csv: 55 metric rows, with rates expressed as 0-1 fractions. comparison.json: full scoring and verification.
+amd/: original CSV, JSON, logs, and environment; intel-original/: original Intel baseline;
+intel-reanalysis/: Intel CSV rescored by the same upstream analysis function.
+This archive excludes manuscript source files; the original manuscript was not modified.
 
-在 Linux x86-64 上重新采集（需 F16C、RDTSCP、64-byte cache line；输出目录必须不存在）：
+Collect new measurements on Linux x86-64 (requires F16C, RDTSCP, 64-byte cache lines; output directory must not exist):
   git clone https://github.com/Classified56/bitsandbytes.git upstream
   git -C upstream checkout --detach 58cc1cc78f708c3a70c2f6cd969baa5f835ef957
   python3 run_matched.py --source upstream --output amd-new --acquisitions 10
 
-仅重算本次归档数据并重画图（不产生新的缓存测量）：
+Recompute archived results and regenerate figures without collecting new cache measurements:
   python3 -m pip install matplotlib
   python3 -B validate_and_plot.py --source upstream
-分析脚本读取同目录 amd/ 和 intel-original/；若使用新采集数据，请在新目录内组织同样结构。
-重新运行会重写派生图表和 comparison 文件，但不会改写原始 amd/、intel-original/ 或上游代码。
+The analysis script reads amd/ and intel-original/ alongside the script. Organize new acquisitions in the same structure in a separate directory.
+Rebuilding rewrites derived plots and comparison files, but leaves the original amd/, intel-original/, and upstream code unchanged.

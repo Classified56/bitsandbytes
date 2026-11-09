@@ -1,9 +1,11 @@
 AMD CPU CACHE-RECOVERY: CONSOLIDATED FINAL RESULTS
 Archive dates: 2026-11-07 (supplementary), 2026-11-09 (matched Figure 4)
 
-本文件集中保存可用于论文的最终实验结果。主结果为严格匹配图 4 的十次 AMD 测量；
-补充结果为早先四种不同参数的 CPU 缓存实验。二者单独报告，不混合计算成功率。
-所有表格由原始 CSV/JSON 重算；这里没有真实 LLM、NPU 或端到端分类实验结果。
+This file consolidates the final results for manuscript use. The primary dataset
+contains ten AMD acquisitions matching Figure 4. Four earlier CPU cache configurations
+are reported separately as supplementary results; their success rates are not pooled.
+All tables are recomputed from the raw CSV/JSON records. This archive contains no
+real-LLM, NPU, or end-to-end classification results.
 
 1. Scope, provenance, and manuscript-ready conclusion
 
