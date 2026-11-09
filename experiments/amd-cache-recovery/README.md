@@ -2,7 +2,7 @@
 
 The controlled CPU Flush+Reload experiment recovers all four injected cache-line groups on an AMD Ryzen 7 8700G. All ten acquisitions matching the paper's Figure 4 settings have 100% precision and recall after the original neighboring-group filter. Five acquisitions have one false group after row consensus; the other five have none.
 
-**[FINAL_RESULTS.txt](FINAL_RESULTS.txt) is the single consolidated results file for manuscript use.** It includes the matched Intel comparison, every AMD acquisition, controls, variability, calibration, numerical checks, spatial diagnostics, and four earlier supplemental configurations. Rates, denominators, settings, provenance, and limitations are explicit. It is generated from the archived measurements, not manually transcribed.
+**[FINAL_RESULTS.txt](FINAL_RESULTS.txt) presents the final results as concise, aligned tables.** It covers the Intel comparison, all AMD acquisitions, controls, variability, timing, spatial diagnostics, numerical checks, and supplementary configurations. Values are generated from the archived measurements. Detailed methods and interpretation remain in this README and `matched-figure4/REPORT.txt`.
 
 ![Figure 4 comparison](matched-figure4/figure4-intel-amd.png)
 
@@ -10,7 +10,7 @@ The controlled CPU Flush+Reload experiment recovers all four injected cache-line
 
 | Path | Purpose |
 | --- | --- |
-| `FINAL_RESULTS.txt` | All final results and manuscript-ready interpretation, including supplemental experiments |
+| `FINAL_RESULTS.txt` | Concise tables of all final outcomes, including supplementary experiments |
 | `matched-figure4/amd/` | Ten complete AMD acquisitions, logs, and environment manifest from 2026-11-09 |
 | `matched-figure4/intel-original/` | Exact copies of the upstream `prefill-four-rows` records (seed 42) |
 | `matched-figure4/intel-reanalysis/` | Intel group scores recomputed using the same analyzer |
