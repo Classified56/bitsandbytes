@@ -1,0 +1,13 @@
+Prefill A=[64, 4864], W=[896, 4864], activation threshold=32.0
+Reload rows=0:4; mode=sweep; flush=observed; full gather remains unchanged
+Reload threshold=106 TSC ticks; held-out primitive balanced accuracy=100.00%
+no_outliers: outliers=0, precision=0.00%, recall=n/a, FPR=5.59%
+  Relative L2 vs reconstructed-weight reference: normal=0.00396155, mixed=0.00396155; independent scalar checks passed
+injected_gather: outliers=4, precision=34.63%, recall=100.00%, FPR=5.10%
+  Relative L2 vs reconstructed-weight reference: normal=0.288598, mixed=0.00380602; independent scalar checks passed
+injected_no_gather: outliers=4, precision=0.00%, recall=n/a, FPR=4.87%
+Detected 32-column group starts: [192, 224, 896, 1984, 2240]
+Control-adjusted group starts: [192, 896, 1984, 2240]
+consensus leading guesses: [192, 896, 1984, 2240]; precision=100.00%, recall=100.00%, F1=100.00%, exact=True
+control_adjusted leading guesses: [192, 896, 1984, 2240]; precision=100.00%, recall=100.00%, F1=100.00%, exact=True
+Cache check: PASS; artifacts: /home/tianhong/bitsandbytes-figure4-20261109/amd/run-04

@@ -1,0 +1,56 @@
+platform,acquisition,stage,case,tp,fp,fn,tn,precision,recall,false_positive_rate,predicted_groups
+Intel,intel-original,raw_probe,no_outliers,0,97,0,2943,0.0,,0.03190789473684211,
+Intel,intel-original,raw_probe,injected_gather,80,172,0,2788,0.31746031746031744,1.0,0.05810810810810811,
+Intel,intel-original,raw_probe,injected_no_gather,0,100,0,2940,0.0,,0.03289473684210526,
+Intel,intel-original,consensus,injected_gather,4,5,0,143,0.4444444444444444,1.0,0.033783783783783786,"[192, 224, 896, 928, 960, 1984, 2240, 2272, 2304]"
+Intel,intel-original,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-01,raw_probe,no_outliers,0,254,0,2786,0.0,,0.08355263157894736,
+AMD,run-01,raw_probe,injected_gather,80,277,0,2683,0.22408963585434175,1.0,0.09358108108108108,
+AMD,run-01,raw_probe,injected_no_gather,0,244,0,2796,0.0,,0.08026315789473684,
+AMD,run-01,consensus,injected_gather,4,1,0,147,0.8,1.0,0.006756756756756757,"[192, 224, 896, 1984, 2240]"
+AMD,run-01,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-02,raw_probe,no_outliers,0,249,0,2791,0.0,,0.08190789473684211,
+AMD,run-02,raw_probe,injected_gather,80,208,0,2752,0.2777777777777778,1.0,0.07027027027027027,
+AMD,run-02,raw_probe,injected_no_gather,0,194,0,2846,0.0,,0.06381578947368421,
+AMD,run-02,consensus,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-02,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-03,raw_probe,no_outliers,0,245,0,2795,0.0,,0.0805921052631579,
+AMD,run-03,raw_probe,injected_gather,80,270,0,2690,0.22857142857142856,1.0,0.09121621621621621,
+AMD,run-03,raw_probe,injected_no_gather,0,198,0,2842,0.0,,0.06513157894736842,
+AMD,run-03,consensus,injected_gather,4,1,0,147,0.8,1.0,0.006756756756756757,"[192, 224, 896, 1984, 2240]"
+AMD,run-03,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-04,raw_probe,no_outliers,0,170,0,2870,0.0,,0.05592105263157895,
+AMD,run-04,raw_probe,injected_gather,80,151,0,2809,0.3463203463203463,1.0,0.05101351351351351,
+AMD,run-04,raw_probe,injected_no_gather,0,148,0,2892,0.0,,0.04868421052631579,
+AMD,run-04,consensus,injected_gather,4,1,0,147,0.8,1.0,0.006756756756756757,"[192, 224, 896, 1984, 2240]"
+AMD,run-04,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-05,raw_probe,no_outliers,0,153,0,2887,0.0,,0.05032894736842105,
+AMD,run-05,raw_probe,injected_gather,80,268,0,2692,0.22988505747126436,1.0,0.09054054054054055,
+AMD,run-05,raw_probe,injected_no_gather,0,259,0,2781,0.0,,0.08519736842105263,
+AMD,run-05,consensus,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-05,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-06,raw_probe,no_outliers,0,264,0,2776,0.0,,0.0868421052631579,
+AMD,run-06,raw_probe,injected_gather,80,208,0,2752,0.2777777777777778,1.0,0.07027027027027027,
+AMD,run-06,raw_probe,injected_no_gather,0,201,0,2839,0.0,,0.06611842105263158,
+AMD,run-06,consensus,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-06,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-07,raw_probe,no_outliers,0,189,0,2851,0.0,,0.062171052631578946,
+AMD,run-07,raw_probe,injected_gather,80,217,0,2743,0.26936026936026936,1.0,0.07331081081081081,
+AMD,run-07,raw_probe,injected_no_gather,0,178,0,2862,0.0,,0.05855263157894737,
+AMD,run-07,consensus,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-07,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-08,raw_probe,no_outliers,0,220,0,2820,0.0,,0.07236842105263158,
+AMD,run-08,raw_probe,injected_gather,80,266,0,2694,0.23121387283236994,1.0,0.08986486486486486,
+AMD,run-08,raw_probe,injected_no_gather,0,250,0,2790,0.0,,0.08223684210526316,
+AMD,run-08,consensus,injected_gather,4,1,0,147,0.8,1.0,0.006756756756756757,"[192, 896, 1984, 2016, 2240]"
+AMD,run-08,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-09,raw_probe,no_outliers,0,159,0,2881,0.0,,0.05230263157894737,
+AMD,run-09,raw_probe,injected_gather,80,276,0,2684,0.2247191011235955,1.0,0.09324324324324325,
+AMD,run-09,raw_probe,injected_no_gather,0,192,0,2848,0.0,,0.06315789473684211,
+AMD,run-09,consensus,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-09,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"
+AMD,run-10,raw_probe,no_outliers,0,250,0,2790,0.0,,0.08223684210526316,
+AMD,run-10,raw_probe,injected_gather,80,275,0,2685,0.22535211267605634,1.0,0.0929054054054054,
+AMD,run-10,raw_probe,injected_no_gather,0,232,0,2808,0.0,,0.07631578947368421,
+AMD,run-10,consensus,injected_gather,4,1,0,147,0.8,1.0,0.006756756756756757,"[192, 224, 896, 1984, 2240]"
+AMD,run-10,filtered,injected_gather,4,0,0,148,1.0,1.0,0.0,"[192, 896, 1984, 2240]"

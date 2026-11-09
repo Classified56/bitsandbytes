@@ -1,0 +1,13 @@
+Prefill A=[64, 4864], W=[896, 4864], activation threshold=32
+Reload rows=0:64; mode=sweep; flush=all; full gather remains unchanged
+Reload threshold=232 TSC ticks; held-out primitive balanced accuracy=100.00%
+no_outliers: outliers=0, precision=0.00%, recall=n/a, FPR=0.05%
+  Relative L2 vs reconstructed-weight reference: normal=0.00396672, mixed=0.00396672; independent scalar checks passed
+injected_gather: outliers=4, precision=88.99%, recall=99.77%, FPR=0.33%
+  Relative L2 vs reconstructed-weight reference: normal=0.288878, mixed=0.00380189; independent scalar checks passed
+injected_no_gather: outliers=4, precision=0.00%, recall=n/a, FPR=0.00%
+Detected 32-column group starts: [288, 1152, 2336, 3776]
+Control-adjusted group starts: [288, 1152, 2336, 3776]
+consensus leading guesses: [288, 1152, 2336, 3776]; precision=100.00%, recall=100.00%, F1=100.00%, exact=True
+control_adjusted leading guesses: [288, 1152, 2336, 3776]; precision=100.00%, recall=100.00%, F1=100.00%, exact=True
+Cache check: PASS; artifacts: ../results/prefill-seed43

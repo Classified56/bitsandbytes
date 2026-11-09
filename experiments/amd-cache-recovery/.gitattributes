@@ -1,0 +1,9 @@
+# Python csv.writer emitted CRLF. Preserve original bytes and their SHA256 hashes.
+*.csv -text whitespace=cr-at-eol
+# Keep generated scientific artifacts out of language statistics and review diffs.
+*.csv linguist-generated
+**/analysis.json linguist-generated
+**/summary.json linguist-generated
+**/row_sections.csv linguist-generated
+**/group_scores.csv linguist-generated
+*.svg linguist-generated

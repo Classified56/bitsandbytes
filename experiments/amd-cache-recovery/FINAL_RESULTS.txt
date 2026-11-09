@@ -1,0 +1,468 @@
+AMD CPU CACHE-RECOVERY: CONSOLIDATED FINAL RESULTS
+Archive dates: 2026-11-07 (supplementary), 2026-11-09 (matched Figure 4)
+
+本文件集中保存可用于论文的最终实验结果。主结果为严格匹配图 4 的十次 AMD 测量；
+补充结果为早先四种不同参数的 CPU 缓存实验。二者单独报告，不混合计算成功率。
+所有表格由原始 CSV/JSON 重算；这里没有真实 LLM、NPU 或端到端分类实验结果。
+
+1. Scope, provenance, and manuscript-ready conclusion
+
+On an AMD Ryzen 7 8700G, all ten acquisitions matching the supplied Figure 4
+configuration recovered the four injected 32-column groups after the original
+contiguous-run filter (precision = recall = 100%). Before filtering, row
+consensus yielded no false groups in five acquisitions and one adjacent false
+group in each of the other five. Raw probe FPR ranged from 5.101351% to
+9.358108% (mean 8.162162%). The historical Intel i7-10700 record had a raw
+probe FPR of 5.810811%, five false groups after consensus, and exact recovery
+after filtering. The protocol therefore transfers to this AMD platform for
+the tested synthetic input, while probe-level noise and group-level errors
+differ between the recorded environments. These data do not establish a causal
+CPU-architecture effect or generalization to real LLM workloads.
+
+Measurement/analysis baseline commit: 58cc1cc78f708c3a70c2f6cd969baa5f835ef957
+Repository: https://github.com/Classified56/bitsandbytes (shadow_outlier branch)
+Intel record: prefill_flush_reload/prefill-four-rows, seed 42 (not prefill-4-rows, seed 420).
+Intel hardware/OS from manuscript: i7-10700, Ubuntu 22.04.5 LTS, 16 GB DDR4.
+AMD: Ryzen 7 8700G, 8 cores/16 threads, 64-byte cache lines; Ubuntu 24.04.4;
+Linux 7.0.0-38-generic; Python 3.12.3; GCC 13.3.0. Full metadata: matched-figure4/amd/manifest.json.
+Native build flags: -O3 -mf16c -shared -fPIC; linked with -lm.
+Measurement files were unchanged and verified by 17 SHA256 hashes. No extra
+core pinning, governor tuning, prefetcher modification, or threshold tuning was applied.
+The wrapper records every planned acquisition, including failure, and designates
+run-01 as primary before starting. The archived ten runs all exited with code 0.
+
+2. Matched settings and metric definitions
+
+{
+  "tokens": 64,
+  "intermediate": 4864,
+  "hidden": 896,
+  "outliers": 4,
+  "threshold": 32,
+  "repeats": 5,
+  "probe_stride": 5,
+  "probe_rows": 4,
+  "row_start": 0,
+  "probe_mode": "sweep",
+  "flush_scope": "observed",
+  "row_hit_fraction": 0.6,
+  "min_row_fraction": 0.5,
+  "min_control_delta": 0.5,
+  "seed": 42
+}
+True FP16 column indices: 204, 912, 2006, 2253 (zero-based).
+True 32-column group starts: 192, 896, 1984, 2240; group ends are exclusive.
+FP16 activation matrix: 64 x 4864; hidden dimension 896; 152 candidate groups per row.
+The complete 64-row gather executes, but only rows 0-3 are flushed and observed.
+Each case has 5 trials; each trial uses 5 interleaved, shuffled sweeps (stride 5).
+Case order: no_outliers, injected_gather, injected_no_gather.
+Each case has 3040 probes: gather case has 80 expected-positive and 2960 expected-negative probes.
+The two controls have 3040 expected-negative probes each. Total: 9120 probes per acquisition.
+This reconstructs a footprint across repeated fresh flush/gather windows, not one simultaneous snapshot.
+The flush/gather/reload sequence is staged in one process, before matrix multiplication and numerical checks.
+
+Raw probe: threshold each reload; precision=TP/(TP+FP), recall=TP/(TP+FN), FPR=FP/(FP+TN).
+Consensus: a row hits on >=3/5 repeats; a group is selected if >=2/4 rows hit consistently.
+Filtered: retain only the first group of each strictly contiguous candidate run (step=32 columns).
+Raw groups in Figure 4 means AFTER consensus, not individual probes. Group scoring has 4 positives/148 negatives.
+Control-adjusted (supplemental selector): also require hit fraction to exceed each control by >=0.5 per row.
+All percentages below are 0-100, not 0-1. NA means an undefined metric (e.g., recall in all-negative controls).
+Group FPR and probe FPR use different units/denominators and must not be interchanged.
+
+3. Primary matched comparison: historical Intel versus AMD acquisition 01
+
+platform stage          TP FP FN TN precision_pct recall_pct FPR_pct F1_pct
+Intel    probe        80 172 0 2788 31.746032 100.000000 5.810811 48.192771
+Intel    consensus    4 5 0 143 44.444444 100.000000 3.378378 61.538462
+Intel    filtered     4 0 0 148 100.000000 100.000000 0.000000 100.000000
+Intel consensus group starts: [192, 224, 896, 928, 960, 1984, 2240, 2272, 2304]
+Intel filtered group starts: [192, 896, 1984, 2240]
+AMD-01   probe        80 277 0 2683 22.408964 100.000000 9.358108 36.613272
+AMD-01   consensus    4 1 0 147 80.000000 100.000000 0.675676 88.888889
+AMD-01   filtered     4 0 0 148 100.000000 100.000000 0.000000 100.000000
+AMD-01 consensus group starts: [192, 224, 896, 1984, 2240]
+AMD-01 filtered group starts: [192, 896, 1984, 2240]
+
+4. All matched raw-probe results, including both controls
+
+acquisition case TP FP FN TN precision_pct recall_pct FPR_pct
+Intel no_outliers 0 97 0 2943 0.000000 NA 3.190789
+Intel injected_gather 80 172 0 2788 31.746032 100.000000 5.810811
+Intel injected_no_gather 0 100 0 2940 0.000000 NA 3.289474
+AMD-01 no_outliers 0 254 0 2786 0.000000 NA 8.355263
+AMD-01 injected_gather 80 277 0 2683 22.408964 100.000000 9.358108
+AMD-01 injected_no_gather 0 244 0 2796 0.000000 NA 8.026316
+AMD-02 no_outliers 0 249 0 2791 0.000000 NA 8.190789
+AMD-02 injected_gather 80 208 0 2752 27.777778 100.000000 7.027027
+AMD-02 injected_no_gather 0 194 0 2846 0.000000 NA 6.381579
+AMD-03 no_outliers 0 245 0 2795 0.000000 NA 8.059211
+AMD-03 injected_gather 80 270 0 2690 22.857143 100.000000 9.121622
+AMD-03 injected_no_gather 0 198 0 2842 0.000000 NA 6.513158
+AMD-04 no_outliers 0 170 0 2870 0.000000 NA 5.592105
+AMD-04 injected_gather 80 151 0 2809 34.632035 100.000000 5.101351
+AMD-04 injected_no_gather 0 148 0 2892 0.000000 NA 4.868421
+AMD-05 no_outliers 0 153 0 2887 0.000000 NA 5.032895
+AMD-05 injected_gather 80 268 0 2692 22.988506 100.000000 9.054054
+AMD-05 injected_no_gather 0 259 0 2781 0.000000 NA 8.519737
+AMD-06 no_outliers 0 264 0 2776 0.000000 NA 8.684211
+AMD-06 injected_gather 80 208 0 2752 27.777778 100.000000 7.027027
+AMD-06 injected_no_gather 0 201 0 2839 0.000000 NA 6.611842
+AMD-07 no_outliers 0 189 0 2851 0.000000 NA 6.217105
+AMD-07 injected_gather 80 217 0 2743 26.936027 100.000000 7.331081
+AMD-07 injected_no_gather 0 178 0 2862 0.000000 NA 5.855263
+AMD-08 no_outliers 0 220 0 2820 0.000000 NA 7.236842
+AMD-08 injected_gather 80 266 0 2694 23.121387 100.000000 8.986486
+AMD-08 injected_no_gather 0 250 0 2790 0.000000 NA 8.223684
+AMD-09 no_outliers 0 159 0 2881 0.000000 NA 5.230263
+AMD-09 injected_gather 80 276 0 2684 22.471910 100.000000 9.324324
+AMD-09 injected_no_gather 0 192 0 2848 0.000000 NA 6.315789
+AMD-10 no_outliers 0 250 0 2790 0.000000 NA 8.223684
+AMD-10 injected_gather 80 275 0 2685 22.535211 100.000000 9.290541
+AMD-10 injected_no_gather 0 232 0 2808 0.000000 NA 7.631579
+
+AMD descriptive statistics across ten acquisitions of the SAME input:
+case metric mean_pct sample_sd_percentage_points median_pct min_pct max_pct
+no_outliers precision 0.000000 0.000000 0.000000 0.000000 0.000000
+no_outliers false_positive_rate 7.082237 1.425780 7.648026 5.032895 8.684211
+injected_gather precision 25.350674 3.973156 23.054947 22.408964 34.632035
+injected_gather recall 100.000000 0.000000 100.000000 100.000000 100.000000
+injected_gather false_positive_rate 8.162162 1.456251 9.020270 5.101351 9.358108
+injected_no_gather precision 0.000000 0.000000 0.000000 0.000000 0.000000
+injected_no_gather false_positive_rate 6.894737 1.166226 6.562500 4.868421 8.519737
+Statistics are acquisition-level means/SD, not pooled precision. No independence or population confidence interval is assumed.
+
+5. All matched group recovery results
+
+acquisition selector stage TP FP FN TN precision_pct recall_pct F1_pct exact_set predicted_group_starts
+Intel consensus raw 4 5 0 143 44.444444 100.000000 61.538462 False [192, 224, 896, 928, 960, 1984, 2240, 2272, 2304]
+Intel consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+Intel control_adjusted raw 4 5 0 143 44.444444 100.000000 61.538462 False [192, 224, 896, 928, 960, 1984, 2240, 2272, 2304]
+Intel control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-01 consensus raw 4 1 0 147 80.000000 100.000000 88.888889 False [192, 224, 896, 1984, 2240]
+AMD-01 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-01 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-01 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-02 consensus raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-02 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-02 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-02 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-03 consensus raw 4 1 0 147 80.000000 100.000000 88.888889 False [192, 224, 896, 1984, 2240]
+AMD-03 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-03 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-03 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-04 consensus raw 4 1 0 147 80.000000 100.000000 88.888889 False [192, 224, 896, 1984, 2240]
+AMD-04 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-04 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-04 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-05 consensus raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-05 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-05 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-05 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-06 consensus raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-06 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-06 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-06 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-07 consensus raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-07 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-07 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-07 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-08 consensus raw 4 1 0 147 80.000000 100.000000 88.888889 False [192, 896, 1984, 2016, 2240]
+AMD-08 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-08 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-08 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-09 consensus raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-09 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-09 control_adjusted raw 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-09 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-10 consensus raw 4 1 0 147 80.000000 100.000000 88.888889 False [192, 224, 896, 1984, 2240]
+AMD-10 consensus leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD-10 control_adjusted raw 4 1 0 147 80.000000 100.000000 88.888889 False [192, 224, 896, 1984, 2240]
+AMD-10 control_adjusted leading_group 4 0 0 148 100.000000 100.000000 100.000000 True [192, 896, 1984, 2240]
+AMD consensus/raw: exact sets 5/10; mean precision 90.000000%; mean recall 100.000000%.
+AMD consensus/leading_group: exact sets 10/10; mean precision 100.000000%; mean recall 100.000000%.
+AMD control_adjusted/raw: exact sets 9/10; mean precision 98.000000%; mean recall 100.000000%.
+AMD control_adjusted/leading_group: exact sets 10/10; mean precision 100.000000%; mean recall 100.000000%.
+
+6. Calibration and observed latency distributions
+
+Cache cutoff is chosen on a separate page: 100 warmup samples, 2000 training and 2000 holdout samples.
+It never uses the case/outlier ground truth. Activation threshold=32 is a separate, fixed parameter.
+TSC ticks are not core cycles or nanoseconds. Cross-platform timing differences are not latency speedups.
+dataset cutoff_TSC_ticks heldout_TP FP FN TN balanced_accuracy_pct cache_check_passed
+Intel 119 1000 0 0 1000 100.000000 True
+AMD-01 253 1000 0 0 1000 100.000000 True
+AMD-02 232 1000 0 0 1000 100.000000 True
+AMD-03 253 1000 0 0 1000 100.000000 True
+AMD-04 106 1000 0 0 1000 100.000000 True
+AMD-05 232 1000 0 0 1000 100.000000 True
+AMD-06 253 1000 0 0 1000 100.000000 True
+AMD-07 253 1000 0 0 1000 100.000000 True
+AMD-08 253 1000 0 0 1000 100.000000 True
+AMD-09 253 1000 0 0 1000 100.000000 True
+AMD-10 253 1000 0 0 1000 100.000000 True
+prefill-default 295 1000 0 0 1000 100.000000 True
+prefill-four-rows 232 1000 0 0 1000 100.000000 True
+prefill-seed43 232 1000 0 0 1000 100.000000 True
+prefill-two-rows-single 232 1000 0 0 1000 100.000000 True
+
+Gather-case latency distribution; labels are ground truth, not predicted cache state.
+dataset expected_class n p05_TSC_ticks median_TSC_ticks p95_TSC_ticks
+Intel expected_access 80 32 34.0 56
+Intel expected_no_access 2960 54 200.0 222
+AMD-01 expected_access 80 42 84.0 84
+AMD-01 expected_no_access 2960 84 462.0 798
+AMD-02 expected_access 80 42 84.0 84
+AMD-02 expected_no_access 2960 84 462.0 924
+AMD-03 expected_access 80 42 84.0 84
+AMD-03 expected_no_access 2960 84 462.0 714
+AMD-04 expected_access 80 42 84.0 84
+AMD-04 expected_no_access 2960 84 462.0 798
+AMD-05 expected_access 80 42 84.0 84
+AMD-05 expected_no_access 2960 84 462.0 798
+AMD-06 expected_access 80 42 84.0 84
+AMD-06 expected_no_access 2960 84 462.0 798
+AMD-07 expected_access 80 42 84.0 84
+AMD-07 expected_no_access 2960 84 462.0 756
+AMD-08 expected_access 80 42 84.0 84
+AMD-08 expected_no_access 2960 84 462.0 840
+AMD-09 expected_access 80 42 84.0 84
+AMD-09 expected_no_access 2960 84 462.0 798
+AMD-10 expected_access 80 42 84.0 84
+AMD-10 expected_no_access 2960 84 462.0 840
+prefill-default expected_access 1280 84 84.0 126
+prefill-default expected_no_access 47360 420 462.0 798
+prefill-four-rows expected_access 80 42 84.0 84
+prefill-four-rows expected_no_access 2960 84 462.0 756
+prefill-seed43 expected_access 1280 42 84.0 126
+prefill-seed43 expected_no_access 47360 378 420.0 798
+prefill-two-rows-single expected_access 40 84 84.0 84
+prefill-two-rows-single expected_no_access 1480 420 462.0 798
+
+7. Spatial diagnostic around the known true groups (supplementary observation)
+
+Offsets are measured in cache-line groups of 32 columns; positive is toward larger column indices.
+Truth is used only to describe this diagnostic, never to decide which detected groups to remove.
+Each offset/case pools probes at that offset from all true groups and observed rows within one acquisition.
+offset_groups case Intel_hits/observations Intel_hit_pct AMD_mean_hit_pct AMD_min_hit_pct AMD_max_hit_pct
+-4 no_outliers 0/80 0.000000 4.125000 1.250000 6.250000
+-4 injected_gather 0/80 0.000000 5.625000 3.750000 10.000000
+-4 injected_no_gather 0/80 0.000000 3.625000 0.000000 6.250000
+-3 no_outliers 3/80 3.750000 4.875000 2.500000 10.000000
+-3 injected_gather 3/80 3.750000 6.500000 3.750000 10.000000
+-3 injected_no_gather 3/80 3.750000 6.125000 2.500000 10.000000
+-2 no_outliers 0/80 0.000000 6.250000 2.500000 8.750000
+-2 injected_gather 0/80 0.000000 7.125000 1.250000 12.500000
+-2 injected_no_gather 0/80 0.000000 6.375000 2.500000 10.000000
+-1 no_outliers 1/80 1.250000 7.250000 5.000000 10.000000
+-1 injected_gather 0/80 0.000000 8.000000 5.000000 11.250000
+-1 injected_no_gather 1/80 1.250000 5.750000 2.500000 8.750000
+0 no_outliers 2/80 2.500000 6.000000 2.500000 10.000000
+0 injected_gather 80/80 100.000000 100.000000 100.000000 100.000000
+0 injected_no_gather 2/80 2.500000 6.125000 2.500000 8.750000
+1 no_outliers 3/80 3.750000 9.500000 3.750000 12.500000
+1 injected_gather 51/80 63.750000 26.625000 17.500000 31.250000
+1 injected_no_gather 3/80 3.750000 9.750000 6.250000 15.000000
+2 no_outliers 2/80 2.500000 4.250000 2.500000 6.250000
+2 injected_gather 35/80 43.750000 5.500000 2.500000 7.500000
+2 injected_no_gather 2/80 2.500000 4.625000 0.000000 8.750000
+3 no_outliers 1/80 1.250000 7.000000 5.000000 11.250000
+3 injected_gather 0/80 0.000000 7.000000 5.000000 10.000000
+3 injected_no_gather 2/80 2.500000 5.500000 2.500000 7.500000
+4 no_outliers 1/80 1.250000 4.000000 2.500000 5.000000
+4 injected_gather 2/80 2.500000 5.500000 1.250000 10.000000
+4 injected_no_gather 1/80 1.250000 4.000000 1.250000 7.500000
+5 no_outliers 5/80 6.250000 8.250000 5.000000 11.250000
+5 injected_gather 3/80 3.750000 8.500000 3.750000 12.500000
+5 injected_no_gather 5/80 6.250000 7.375000 3.750000 12.500000
+6 no_outliers 3/80 3.750000 6.125000 3.750000 10.000000
+6 injected_gather 3/80 3.750000 7.250000 3.750000 10.000000
+6 injected_no_gather 3/80 3.750000 7.125000 3.750000 8.750000
+7 no_outliers 2/80 2.500000 6.250000 2.500000 10.000000
+7 injected_gather 2/80 2.500000 7.875000 2.500000 13.750000
+7 injected_no_gather 2/80 2.500000 5.250000 2.500000 8.750000
+8 no_outliers 3/60 5.000000 4.333333 0.000000 8.333333
+8 injected_gather 3/60 5.000000 4.666667 1.666667 6.666667
+8 injected_no_gather 3/60 5.000000 5.666667 3.333333 8.333333
+This spatial pattern does not identify a hardware prefetcher causally. No prefetcher-disable or cache-level isolation experiment was performed.
+
+8. Earlier AMD configurations: descriptive supplementary results, NOT matched Figure 4
+
+Each configuration below has one acquisition with five probe repeats. They are not an additional matched four-run cohort.
+They share 64 x 4864 FP16, hidden=896, 4 outliers, activation threshold=32 and the same decision fractions.
+Multiple settings differ simultaneously; do not claim a one-factor ablation or controlled speed/accuracy improvement.
+
+prefill-default
+configuration={"flush_scope": "all", "hidden": 896, "intermediate": 4864, "min_control_delta": 0.5, "min_row_fraction": 0.5, "outliers": 4, "probe_mode": "sweep", "probe_rows": 64, "probe_stride": 4, "repeats": 5, "row_hit_fraction": 0.6, "row_start": 0, "seed": 42, "threshold": 32, "tokens": 64}
+true_columns=[204, 912, 2006, 2253]
+case TP FP FN TN precision_pct recall_pct FPR_pct
+no_outliers 0 13 0 48627 0.000000 NA 0.026727
+injected_gather 1276 49 4 47311 96.301887 99.687500 0.103463
+injected_no_gather 0 28 0 48612 0.000000 NA 0.057566
+consensus/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+consensus/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+control_adjusted/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+control_adjusted/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+
+prefill-four-rows
+configuration={"flush_scope": "all", "hidden": 896, "intermediate": 4864, "min_control_delta": 0.5, "min_row_fraction": 0.5, "outliers": 4, "probe_mode": "sweep", "probe_rows": 4, "probe_stride": 4, "repeats": 5, "row_hit_fraction": 0.6, "row_start": 30, "seed": 42, "threshold": 32, "tokens": 64}
+true_columns=[204, 912, 2006, 2253]
+case TP FP FN TN precision_pct recall_pct FPR_pct
+no_outliers 0 170 0 2870 0.000000 NA 5.592105
+injected_gather 80 181 0 2779 30.651341 100.000000 6.114865
+injected_no_gather 0 185 0 2855 0.000000 NA 6.085526
+consensus/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+consensus/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+control_adjusted/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+control_adjusted/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+
+prefill-seed43
+configuration={"flush_scope": "all", "hidden": 896, "intermediate": 4864, "min_control_delta": 0.5, "min_row_fraction": 0.5, "outliers": 4, "probe_mode": "sweep", "probe_rows": 64, "probe_stride": 4, "repeats": 5, "row_hit_fraction": 0.6, "row_start": 0, "seed": 43, "threshold": 32, "tokens": 64}
+true_columns=[315, 1179, 2343, 3789]
+case TP FP FN TN precision_pct recall_pct FPR_pct
+no_outliers 0 25 0 48615 0.000000 NA 0.051398
+injected_gather 1277 158 3 47202 88.989547 99.765625 0.333615
+injected_no_gather 0 1 0 48639 0.000000 NA 0.002056
+consensus/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[288, 1152, 2336, 3776]
+consensus/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[288, 1152, 2336, 3776]
+control_adjusted/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[288, 1152, 2336, 3776]
+control_adjusted/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[288, 1152, 2336, 3776]
+
+prefill-two-rows-single
+configuration={"flush_scope": "all", "hidden": 896, "intermediate": 4864, "min_control_delta": 0.5, "min_row_fraction": 0.5, "outliers": 4, "probe_mode": "single", "probe_rows": 2, "probe_stride": 4, "repeats": 5, "row_hit_fraction": 0.6, "row_start": 30, "seed": 42, "threshold": 32, "tokens": 64}
+true_columns=[204, 912, 2006, 2253]
+case TP FP FN TN precision_pct recall_pct FPR_pct
+no_outliers 0 0 0 1520 NA NA 0.000000
+injected_gather 40 0 0 1480 100.000000 100.000000 0.000000
+injected_no_gather 0 0 0 1520 NA NA 0.000000
+consensus/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+consensus/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+control_adjusted/raw: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+control_adjusted/leading_group: TP=4 FP=0 FN=0 TN=148 precision=100.000000% recall=100.000000% F1=100.000000% exact_set=True groups=[192, 896, 1984, 2240]
+
+All four supplementary acquisitions are exact after consensus and after filtering.
+The single-probe configuration re-flushes and re-gathers for every target line, so its zero observed errors
+cannot be compared as a free improvement over sweep probing. Timing overhead was not benchmarked.
+
+9. Numerical validation (supporting functional checks, not cache-recovery accuracy)
+
+Storage: original activations/weights FP16, quantized tensors INT8, scales FP32;
+main accumulation INT32, correction FP32, output rounding FP16.
+Each distinct numerical report is printed once, with all datasets sharing it.
+
+Datasets: Intel/no_outliers, AMD-01/no_outliers, AMD-02/no_outliers, AMD-03/no_outliers, AMD-04/no_outliers, AMD-05/no_outliers, AMD-06/no_outliers, AMD-07/no_outliers, AMD-08/no_outliers, AMD-09/no_outliers, AMD-10/no_outliers, prefill-default/no_outliers, prefill-four-rows/no_outliers, prefill-two-rows-single/no_outliers
+{
+  "mixed_vs_original_weights": {
+    "max_absolute": 0.01186978816986084,
+    "relative_l2": 0.005621958361284823
+  },
+  "mixed_vs_reconstructed_weights": {
+    "max_absolute": 0.0077194273471832275,
+    "relative_l2": 0.003961549319838938
+  },
+  "normal_vs_reconstructed_weights": {
+    "max_absolute": 0.0077194273471832275,
+    "relative_l2": 0.003961549319838938
+  },
+  "scalar_checks": "passed"
+}
+
+Datasets: Intel/injected_gather, AMD-01/injected_gather, AMD-02/injected_gather, AMD-03/injected_gather, AMD-04/injected_gather, AMD-05/injected_gather, AMD-06/injected_gather, AMD-07/injected_gather, AMD-08/injected_gather, AMD-09/injected_gather, AMD-10/injected_gather, prefill-default/injected_gather, prefill-four-rows/injected_gather, prefill-two-rows-single/injected_gather
+{
+  "mixed_vs_original_weights": {
+    "max_absolute": 0.011763572692871094,
+    "relative_l2": 0.005512261994197015
+  },
+  "mixed_vs_reconstructed_weights": {
+    "max_absolute": 0.0077194273471832275,
+    "relative_l2": 0.0038060186154715145
+  },
+  "normal_vs_reconstructed_weights": {
+    "max_absolute": 0.9882238507270813,
+    "relative_l2": 0.2885983435846034
+  },
+  "scalar_checks": "passed"
+}
+
+Datasets: prefill-seed43/no_outliers
+{
+  "mixed_vs_original_weights": {
+    "max_absolute": 0.012367278337478638,
+    "relative_l2": 0.005601618143411281
+  },
+  "mixed_vs_reconstructed_weights": {
+    "max_absolute": 0.007851719856262207,
+    "relative_l2": 0.003966719103119005
+  },
+  "normal_vs_reconstructed_weights": {
+    "max_absolute": 0.007851719856262207,
+    "relative_l2": 0.003966719103119005
+  },
+  "scalar_checks": "passed"
+}
+
+Datasets: prefill-seed43/injected_gather
+{
+  "mixed_vs_original_weights": {
+    "max_absolute": 0.012367278337478638,
+    "relative_l2": 0.005483434252488601
+  },
+  "mixed_vs_reconstructed_weights": {
+    "max_absolute": 0.007851719856262207,
+    "relative_l2": 0.0038018889158523733
+  },
+  "normal_vs_reconstructed_weights": {
+    "max_absolute": 0.9790226221084595,
+    "relative_l2": 0.2888776586668287
+  },
+  "scalar_checks": "passed"
+}
+Errors are normal/mixed arithmetic versus the stated reconstructed/original-weight references.
+Relative L2 is a ratio, not a percentage in the JSON above. These checks do not measure downstream model/task accuracy.
+
+10. Validation and limits on claims
+
+Verified 405840 raw records across 15 datasets (1 Intel, 10 matched AMD, 4 supplemental AMD).
+Each CSV was checked for complete/unique case-trial-row-group coverage, correct truth labels, and
+prediction equality to latency < calibrated cutoff. Confusion matrices and rates were recomputed.
+Row/group analysis, spatial offsets and probe-order diagnostics were recomputed with the pinned analyzer
+and compared to archived reports. The matched validator additionally checks the complete probe order
+against Intel and independently recomputes consensus/filter decisions. Raw input files are unmodified.
+
+Limits:
+- Intel is one historical acquisition. Its original compiler/binary, tuning and scheduler state are unavailable.
+- AMD repeats the same seed/input ten times in one short session; these are not ten independent inputs.
+- No general claim of AMD superiority, robust real-world attack success, or statistically isolated CPU effect follows.
+- The first-group filter may erase genuinely adjacent outlier groups. This input has separated true groups.
+- The results identify 32-column cache-line groups, not individual FP16 feature columns.
+- The controlled single-process experiment does not establish cross-process exploitation or NPU leakage.
+- No real-model recovery, end-to-end classification accuracy, or first-token latency claim is measured here.
+- Zero observed errors are finite-sample findings, not a proof of a zero population error rate.
+- No causal prefetch mechanism, cache-level attribution, or architectural performance advantage is established.
+
+11. Artifact map and regeneration
+
+Intel: matched-figure4/intel-original (9120 records)
+AMD-01: matched-figure4/amd/run-01 (9120 records)
+AMD-02: matched-figure4/amd/run-02 (9120 records)
+AMD-03: matched-figure4/amd/run-03 (9120 records)
+AMD-04: matched-figure4/amd/run-04 (9120 records)
+AMD-05: matched-figure4/amd/run-05 (9120 records)
+AMD-06: matched-figure4/amd/run-06 (9120 records)
+AMD-07: matched-figure4/amd/run-07 (9120 records)
+AMD-08: matched-figure4/amd/run-08 (9120 records)
+AMD-09: matched-figure4/amd/run-09 (9120 records)
+AMD-10: matched-figure4/amd/run-10 (9120 records)
+prefill-default: supplementary-20261107/results/prefill-default (145920 records)
+prefill-four-rows: supplementary-20261107/results/prefill-four-rows (9120 records)
+prefill-seed43: supplementary-20261107/results/prefill-seed43 (145920 records)
+prefill-two-rows-single: supplementary-20261107/results/prefill-two-rows-single (4560 records)
+
+Primary comparison: matched-figure4/figure4-intel-amd.{png,pdf,svg}
+Repeatability: matched-figure4/figure4-amd-repeatability.{png,pdf,svg}
+Machine-readable matched metrics: matched-figure4/comparison.{json,csv}
+Commands from repository root:
+  python3 -B experiments/amd-cache-recovery/matched-figure4/validate_and_plot.py --source .
+  python3 -B experiments/amd-cache-recovery/summarize_final_results.py --source .
+Only the first command needs Matplotlib. Neither command executes cache measurements.
+Raw per-run reports contain additional per-row and probe-order detail, available for future analysis.
+This TXT consolidates the final evaluated outcomes; per-probe raw observations remain in CSV.

@@ -1,0 +1,6 @@
+!.gitignore
+!**/*.log
+__pycache__/
+.matplotlib/
+.cache/
+reruns/

@@ -1,0 +1,991 @@
+{
+  "tested_date": "2026-11-07",
+  "source_repository": "https://github.com/Classified56/bitsandbytes",
+  "source_branch": "shadow_outlier",
+  "source_commit": "58cc1cc78f708c3a70c2f6cd969baa5f835ef957",
+  "cpu": "AMD Ryzen 7 8700G",
+  "cache_line_bytes": 64,
+  "prefill_runs": [
+    {
+      "run": "prefill-default",
+      "seed": 42,
+      "observed_rows": 64,
+      "probe_mode": "sweep",
+      "line_precision": 0.9630188679245283,
+      "line_recall": 0.996875,
+      "line_fpr": 0.0010346283783783784,
+      "no_outliers_fpr": 0.0002672697368421053,
+      "no_gather_fpr": 0.000575657894736842,
+      "calibration_balanced_accuracy": 1.0,
+      "cache_check_passed": true,
+      "actual_columns": [
+        204,
+        912,
+        2006,
+        2253
+      ],
+      "group_scores": {
+        "consensus": {
+          "raw": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 192,
+              "column_start": 192,
+              "column_end_exclusive": 224,
+              "candidate_groups": [
+                192
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 896,
+              "column_start": 896,
+              "column_end_exclusive": 928,
+              "candidate_groups": [
+                896
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1984,
+              "column_start": 1984,
+              "column_end_exclusive": 2016,
+              "candidate_groups": [
+                1984
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2240,
+              "column_start": 2240,
+              "column_end_exclusive": 2272,
+              "candidate_groups": [
+                2240
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        },
+        "control_adjusted": {
+          "raw": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 192,
+              "column_start": 192,
+              "column_end_exclusive": 224,
+              "candidate_groups": [
+                192
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 896,
+              "column_start": 896,
+              "column_end_exclusive": 928,
+              "candidate_groups": [
+                896
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1984,
+              "column_start": 1984,
+              "column_end_exclusive": 2016,
+              "candidate_groups": [
+                1984
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2240,
+              "column_start": 2240,
+              "column_end_exclusive": 2272,
+              "candidate_groups": [
+                2240
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run": "prefill-four-rows",
+      "seed": 42,
+      "observed_rows": 4,
+      "probe_mode": "sweep",
+      "line_precision": 0.3065134099616858,
+      "line_recall": 1.0,
+      "line_fpr": 0.06114864864864865,
+      "no_outliers_fpr": 0.05592105263157895,
+      "no_gather_fpr": 0.06085526315789474,
+      "calibration_balanced_accuracy": 1.0,
+      "cache_check_passed": true,
+      "actual_columns": [
+        204,
+        912,
+        2006,
+        2253
+      ],
+      "group_scores": {
+        "consensus": {
+          "raw": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 192,
+              "column_start": 192,
+              "column_end_exclusive": 224,
+              "candidate_groups": [
+                192
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 896,
+              "column_start": 896,
+              "column_end_exclusive": 928,
+              "candidate_groups": [
+                896
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1984,
+              "column_start": 1984,
+              "column_end_exclusive": 2016,
+              "candidate_groups": [
+                1984
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2240,
+              "column_start": 2240,
+              "column_end_exclusive": 2272,
+              "candidate_groups": [
+                2240
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        },
+        "control_adjusted": {
+          "raw": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 192,
+              "column_start": 192,
+              "column_end_exclusive": 224,
+              "candidate_groups": [
+                192
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 896,
+              "column_start": 896,
+              "column_end_exclusive": 928,
+              "candidate_groups": [
+                896
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1984,
+              "column_start": 1984,
+              "column_end_exclusive": 2016,
+              "candidate_groups": [
+                1984
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2240,
+              "column_start": 2240,
+              "column_end_exclusive": 2272,
+              "candidate_groups": [
+                2240
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run": "prefill-two-rows-single",
+      "seed": 42,
+      "observed_rows": 2,
+      "probe_mode": "single",
+      "line_precision": 1.0,
+      "line_recall": 1.0,
+      "line_fpr": 0.0,
+      "no_outliers_fpr": 0.0,
+      "no_gather_fpr": 0.0,
+      "calibration_balanced_accuracy": 1.0,
+      "cache_check_passed": true,
+      "actual_columns": [
+        204,
+        912,
+        2006,
+        2253
+      ],
+      "group_scores": {
+        "consensus": {
+          "raw": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 192,
+              "column_start": 192,
+              "column_end_exclusive": 224,
+              "candidate_groups": [
+                192
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 896,
+              "column_start": 896,
+              "column_end_exclusive": 928,
+              "candidate_groups": [
+                896
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1984,
+              "column_start": 1984,
+              "column_end_exclusive": 2016,
+              "candidate_groups": [
+                1984
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2240,
+              "column_start": 2240,
+              "column_end_exclusive": 2272,
+              "candidate_groups": [
+                2240
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        },
+        "control_adjusted": {
+          "raw": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "actual_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "matched_groups": [
+              192,
+              896,
+              1984,
+              2240
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 192,
+              "column_start": 192,
+              "column_end_exclusive": 224,
+              "candidate_groups": [
+                192
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 896,
+              "column_start": 896,
+              "column_end_exclusive": 928,
+              "candidate_groups": [
+                896
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1984,
+              "column_start": 1984,
+              "column_end_exclusive": 2016,
+              "candidate_groups": [
+                1984
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2240,
+              "column_start": 2240,
+              "column_end_exclusive": 2272,
+              "candidate_groups": [
+                2240
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run": "prefill-seed43",
+      "seed": 43,
+      "observed_rows": 64,
+      "probe_mode": "sweep",
+      "line_precision": 0.8898954703832752,
+      "line_recall": 0.99765625,
+      "line_fpr": 0.003336148648648649,
+      "no_outliers_fpr": 0.0005139802631578947,
+      "no_gather_fpr": 2.055921052631579e-05,
+      "calibration_balanced_accuracy": 1.0,
+      "cache_check_passed": true,
+      "actual_columns": [
+        315,
+        1179,
+        2343,
+        3789
+      ],
+      "group_scores": {
+        "consensus": {
+          "raw": {
+            "predicted_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "actual_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "matched_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "actual_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "matched_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 288,
+              "column_start": 288,
+              "column_end_exclusive": 320,
+              "candidate_groups": [
+                288
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1152,
+              "column_start": 1152,
+              "column_end_exclusive": 1184,
+              "candidate_groups": [
+                1152
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2336,
+              "column_start": 2336,
+              "column_end_exclusive": 2368,
+              "candidate_groups": [
+                2336
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 3776,
+              "column_start": 3776,
+              "column_end_exclusive": 3808,
+              "candidate_groups": [
+                3776
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        },
+        "control_adjusted": {
+          "raw": {
+            "predicted_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "actual_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "matched_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "leading_group": {
+            "predicted_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "actual_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "matched_groups": [
+              288,
+              1152,
+              2336,
+              3776
+            ],
+            "false_positive_groups": [],
+            "missed_groups": [],
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "tn": 148,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "jaccard": 1.0,
+            "accuracy": 1.0,
+            "exact_match": true
+          },
+          "candidate_runs": [
+            {
+              "guessed_group": 288,
+              "column_start": 288,
+              "column_end_exclusive": 320,
+              "candidate_groups": [
+                288
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 1152,
+              "column_start": 1152,
+              "column_end_exclusive": 1184,
+              "candidate_groups": [
+                1152
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 2336,
+              "column_start": 2336,
+              "column_end_exclusive": 2368,
+              "candidate_groups": [
+                2336
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            },
+            {
+              "guessed_group": 3776,
+              "column_start": 3776,
+              "column_end_exclusive": 3808,
+              "candidate_groups": [
+                3776
+              ],
+              "following_groups": [],
+              "guessed_group_is_actual": true,
+              "following_actual_groups": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "scope": "Four historical synthetic CPU cache runs; their settings differ from the matched Figure 4 comparison."
+}

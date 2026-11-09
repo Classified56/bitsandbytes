@@ -1,0 +1,5 @@
+row_count,observed_rows,row_hit_fraction,min_row_fraction,min_control_delta,selector,processing,tp,fp,fn,tn,precision,recall,f1,jaccard,accuracy,exact_match,predicted_groups,actual_groups
+4,"[0, 1, 2, 3]",0.6,0.5,0.5,consensus,raw,4,1,0,147,0.8,1.0,0.8888888888888888,0.8,0.993421052631579,False,"[192, 224, 896, 1984, 2240]","[192, 896, 1984, 2240]"
+4,"[0, 1, 2, 3]",0.6,0.5,0.5,consensus,leading_group,4,0,0,148,1.0,1.0,1.0,1.0,1.0,True,"[192, 896, 1984, 2240]","[192, 896, 1984, 2240]"
+4,"[0, 1, 2, 3]",0.6,0.5,0.5,control_adjusted,raw,4,1,0,147,0.8,1.0,0.8888888888888888,0.8,0.993421052631579,False,"[192, 224, 896, 1984, 2240]","[192, 896, 1984, 2240]"
+4,"[0, 1, 2, 3]",0.6,0.5,0.5,control_adjusted,leading_group,4,0,0,148,1.0,1.0,1.0,1.0,1.0,True,"[192, 896, 1984, 2240]","[192, 896, 1984, 2240]"

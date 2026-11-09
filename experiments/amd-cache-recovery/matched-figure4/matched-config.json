@@ -1,0 +1,17 @@
+{
+  "tokens": 64,
+  "intermediate": 4864,
+  "hidden": 896,
+  "outliers": 4,
+  "threshold": 32,
+  "repeats": 5,
+  "probe_stride": 5,
+  "probe_rows": 4,
+  "row_start": 0,
+  "probe_mode": "sweep",
+  "flush_scope": "observed",
+  "row_hit_fraction": 0.6,
+  "min_row_fraction": 0.5,
+  "min_control_delta": 0.5,
+  "seed": 42
+}
