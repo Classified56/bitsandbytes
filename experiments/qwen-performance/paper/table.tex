@@ -1,0 +1,29 @@
+\begin{table}[t]
+    \centering
+    \caption{Qwen2.5-0.5B inference performance. DQ denotes dynamic
+    quantization with outlier correction. TTFT is the median of 10 warm
+    requests with 128 input tokens, batch size 1, and four CPU threads;
+    model loading and compilation are excluded.}
+    \label{tab:architecture-performance}
+    \footnotesize
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{@{}lrr@{}}
+        \hline
+        Execution configuration & TTFT (ms) & Peak memory (MiB) \\
+        \hline
+        Intel CPU, without DQ          & 293.17 & 2301.68 \\
+        Intel CPU, with DQ             & 598.33 & 1306.64 \\
+        AMD CPU, without DQ            & 331.40 & 2322.67 \\
+        AMD CPU, with DQ               & 214.02 & 1383.15 \\
+        AMD CPU+NPU, without DQ        & 725.41 & 1913.98 \\
+        AMD CPU+NPU, with DQ           & 816.72 & 1609.84 \\
+        Rocket+Gemmini, with DQ & TBD & TBD \\
+        \hline
+    \end{tabular}
+    \vspace{2pt}
+    \parbox{\columnwidth}{\scriptsize Peak memory is sampled inference-phase
+    host RSS plus mapped NPU buffer allocation in shared DDR; the latter is
+    excluded from RSS and is not a separate physical-residency measurement.
+    CPU baselines use FP32. Single-core NPU matmuls use BF16 without DQ; DQ uses INT8 with
+    FP32 CPU outlier correction. Rocket+Gemmini is not measured here.}
+\end{table}

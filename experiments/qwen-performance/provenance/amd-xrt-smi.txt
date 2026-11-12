@@ -1,0 +1,33 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+System Configuration
+  OS Name              : Linux
+  Release              : 7.0.0-42-generic
+  Machine              : x86_64
+  CPU Cores            : 16
+  Memory               : 15092 MB
+  Distribution         : Ubuntu 24.04.4 LTS
+  GLIBC                : 2.39
+  Model                : B650M GAMING PLUS WIFI
+  BIOS Vendor          : American Megatrends International, LLC.
+  BIOS Version         : F34
+  Processor            : AMD Ryzen 7 8700G w/ Radeon 780M Graphics
+
+XRT
+  Version              : 2.21.75
+  Branch               : HEAD
+  Hash                 : 4eb1f4392a012b4e6eca759762389c612537f7c7
+  Hash Date            : 2026-03-09 20:30:37
+  amdxdna Version      : 7.0.0-42-generic
+  virtio-pci Version   : 7.0.0-42-generic
+  NPU Firmware Version : 1.5.5.391
+
+Device(s) Present
+|BDF             |Name          |
+|----------------|--------------|
+|[0000:10:00.1]  |RyzenAI-npu1  |
+
+

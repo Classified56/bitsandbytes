@@ -1,0 +1,13 @@
+--- upstream/single_core.py
++++ code/single_core.py
+@@ -134,7 +134,9 @@
+         trace=1 if trace_config else 0,
+     )
+ 
+-    rows_per_block = 4
++    # Wide Qwen FFN matrices need multiple shim BDs per transfer. Keep only
++    # one tile row in each ping-pong group to stay within XDNA1's 16-BD limit.
++    rows_per_block = 2
+ 
+     A_tiles = TensorAccessPattern.full((M, K)).tile((m, k))
+     if b_col_maj:

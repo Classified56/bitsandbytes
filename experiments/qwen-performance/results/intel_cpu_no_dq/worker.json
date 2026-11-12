@@ -1,0 +1,309 @@
+{
+  "configuration": {
+    "label": "intel_cpu_no_dq",
+    "backend": "cpu",
+    "dq": 0,
+    "runs": 10,
+    "warmups": 2
+  },
+  "pid": 365316,
+  "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+  "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "torch_threads": 4,
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.11.0+cpu",
+    "transformers": "4.57.1",
+    "numpy": "2.2.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "mlir-aie": null,
+    "llvm-aie": null
+  },
+  "bitsandbytes_source_commit": "c593d6f9debc17253c6b74fd6c2c1dbceecc4fcd",
+  "bitsandbytes_source_version": "0.50.3.dev0",
+  "cpu_int8_backend": "FP32 matmul fallback",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "host_dtype": "float32",
+  "offload_dtype": null,
+  "dq_activation_quant_input_dtype": null,
+  "dq_threshold": null,
+  "attn_implementation": "eager",
+  "batch_size": 1,
+  "input_tokens": 128,
+  "output_tokens": 1,
+  "prompt_name": "prompt_1",
+  "prefix_reuse": false,
+  "use_cache": true,
+  "prefill": "one batched 128-token forward",
+  "allocator_policy": "gc.collect and malloc_trim once after model preparation, before warmups; no trimming during timed inference",
+  "replaced_modules": [],
+  "npu_tensor_bytes": 0,
+  "npu_mappings": [],
+  "npu_mapped_kib": 0,
+  "load_and_prepare_s": 0.41908067400800064,
+  "memory_ready": {
+    "VmHWM_kib": 3297620,
+    "VmRSS_kib": 2356508,
+    "VmSwap_kib": 0
+  },
+  "memory_after": {
+    "VmHWM_kib": 3297620,
+    "VmRSS_kib": 2356924,
+    "VmSwap_kib": 0
+  },
+  "lifetime_maxrss_kib": 3297620,
+  "warmups": [
+    {
+      "ttft_ms": 294.460387,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0
+    },
+    {
+      "ttft_ms": 291.99268,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0
+    }
+  ],
+  "runs": [
+    {
+      "ttft_ms": 297.734853,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 1,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356732,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 292.612598,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 2,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356880,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 293.840651,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 3,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356880,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 293.03487,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 4,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356880,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 292.72848,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 5,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356892,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 296.94686,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 6,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356892,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 293.85052,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 7,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356892,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 292.346945,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 8,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356892,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 293.313695,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 9,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356924,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 292.908634,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "run": 10,
+      "memory_after": {
+        "VmHWM_kib": 3297620,
+        "VmRSS_kib": 2356924,
+        "VmSwap_kib": 0
+      }
+    }
+  ],
+  "validations": [
+    {
+      "prompt": "prompt_1",
+      "ttft_ms": 300.191916,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "top_token_ids": [
+        646,
+        374,
+        11,
+        448,
+        429
+      ],
+      "top_logits": [
+        19.674583435058594,
+        19.573932647705078,
+        18.865951538085938,
+        18.800992965698242,
+        18.432510375976562
+      ]
+    },
+    {
+      "prompt": "prompt_2",
+      "ttft_ms": 291.071149,
+      "first_token": 3015,
+      "first_text": " water",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "top_token_ids": [
+        3015,
+        8968,
+        33136,
+        16486,
+        47898
+      ],
+      "top_logits": [
+        18.752906799316406,
+        17.278430938720703,
+        15.8905668258667,
+        15.373387336730957,
+        14.922271728515625
+      ]
+    },
+    {
+      "prompt": "prompt_3",
+      "ttft_ms": 295.81399,
+      "first_token": 4938,
+      "first_text": " memory",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 0,
+      "outlier_columns_sum": 0,
+      "top_token_ids": [
+        4938,
+        22038,
+        279,
+        3971,
+        264
+      ],
+      "top_logits": [
+        23.013578414916992,
+        18.304475784301758,
+        17.553085327148438,
+        17.207462310791016,
+        17.108949661254883
+      ]
+    }
+  ]
+}

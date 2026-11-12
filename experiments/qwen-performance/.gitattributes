@@ -1,0 +1,5 @@
+# Preserve verbatim kernel/runtime output and patch context whitespace.
+**/smaps-ready.txt -whitespace
+**/worker.log -whitespace
+provenance/amd-xrt-smi.txt -whitespace
+provenance/single-core-dma.patch -whitespace

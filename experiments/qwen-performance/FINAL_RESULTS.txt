@@ -1,0 +1,24 @@
+Qwen2.5-0.5B | 128 input tokens | batch 1 | first output token | 4 CPU threads
+2 warmups + 10 measured requests/configuration | median TTFT | no prefix reuse
+
+| Configuration                  | TTFT median (ms) | TTFT min-max (ms) | Peak memory (MiB) |
+|--------------------------------|------------------|-------------------|-------------------|
+| Intel CPU, without DQ          |           293.17 |     292.35-297.73 |           2301.68 |
+| Intel CPU, with DQ             |           598.33 |     593.40-603.98 |           1306.64 |
+| AMD CPU, without DQ            |           331.40 |     330.74-332.57 |           2322.67 |
+| AMD CPU, with DQ               |           214.02 |     213.06-215.25 |           1383.15 |
+| AMD CPU+NPU, without DQ        |           725.41 |     687.24-737.89 |           1913.98 |
+| AMD CPU+NPU, with DQ           |           816.72 |     791.66-855.11 |           1609.84 |
+
+| Configuration                  | Peak host RSS (MiB) | NPU mapped allocation (MiB) |
+|--------------------------------|---------------------|-----------------------------|
+| Intel CPU, without DQ          |             2301.68 |                        0.00 |
+| Intel CPU, with DQ             |             1306.64 |                        0.00 |
+| AMD CPU, without DQ            |             2322.67 |                        0.00 |
+| AMD CPU, with DQ               |             1383.15 |                        0.00 |
+| AMD CPU+NPU, without DQ        |             1162.32 |                      751.66 |
+| AMD CPU+NPU, with DQ           |             1200.35 |                      409.49 |
+
+Peak memory = inference-phase host RSS + mapped NPU buffer allocation (shared DDR, excluded from RSS).
+NPU mapping size is allocated/mapped memory; physical residency was not separately measured.
+Loading/JIT excluded. CPU FP32; non-DQ NPU matmuls BF16; DQ threshold 6.0, INT8 + FP32 outlier correction.

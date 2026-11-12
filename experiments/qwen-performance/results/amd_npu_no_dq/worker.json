@@ -1,0 +1,1547 @@
+{
+  "configuration": {
+    "label": "amd_npu_no_dq",
+    "backend": "npu",
+    "dq": 0,
+    "runs": 10,
+    "warmups": 2
+  },
+  "pid": 60443,
+  "cpu": "AMD Ryzen 7 8700G w/ Radeon 780M Graphics",
+  "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39",
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "torch_threads": 4,
+  "python": "3.12.3",
+  "packages": {
+    "torch": "2.11.0+cpu",
+    "transformers": "4.57.1",
+    "numpy": "2.2.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "mlir-aie": "1.4.4",
+    "llvm-aie": "22.0.0.2026092101+0006955e"
+  },
+  "bitsandbytes_source_commit": "c593d6f9debc17253c6b74fd6c2c1dbceecc4fcd",
+  "bitsandbytes_source_version": "0.50.3.dev0",
+  "cpu_int8_backend": "torch._int_mm",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "host_dtype": "float32",
+  "offload_dtype": "bfloat16/float32",
+  "dq_activation_quant_input_dtype": null,
+  "dq_threshold": null,
+  "attn_implementation": "eager",
+  "batch_size": 1,
+  "input_tokens": 128,
+  "output_tokens": 1,
+  "prompt_name": "prompt_1",
+  "prefix_reuse": false,
+  "use_cache": true,
+  "prefill": "one batched 128-token forward",
+  "allocator_policy": "gc.collect and malloc_trim once after model preparation, before warmups; no trimming during timed inference",
+  "replaced_modules": [
+    "model.layers.0.self_attn.q_proj",
+    "model.layers.0.self_attn.k_proj",
+    "model.layers.0.self_attn.v_proj",
+    "model.layers.0.self_attn.o_proj",
+    "model.layers.0.mlp.gate_proj",
+    "model.layers.0.mlp.up_proj",
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.self_attn.q_proj",
+    "model.layers.1.self_attn.k_proj",
+    "model.layers.1.self_attn.v_proj",
+    "model.layers.1.self_attn.o_proj",
+    "model.layers.1.mlp.gate_proj",
+    "model.layers.1.mlp.up_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.2.self_attn.q_proj",
+    "model.layers.2.self_attn.k_proj",
+    "model.layers.2.self_attn.v_proj",
+    "model.layers.2.self_attn.o_proj",
+    "model.layers.2.mlp.gate_proj",
+    "model.layers.2.mlp.up_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.self_attn.q_proj",
+    "model.layers.3.self_attn.k_proj",
+    "model.layers.3.self_attn.v_proj",
+    "model.layers.3.self_attn.o_proj",
+    "model.layers.3.mlp.gate_proj",
+    "model.layers.3.mlp.up_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.self_attn.q_proj",
+    "model.layers.4.self_attn.k_proj",
+    "model.layers.4.self_attn.v_proj",
+    "model.layers.4.self_attn.o_proj",
+    "model.layers.4.mlp.gate_proj",
+    "model.layers.4.mlp.up_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.self_attn.q_proj",
+    "model.layers.5.self_attn.k_proj",
+    "model.layers.5.self_attn.v_proj",
+    "model.layers.5.self_attn.o_proj",
+    "model.layers.5.mlp.gate_proj",
+    "model.layers.5.mlp.up_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.self_attn.q_proj",
+    "model.layers.6.self_attn.k_proj",
+    "model.layers.6.self_attn.v_proj",
+    "model.layers.6.self_attn.o_proj",
+    "model.layers.6.mlp.gate_proj",
+    "model.layers.6.mlp.up_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.self_attn.q_proj",
+    "model.layers.7.self_attn.k_proj",
+    "model.layers.7.self_attn.v_proj",
+    "model.layers.7.self_attn.o_proj",
+    "model.layers.7.mlp.gate_proj",
+    "model.layers.7.mlp.up_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.self_attn.q_proj",
+    "model.layers.8.self_attn.k_proj",
+    "model.layers.8.self_attn.v_proj",
+    "model.layers.8.self_attn.o_proj",
+    "model.layers.8.mlp.gate_proj",
+    "model.layers.8.mlp.up_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.self_attn.q_proj",
+    "model.layers.9.self_attn.k_proj",
+    "model.layers.9.self_attn.v_proj",
+    "model.layers.9.self_attn.o_proj",
+    "model.layers.9.mlp.gate_proj",
+    "model.layers.9.mlp.up_proj",
+    "model.layers.9.mlp.down_proj",
+    "model.layers.10.self_attn.q_proj",
+    "model.layers.10.self_attn.k_proj",
+    "model.layers.10.self_attn.v_proj",
+    "model.layers.10.self_attn.o_proj",
+    "model.layers.10.mlp.gate_proj",
+    "model.layers.10.mlp.up_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.self_attn.q_proj",
+    "model.layers.11.self_attn.k_proj",
+    "model.layers.11.self_attn.v_proj",
+    "model.layers.11.self_attn.o_proj",
+    "model.layers.11.mlp.gate_proj",
+    "model.layers.11.mlp.up_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.self_attn.q_proj",
+    "model.layers.12.self_attn.k_proj",
+    "model.layers.12.self_attn.v_proj",
+    "model.layers.12.self_attn.o_proj",
+    "model.layers.12.mlp.gate_proj",
+    "model.layers.12.mlp.up_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.self_attn.q_proj",
+    "model.layers.13.self_attn.k_proj",
+    "model.layers.13.self_attn.v_proj",
+    "model.layers.13.self_attn.o_proj",
+    "model.layers.13.mlp.gate_proj",
+    "model.layers.13.mlp.up_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.self_attn.q_proj",
+    "model.layers.14.self_attn.k_proj",
+    "model.layers.14.self_attn.v_proj",
+    "model.layers.14.self_attn.o_proj",
+    "model.layers.14.mlp.gate_proj",
+    "model.layers.14.mlp.up_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.self_attn.q_proj",
+    "model.layers.15.self_attn.k_proj",
+    "model.layers.15.self_attn.v_proj",
+    "model.layers.15.self_attn.o_proj",
+    "model.layers.15.mlp.gate_proj",
+    "model.layers.15.mlp.up_proj",
+    "model.layers.15.mlp.down_proj",
+    "model.layers.16.self_attn.q_proj",
+    "model.layers.16.self_attn.k_proj",
+    "model.layers.16.self_attn.v_proj",
+    "model.layers.16.self_attn.o_proj",
+    "model.layers.16.mlp.gate_proj",
+    "model.layers.16.mlp.up_proj",
+    "model.layers.16.mlp.down_proj",
+    "model.layers.17.self_attn.q_proj",
+    "model.layers.17.self_attn.k_proj",
+    "model.layers.17.self_attn.v_proj",
+    "model.layers.17.self_attn.o_proj",
+    "model.layers.17.mlp.gate_proj",
+    "model.layers.17.mlp.up_proj",
+    "model.layers.17.mlp.down_proj",
+    "model.layers.18.self_attn.q_proj",
+    "model.layers.18.self_attn.k_proj",
+    "model.layers.18.self_attn.v_proj",
+    "model.layers.18.self_attn.o_proj",
+    "model.layers.18.mlp.gate_proj",
+    "model.layers.18.mlp.up_proj",
+    "model.layers.18.mlp.down_proj",
+    "model.layers.19.self_attn.q_proj",
+    "model.layers.19.self_attn.k_proj",
+    "model.layers.19.self_attn.v_proj",
+    "model.layers.19.self_attn.o_proj",
+    "model.layers.19.mlp.gate_proj",
+    "model.layers.19.mlp.up_proj",
+    "model.layers.19.mlp.down_proj",
+    "model.layers.20.self_attn.q_proj",
+    "model.layers.20.self_attn.k_proj",
+    "model.layers.20.self_attn.v_proj",
+    "model.layers.20.self_attn.o_proj",
+    "model.layers.20.mlp.gate_proj",
+    "model.layers.20.mlp.up_proj",
+    "model.layers.20.mlp.down_proj",
+    "model.layers.21.self_attn.q_proj",
+    "model.layers.21.self_attn.k_proj",
+    "model.layers.21.self_attn.v_proj",
+    "model.layers.21.self_attn.o_proj",
+    "model.layers.21.mlp.gate_proj",
+    "model.layers.21.mlp.up_proj",
+    "model.layers.21.mlp.down_proj",
+    "model.layers.22.self_attn.q_proj",
+    "model.layers.22.self_attn.k_proj",
+    "model.layers.22.self_attn.v_proj",
+    "model.layers.22.self_attn.o_proj",
+    "model.layers.22.mlp.gate_proj",
+    "model.layers.22.mlp.up_proj",
+    "model.layers.22.mlp.down_proj",
+    "model.layers.23.self_attn.q_proj",
+    "model.layers.23.self_attn.k_proj",
+    "model.layers.23.self_attn.v_proj",
+    "model.layers.23.self_attn.o_proj",
+    "model.layers.23.mlp.gate_proj",
+    "model.layers.23.mlp.up_proj",
+    "model.layers.23.mlp.down_proj"
+  ],
+  "npu_tensor_bytes": 721059840,
+  "npu_mappings": [
+    {
+      "mapping": "73edba515000-73edba585000 rw-s 12ef39000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 448,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edba585000-73edba6b5000 rw-s 12ee09000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1216,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbaeb6000-73edbb116000 rw-s 12eba9000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 2432,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbb116000-73edbb14e000 rw-s 12eb71000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbb94f000-73edbb987000 rw-s 12eb29000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbc288000-73edbc2f8000 rw-s 12eab8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 448,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbc2f8000-73edbc330000 rw-s 12ea80000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbc330000-73edbcb80000 rw-s 12e230000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbcb80000-73edbd3d0000 rw-s 12d9e0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbd3d0000-73edbdc20000 rw-s 12d190000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbdc20000-73edbdda8000 rw-s 12d008000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbdda8000-73edbdde0000 rw-s 12cfd0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbdde0000-73edbde18000 rw-s 12cf98000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbde18000-73edbdfa0000 rw-s 12ce10000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbdfa0000-73edbe7f0000 rw-s 12c5c0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbe7f0000-73edbf040000 rw-s 12bd70000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbf040000-73edbf890000 rw-s 12b520000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbf890000-73edbfa18000 rw-s 12b398000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbfa18000-73edbfa50000 rw-s 12b360000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbfa50000-73edbfa88000 rw-s 12b328000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbfa88000-73edbfc10000 rw-s 12b1a0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edbfc10000-73edc0460000 rw-s 12a950000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc0460000-73edc0cb0000 rw-s 12a100000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc0cb0000-73edc1500000 rw-s 1298b0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc1500000-73edc1688000 rw-s 129728000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc1688000-73edc16c0000 rw-s 1296f0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc16c0000-73edc16f8000 rw-s 1296b8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc16f8000-73edc1880000 rw-s 129530000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc1880000-73edc20d0000 rw-s 128ce0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc20d0000-73edc2920000 rw-s 128490000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc2920000-73edc3170000 rw-s 127c40000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc3170000-73edc32f8000 rw-s 127ab8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc32f8000-73edc3330000 rw-s 127a80000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc3330000-73edc3368000 rw-s 127a48000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc3368000-73edc34f0000 rw-s 1278c0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc34f0000-73edc3d40000 rw-s 127070000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc3d40000-73edc4590000 rw-s 126820000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc4590000-73edc4de0000 rw-s 125fd0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc4de0000-73edc4f68000 rw-s 125e48000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc4f68000-73edc4fa0000 rw-s 125e10000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc4fa0000-73edc4fd8000 rw-s 125dd8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc4fd8000-73edc5160000 rw-s 125c50000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc5160000-73edc59b0000 rw-s 125400000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc59b0000-73edc6200000 rw-s 124bb0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc6200000-73edc6a50000 rw-s 124360000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc6a50000-73edc6bd8000 rw-s 1241d8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc6bd8000-73edc6c10000 rw-s 1241a0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc6c10000-73edc6c48000 rw-s 124168000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc6c48000-73edc6dd0000 rw-s 123fe0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc6dd0000-73edc7620000 rw-s 123790000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc7620000-73edc7e70000 rw-s 122f40000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc7e70000-73edc86c0000 rw-s 1226f0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc86c0000-73edc8848000 rw-s 122568000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc8848000-73edc8880000 rw-s 122530000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc8880000-73edc88b8000 rw-s 1224f8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc88b8000-73edc8a40000 rw-s 122370000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc8a40000-73edc9290000 rw-s 121b20000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc9290000-73edc9ae0000 rw-s 1212d0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edc9ae0000-73edca330000 rw-s 120a80000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edca330000-73edca4b8000 rw-s 1208f8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edca4b8000-73edca4f0000 rw-s 1208c0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edca4f0000-73edca528000 rw-s 120888000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edca528000-73edca6b0000 rw-s 120700000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edca6b0000-73edcaf00000 rw-s 11feb0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcaf00000-73edcb750000 rw-s 11f660000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcb750000-73edcbfa0000 rw-s 11ee10000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcbfa0000-73edcc128000 rw-s 11ec88000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcc128000-73edcc160000 rw-s 11ec50000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcc160000-73edcc198000 rw-s 11ec18000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcc198000-73edcc320000 rw-s 11ea90000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcc320000-73edccb70000 rw-s 11e240000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edccb70000-73edcd3c0000 rw-s 11d9f0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcd3c0000-73edcdc10000 rw-s 11d1a0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcdc10000-73edcdd98000 rw-s 11d018000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcdd98000-73edcddd0000 rw-s 11cfe0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcddd0000-73edcde08000 rw-s 11cfa8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcde08000-73edcdf90000 rw-s 11ce20000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcdf90000-73edce7e0000 rw-s 11c5d0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edce7e0000-73edcf030000 rw-s 11bd80000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcf030000-73edcf880000 rw-s 11b530000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcf880000-73edcfa08000 rw-s 11b3a8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcfa08000-73edcfa40000 rw-s 11b370000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcfa40000-73edcfa78000 rw-s 11b338000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcfa78000-73edcfc00000 rw-s 11b1b0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edcfc00000-73edd0450000 rw-s 11a960000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd0450000-73edd0ca0000 rw-s 11a110000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd0ca0000-73edd14f0000 rw-s 1198c0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd14f0000-73edd1678000 rw-s 119738000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd1678000-73edd16b0000 rw-s 119700000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd16b0000-73edd16e8000 rw-s 1196c8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd16e8000-73edd1870000 rw-s 119540000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd1870000-73edd20c0000 rw-s 118cf0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd20c0000-73edd2910000 rw-s 1184a0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd2910000-73edd3160000 rw-s 117c50000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd3160000-73edd32e8000 rw-s 117ac8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd32e8000-73edd3320000 rw-s 117a90000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd3320000-73edd3358000 rw-s 117a58000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd3358000-73edd34e0000 rw-s 1178d0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd34e0000-73edd3d30000 rw-s 117080000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd3d30000-73edd4580000 rw-s 116830000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd4580000-73edd4dd0000 rw-s 115fe0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd4dd0000-73edd4f58000 rw-s 115e58000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd4f58000-73edd50e0000 rw-s 115c60000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd50e0000-73edd5930000 rw-s 115410000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd5930000-73edd6180000 rw-s 114bc0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd6180000-73edd69d0000 rw-s 114370000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd69d0000-73edd6b58000 rw-s 1141e8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd6b58000-73edd6ce0000 rw-s 113ff0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd6ce0000-73edd7530000 rw-s 1137a0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd7530000-73edd7d80000 rw-s 112f50000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd7d80000-73edd85d0000 rw-s 112700000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd85d0000-73edd8e20000 rw-s 111b30000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd8e20000-73edd9670000 rw-s 1112e0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd9670000-73edd9ec0000 rw-s 110a90000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edd9ec0000-73edda710000 rw-s 10fec0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edda710000-73eddaf60000 rw-s 10f670000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73eddaf60000-73eddb7b0000 rw-s 10ee20000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73eddb7b0000-73eddc000000 rw-s 10e250000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73eddc000000-73ede0000000 rw-s 100000000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 65536,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ede0018000-73ede0050000 rw-s 115e20000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ede0050000-73ede01d8000 rw-s 112578000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ede01d8000-73ede0360000 rw-s 112380000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ede0360000-73ede0bb0000 rw-s 10da00000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ede0bb0000-73ede1400000 rw-s 10d1b0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edebe78000-73edec000000 rw-s 110908000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0000000-73edf0038000 rw-s 115de8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0038000-73edf0070000 rw-s 1141b0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0070000-73edf00a8000 rw-s 114178000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf00a8000-73edf00e0000 rw-s 112540000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf00e0000-73edf0118000 rw-s 112508000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0118000-73edf0150000 rw-s 1108d0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0150000-73edf0188000 rw-s 110898000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0188000-73edf0310000 rw-s 110710000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0410000-73edf0598000 rw-s 10ec98000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0598000-73edf05d0000 rw-s 10ec60000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf05d0000-73edf0608000 rw-s 10ec28000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0608000-73edf0790000 rw-s 10eaa0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0790000-73edf0918000 rw-s 10d028000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0918000-73edf0950000 rw-s 10cff0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0950000-73edf0988000 rw-s 10cfb8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0988000-73edf0b10000 rw-s 10ce30000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf0b10000-73edf1360000 rw-s 10c5e0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf1360000-73edf1bb0000 rw-s 10bd90000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf1bb0000-73edf2400000 rw-s 10b540000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf2400000-73edf2588000 rw-s 10b3b8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf2588000-73edf2710000 rw-s 10b1c0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf2710000-73edf2f60000 rw-s 10a970000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf2f60000-73edf37b0000 rw-s 10a120000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf37b0000-73edf4000000 rw-s 1098d0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8020000-73edf8058000 rw-s 10b380000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8058000-73edf8090000 rw-s 10b348000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8090000-73edf8218000 rw-s 109748000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8218000-73edf8250000 rw-s 109710000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8250000-73edf8288000 rw-s 1096d8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8288000-73edf8410000 rw-s 109550000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8410000-73edf8c60000 rw-s 108d00000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf8c60000-73edf94b0000 rw-s 1084b0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf94b0000-73edf9d00000 rw-s 107c60000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf9d00000-73edf9e88000 rw-s 107ad8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf9e88000-73edf9ec0000 rw-s 107aa0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edf9ec0000-73edfa710000 rw-s 107090000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edfa710000-73edfaf60000 rw-s 106840000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edfaf60000-73edfb7b0000 rw-s 105ff0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73edfb7b0000-73edfc000000 rw-s 105420000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee00021000-73ee00059000 rw-s 107a68000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee00059000-73ee001e1000 rw-s 1078e0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee001e1000-73ee00369000 rw-s 105e68000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee00369000-73ee003a1000 rw-s 105e30000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee003a1000-73ee003d9000 rw-s 105df8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee003d9000-73ee00561000 rw-s 105c70000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee00561000-73ee00db1000 rw-s 104bd0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee00db1000-73ee01601000 rw-s 104380000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 8512,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee01601000-73ee01789000 rw-s 1041f8000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee01789000-73ee01911000 rw-s 104000000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 1568,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee024f3000-73ee0252b000 rw-s 1041c0000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee29f46000-73ee29f7e000 rw-s 104188000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 224,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee45b0c000-73ee45b1c000 rw-s 12eb61000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 64,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    },
+    {
+      "mapping": "73ee53e13000-73ee53e14000 rw-s 12eb28000 00:07 937                       /dev/accel/accel0",
+      "Size_kib": 4,
+      "Rss_kib": 0,
+      "Pss_kib": 0
+    }
+  ],
+  "npu_mapped_kib": 769700,
+  "load_and_prepare_s": 1.052444545988692,
+  "memory_ready": {
+    "VmHWM_kib": 3311284,
+    "VmRSS_kib": 1096988,
+    "VmSwap_kib": 0
+  },
+  "memory_after": {
+    "VmHWM_kib": 3311284,
+    "VmRSS_kib": 1190220,
+    "VmSwap_kib": 0
+  },
+  "lifetime_maxrss_kib": 3311284,
+  "warmups": [
+    {
+      "ttft_ms": 895.160255,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0
+    },
+    {
+      "ttft_ms": 680.38618,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0
+    }
+  ],
+  "runs": [
+    {
+      "ttft_ms": 687.236252,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 1,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1105648,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 698.74069,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 2,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1108780,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 733.144805,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 3,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1120264,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 732.825789,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 4,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1131724,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 735.4824,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 5,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1142988,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 737.888426,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 6,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1154312,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 708.430666,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 7,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1162568,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 717.998859,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 8,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1173832,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 705.177465,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 9,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1182024,
+        "VmSwap_kib": 0
+      }
+    },
+    {
+      "ttft_ms": 734.200527,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "run": 10,
+      "memory_after": {
+        "VmHWM_kib": 3311284,
+        "VmRSS_kib": 1190220,
+        "VmSwap_kib": 0
+      }
+    }
+  ],
+  "validations": [
+    {
+      "prompt": "prompt_1",
+      "ttft_ms": 689.285893,
+      "first_token": 646,
+      "first_text": " can",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "top_token_ids": [
+        646,
+        374,
+        11,
+        448,
+        429
+      ],
+      "top_logits": [
+        19.67510986328125,
+        19.564292907714844,
+        18.875019073486328,
+        18.77825164794922,
+        18.429340362548828
+      ]
+    },
+    {
+      "prompt": "prompt_2",
+      "ttft_ms": 690.14394,
+      "first_token": 3015,
+      "first_text": " water",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "top_token_ids": [
+        3015,
+        8968,
+        33136,
+        16486,
+        47898
+      ],
+      "top_logits": [
+        18.732723236083984,
+        17.272216796875,
+        15.874994277954102,
+        15.368881225585938,
+        14.906278610229492
+      ]
+    },
+    {
+      "prompt": "prompt_3",
+      "ttft_ms": 692.923352,
+      "first_token": 4938,
+      "first_text": " memory",
+      "input_tokens": 128,
+      "output_tokens": 1,
+      "npu_dispatches": 168,
+      "outlier_columns_sum": 0,
+      "top_token_ids": [
+        4938,
+        22038,
+        279,
+        3971,
+        264
+      ],
+      "top_logits": [
+        22.975830078125,
+        18.284128189086914,
+        17.550025939941406,
+        17.202159881591797,
+        17.100889205932617
+      ]
+    }
+  ]
+}

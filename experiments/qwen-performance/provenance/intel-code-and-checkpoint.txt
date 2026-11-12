@@ -1,0 +1,36 @@
+0ac1aaf700061f17ddce89b28d19e583d815b9c82933bc48e29b1178bcb015c9  code/benchmark_worker.py
+a82f38f8ccb2f7ddbdea834827330284cbb9b3f7dcee33e2aae061365b95801c  code/download_model.py
+d835631a9245aaf991c2f140d9ae153bdb5d9dd34a95f7e29cd41495b678a83e  code/linear_backends.py
+54d2102e04b03a1e631e258ddb369f80ffee9766da86cbace884351adb717690  code/run_benchmark.py
+[
+  {
+    "file": "config.json",
+    "size": 681,
+    "sha256": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b"
+  },
+  {
+    "file": "tokenizer_config.json",
+    "size": 7228,
+    "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+  },
+  {
+    "file": "tokenizer.json",
+    "size": 7031645,
+    "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+  },
+  {
+    "file": "generation_config.json",
+    "size": 138,
+    "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8"
+  },
+  {
+    "file": "LICENSE",
+    "size": 11343,
+    "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+  },
+  {
+    "file": "model.safetensors",
+    "size": 988097824,
+    "sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342"
+  }
+]

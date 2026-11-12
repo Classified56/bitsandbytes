@@ -1,0 +1,7 @@
+We separately benchmarked Qwen2.5-0.5B on the Intel Core i7-10700 and AMD Ryzen 7 8700G using the same Torch and Transformers versions, prompt, and inference procedure, without cache probes.
+After two warmup requests, we measured ten requests with no prefix-cache reuse.
+The hybrid configurations offload all 168 transformer linear projections across 24 decoder blocks to synchronous, single-AIE-core NPU kernels; attention, nonlinear operations, and the output head remain on the CPU.
+DQ uses an activation threshold of 6.0 and CPU-side outlier gathering and correction.
+Table~\ref{tab:architecture-performance} reports implementation-specific performance: DQ lowers the measured memory footprint in all three execution settings, but reduces TTFT only for the AMD CPU in these tests.
+The Intel INT8 backend falls back to FP32 matrix multiplication, whereas the AMD CPU uses a native integer kernel.
+The hybrid implementation includes transfer and dispatch overheads and does not outperform the CPU baselines; these measurements do not represent optimized full-array NPU performance.

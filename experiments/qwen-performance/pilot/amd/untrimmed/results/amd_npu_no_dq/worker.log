@@ -1,0 +1,163 @@
+{"stage": "loading", "pid": 58520, "label": "amd_npu_no_dq", "cpus": [0, 1, 2, 3]}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/home/tianhong/qwen-performance-20261111/code/benchmark_worker.py", line 182, in <module>
+    main()
+  File "/home/tianhong/qwen-performance-20261111/code/benchmark_worker.py", line 123, in main
+    record,_=request(specs[0])
+             ^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/code/benchmark_worker.py", line 106, in request
+    output=model(**inputs,use_cache=True,logits_to_keep=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/utils/generic.py", line 918, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/models/qwen2/modeling_qwen2.py", line 449, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/utils/generic.py", line 1064, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/models/qwen2/modeling_qwen2.py", line 384, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/models/qwen2/modeling_qwen2.py", line 249, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/transformers/models/qwen2/modeling_qwen2.py", line 46, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                                           ^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/python-deps/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/code/linear_backends.py", line 73, in forward
+    y = self.pool.mm(x.reshape(-1, shape[-1]), self.npu_weight, self.out_features, False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/qwen-performance-20261111/code/linear_backends.py", line 53, in mm
+    kernel(a, weight, c)  # Synchronous real NPU dispatch; no CPU fallback.
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/npu-activity-experiment/cnn-venv/lib/python3.12/site-packages/mlir_aie/python/aie/utils/callabledesign.py", line 412, in __call__
+    kernel = self._compile_and_build_kernel(compilable, cache_key, trace_config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/npu-activity-experiment/cnn-venv/lib/python3.12/site-packages/mlir_aie/python/aie/utils/callabledesign.py", line 235, in _compile_and_build_kernel
+    xclbin_path, inst_path = compilable.compile()
+                             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianhong/npu-activity-experiment/cnn-venv/lib/python3.12/site-packages/mlir_aie/python/aie/utils/compile/jit/compilabledesign.py", line 659, in compile
+    compile_mlir_module(
+  File "/home/tianhong/npu-activity-experiment/cnn-venv/lib/python3.12/site-packages/mlir_aie/python/aie/utils/compile/utils.py", line 809, in compile_mlir_module
+    _run_aiecc(mlir_file, args, cwd=work_dir)
+  File "/home/tianhong/npu-activity-experiment/cnn-venv/lib/python3.12/site-packages/mlir_aie/python/aie/utils/compile/utils.py", line 651, in _run_aiecc
+    raise RuntimeError(
+RuntimeError: [aiecc] Compilation failed with exit code 1:
+[0/1] elfs_{0}.elf, [0/1] npu_dma_lowered.mlir/home/tianhong/.npu/cache/24c1f34959520562c8ee647e/aie.mlir:92:12: error: 'aiex.dma_configure_task' op Too many simultaneously active buffer descriptors on tile (0,0), which supports up to 16. Emit an aiex.dma_await_task to free BDs for reuse; it waits for hardware completion, so the recycled ids are no longer in flight. aiex.dma_free_task also recycles ids but does NOT wait for completion -- using it before the task has finished is a race -- so reach for it only when some other synchronization already guarantees completion (see programming_guide/section-2/section-2d/DMATasks.md). Or let the compiler poll for finished tasks and take their ids (reclaim-bds, aiecc --reclaim-runtime-bds), provided no task depends on a push issued after it.
+aiecc: edge 'npu_dma_lowered.mlir' (key 'input_with_addresses.mlir') failed
+aiecc: pipeline failed
+
+--- full aiecc log ---
+
+(0/49) input.mlir
+(1/49)           
+(1/49) [0/1] placed.mlir
+(2/49)                  
+(2/49) [0/1] traced.mlir
+(3/49)                  
+(3/49) [0/1] default_stack_size.mlir
+(4/49)                              
+(4/49) [0/1] input_with_symbols.mlir
+(5/49)                              
+(5/49) [0/1] input_physical.mlir
+(6/49)                          
+(6/49) deviceCacheLookup
+(7/49)                  
+(7/49) perCore_{0}.mlir
+(8/49)                 
+(8/49) lowered_{0}.mlir
+(9/49)                 
+(9/49) perCoreInDevice
+(10/49)               
+(10/49) [0/1] llvmIR_{0}.ll
+(11/49)                    
+(11/49) perCoreCompile
+(12/49)               
+(12/49) preBakedCores
+(14/49)              
+(14/49) [0/1] peano-compat_{0}.ll
+(15/49)                          
+(15/49) [0/1] perCoreStackSpace_{0}.txt
+(16/49)                                
+(16/49) [0/1] perCoreArches_{0}.txt
+(17/49)                            
+(17/49) [0/1] perCoreIRLinkFiles_{0}.txt
+(18/49)                                 
+(18/49) [0/1] probeScripts_{0}.ld.script
+(18/49) [0/1] peano-linked_{0}.ll, [0/1] probeScripts_{0}.ld.script
+(19/49) [0/1] probeScripts_{0}.ld.script                           
+(19/49) [0/1] opted_{0}.ll, [0/1] probeScripts_{0}.ld.script
+(20/49) [0/1] opted_{0}.ll                                  
+(21/49)                   
+(21/49) [0/1] objects_{0}.o
+(22/49)                    
+(22/49) [0/1] probeElfs_{0}.elf
+(23/49)                        
+(23/49) input_with_addresses.mlir
+(24/49)                          
+(24/49) placedCore_{0}.mlir
+(25/49)                    
+(25/49) sequencePlacement
+(26/49)                  
+(26/49) placedCoreCompile
+(27/49)                  
+(27/49) [0/1] npu_materialized.mlir
+(28/49)                            
+(28/49) [0/1] ldScripts_{0}.ld.script
+(29/49)                              
+(29/49) [0/1] npu_dma_lowered.mlir
+(29/49) [0/1] elfs_{0}.elf, [0/1] npu_dma_lowered.mlir/home/tianhong/.npu/cache/24c1f34959520562c8ee647e/aie.mlir:92:12: error: 'aiex.dma_configure_task' op Too many simultaneously active buffer descriptors on tile (0,0), which supports up to 16. Emit an aiex.dma_await_task to free BDs for reuse; it waits for hardware completion, so the recycled ids are no longer in flight. aiex.dma_free_task also recycles ids but does NOT wait for completion -- using it before the task has finished is a race -- so reach for it only when some other synchronization already guarantees completion (see programming_guide/section-2/section-2d/DMATasks.md). Or let the compiler poll for finished tasks and take their ids (reclaim-bds, aiecc --reclaim-runtime-bds), provided no task depends on a push issued after it.
+      %9 = aiex.dma_configure_task_for @inB {
+           ^
+/home/tianhong/.npu/cache/24c1f34959520562c8ee647e/aie.mlir:92:12: note: see current operation: 
+%81 = "aiex.dma_configure_task"(%13) <{channel = 1 : i32, direction = 1 : i32, issue_token = false, repeat_count = 63 : i32}> ({
+  "aie.dma_bd"(%arg1) <{operandSegmentSizes = array<i32: 1, 0, 0, 0, 0, 0>, static_len = 28672 : i32, static_offset = 1835008 : i32, static_sizes = array<i64: 64, 28, 32, 32>, static_strides = array<i64: 28672, 32, 896, 1>}> : (memref<4358144xbf16>) -> ()
+  "aie.end"() : () -> ()
+}) : (index) -> index
+
+(30/49)                                               
+aiecc: edge 'npu_dma_lowered.mlir' (key 'input_with_addresses.mlir') failed
+aiecc: pipeline failed
+

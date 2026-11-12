@@ -1,0 +1,42 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+aiofiles==25.1.0
+certifi==2026.10.23
+charset-normalizer==3.5.2
+cloudpickle==3.1.2
+eudsl-python-extras @ file:///tmp/tmp45sxqm25/download/eudsl_python_extras-0.1.0.20260914.759%2B4853bb0.tar.gz#sha256=844828b921e29f68494d1df71d81e06dcd30648a0ddc6ea293cbff80b80e21d5
+filelock==4.2.10
+fsspec==2026.9.0
+hf-xet==1.8.0
+huggingface_hub==0.36.2
+idna==3.20
+Jinja2==3.1.6
+llvm-aie==22.0.0.2026092101+0006955e
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+ml_dtypes==0.6.0
+mlir-aie @ https://github.com/Xilinx/mlir-aie/releases/download/v1.4.4/mlir_aie-1.4.4-cp312-cp312-manylinux_2_35_x86_64.whl#sha256=9a2b52fa8885a5592277dfb330ac8fda2a18019a96ae2fe6c7dfa44dc79bd6e2
+mpmath==1.3.0
+networkx==3.7
+numpy==2.2.6
+packaging==26.3
+pillow==12.3.0
+Pygments==2.21.0
+PyYAML==6.0.3
+regex==2026.11.9
+requests==2.34.2
+rich==15.0.0
+safetensors==0.8.0
+setuptools==78.1.0
+sympy==1.14.0
+tokenizers==0.22.2
+torch==2.11.0+cpu
+torchvision==0.29.1+cpu
+tqdm==4.70.1
+transformers==4.57.1
+typing_extensions==4.16.0
+urllib3==2.8.0

@@ -1,0 +1,17 @@
+{
+  "label": "amd_cpu_no_dq",
+  "runs": 10,
+  "ttft_median_ms": 331.400255,
+  "ttft_mean_ms": 331.4584983,
+  "ttft_min_ms": 330.743998,
+  "ttft_max_ms": 332.572642,
+  "host_peak_rss_mib": 2322.66796875,
+  "npu_mapped_allocation_mib": 0.0,
+  "peak_accounted_memory_mib": 2322.66796875,
+  "npu_tensor_allocation_mib": 0.0,
+  "rss_sample_count": 623,
+  "sampling_mean_interval_ms": 5.325089350482315,
+  "sampling_max_interval_ms": 5.491464,
+  "memory_definition": "Peak sampled host RSS plus mapped XRT BO allocation (shared DDR, zero RSS); warmed inference phase only. NPU mapping size is allocated/mapped memory, not separately measured physical residency.",
+  "ttft_definition": "Raw-text tokenization + fresh 128-token batched model forward + greedy first-token selection and text decode; excludes load, JIT, warmups, network, queueing."
+}
