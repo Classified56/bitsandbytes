@@ -1,0 +1,17 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "llama", "prompt": 0, "windows": 576, "seconds": 22.8}
+{"model": "llama", "prompt": 1, "windows": 1152, "seconds": 45.4}
+{"model": "llama", "prompt": 2, "windows": 1728, "seconds": 68.08}
+{"model": "llama", "prompt": 3, "windows": 2304, "seconds": 90.54}
+{"model": "llama", "prompt": 4, "windows": 2880, "seconds": 113.19}
+{"model": "llama", "prompt": 5, "windows": 3456, "seconds": 136.03}
+{"model": "llama", "prompt": 6, "windows": 4032, "seconds": 159.04}
+{"model": "llama", "prompt": 7, "windows": 4608, "seconds": 181.75}
+{"model": "llama", "prompt": 8, "windows": 5184, "seconds": 204.36}
+{"model": "llama", "prompt": 9, "windows": 5760, "seconds": 227.16}
+{"model": "llama", "prompt": 10, "windows": 6336, "seconds": 249.81}
+{"model": "llama", "prompt": 11, "windows": 6912, "seconds": 272.56}
+{"model": "llama", "prompt": 12, "windows": 7488, "seconds": 295.66}
+{"model": "llama", "prompt": 13, "windows": 8064, "seconds": 318.48}
+{"model": "llama", "prompt": 14, "windows": 8640, "seconds": 341.07}
+{"model": "llama", "prompt": 15, "windows": 9216, "seconds": 364.12}

@@ -1,0 +1,5141 @@
+{
+  "model": null,
+  "rows": [
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 3856,
+        "fn": 0,
+        "tn": 3544,
+        "fpr": 0.5210810810810811,
+        "precision": 0.04930966469428008,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.44742905405405403,
+          0.5874425675675675
+        ],
+        "precision_ci95": [
+          0.043984320056455535,
+          0.05696423369450996
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 807,
+        "fn": 0,
+        "tn": 673,
+        "fpr": 0.5452702702702703,
+        "precision": 0.047225501770956316,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.4189189189189189,
+          0.6614864864864864
+        ],
+        "precision_ci95": [
+          0.03925417075564279,
+          0.06060606060606061
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 17,
+        "fp": 281,
+        "fn": 23,
+        "tn": 1199,
+        "fpr": 0.18986486486486487,
+        "precision": 0.05704697986577181,
+        "recall": 0.425,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.17027027027027028,
+          0.21216216216216216
+        ],
+        "precision_ci95": [
+          0.03125,
+          0.08417597022860179
+        ],
+        "recall_ci95": [
+          0.25,
+          0.6
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 48,
+        "fpr": 0.02040816326530612,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 40,
+        "fp": 587,
+        "fn": 0,
+        "tn": 893,
+        "fpr": 0.3966216216216216,
+        "precision": 0.06379585326953748,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.3141891891891892,
+          0.47771959459459434
+        ],
+        "precision_ci95": [
+          0.05354573373708739,
+          0.07920792079207921
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 587,
+        "fn": 0,
+        "tn": 893,
+        "fpr": 0.3966216216216216,
+        "precision": 0.06379585326953748,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.3141891891891892,
+          0.47771959459459434
+        ],
+        "precision_ci95": [
+          0.05354573373708739,
+          0.07920792079207921
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 25,
+        "fp": 324,
+        "fn": 15,
+        "tn": 1156,
+        "fpr": 0.21891891891891893,
+        "precision": 0.07163323782234957,
+        "recall": 0.625,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.17229729729729729,
+          0.2635304054054051
+        ],
+        "precision_ci95": [
+          0.055248217268405495,
+          0.09127468060394882
+        ],
+        "recall_ci95": [
+          0.45,
+          0.775
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 1274,
+        "fn": 0,
+        "tn": 6126,
+        "fpr": 0.17216216216216215,
+        "precision": 0.13568521031207598,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.1562162162162162,
+          0.18662162162162163
+        ],
+        "precision_ci95": [
+          0.1265022137887413,
+          0.14749262536873156
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 98,
+        "fn": 0,
+        "tn": 1382,
+        "fpr": 0.06621621621621622,
+        "precision": 0.2898550724637681,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.04932432432432433,
+          0.08243243243243244
+        ],
+        "precision_ci95": [
+          0.24691358024691357,
+          0.35398230088495575
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 38,
+        "fp": 60,
+        "fn": 2,
+        "tn": 1420,
+        "fpr": 0.04054054054054054,
+        "precision": 0.3877551020408163,
+        "recall": 0.95,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.024324324324324326,
+          0.05540540540540541
+        ],
+        "precision_ci95": [
+          0.31745063879210217,
+          0.5135135135135135
+        ],
+        "recall_ci95": [
+          0.875,
+          1.0
+        ],
+        "exact_windows": 2
+      },
+      "first_probe_per_flush": {
+        "tp": 5,
+        "fp": 4,
+        "fn": 0,
+        "tn": 241,
+        "fpr": 0.0163265306122449,
+        "precision": 0.5555555555555556,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 3863,
+        "fn": 0,
+        "tn": 3537,
+        "fpr": 0.5220270270270271,
+        "precision": 0.049224710804824025,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.463375,
+          0.5786486486486486
+        ],
+        "precision_ci95": [
+          0.04462293618920125,
+          0.05511198075772678
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 792,
+        "fn": 0,
+        "tn": 688,
+        "fpr": 0.5351351351351351,
+        "precision": 0.04807692307692308,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.425,
+          0.6412162162162162
+        ],
+        "precision_ci95": [
+          0.04044489383215369,
+          0.059790732436472344
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 17,
+        "fp": 313,
+        "fn": 23,
+        "tn": 1167,
+        "fpr": 0.2114864864864865,
+        "precision": 0.051515151515151514,
+        "recall": 0.425,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.17972972972972973,
+          0.24391891891891893
+        ],
+        "precision_ci95": [
+          0.03170028818443804,
+          0.07527065841802914
+        ],
+        "recall_ci95": [
+          0.275,
+          0.575
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 48,
+        "fpr": 0.02040816326530612,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 40,
+        "fp": 483,
+        "fn": 0,
+        "tn": 997,
+        "fpr": 0.32635135135135135,
+        "precision": 0.07648183556405354,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.25673986486486483,
+          0.40001689189189166
+        ],
+        "precision_ci95": [
+          0.06328863959045734,
+          0.0952437777020115
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 483,
+        "fn": 0,
+        "tn": 997,
+        "fpr": 0.32635135135135135,
+        "precision": 0.07648183556405354,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.25673986486486483,
+          0.40001689189189166
+        ],
+        "precision_ci95": [
+          0.06328863959045734,
+          0.0952437777020115
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 28,
+        "fp": 272,
+        "fn": 12,
+        "tn": 1208,
+        "fpr": 0.1837837837837838,
+        "precision": 0.09333333333333334,
+        "recall": 0.7,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.13716216216216215,
+          0.23513513513513515
+        ],
+        "precision_ci95": [
+          0.0628921832884097,
+          0.1347860593512767
+        ],
+        "recall_ci95": [
+          0.525,
+          0.85
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 1203,
+        "fn": 0,
+        "tn": 6197,
+        "fpr": 0.16256756756756757,
+        "precision": 0.14255167498218105,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.15080743243243241,
+          0.17621621621621622
+        ],
+        "precision_ci95": [
+          0.13297872340425532,
+          0.1519785731621343
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 91,
+        "fn": 0,
+        "tn": 1389,
+        "fpr": 0.06148648648648649,
+        "precision": 0.3053435114503817,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.04864864864864865,
+          0.07432432432432433
+        ],
+        "precision_ci95": [
+          0.26666666666666666,
+          0.35714285714285715
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 38,
+        "fp": 62,
+        "fn": 2,
+        "tn": 1418,
+        "fpr": 0.041891891891891894,
+        "precision": 0.38,
+        "recall": 0.95,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.029054054054054056,
+          0.05540540540540541
+        ],
+        "precision_ci95": [
+          0.31666666666666665,
+          0.4691358024691358
+        ],
+        "recall_ci95": [
+          0.875,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 5,
+        "fp": 5,
+        "fn": 0,
+        "tn": 240,
+        "fpr": 0.02040816326530612,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 4,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 800,
+        "fp": 7813,
+        "fn": 0,
+        "tn": 21787,
+        "fpr": 0.2639527027027027,
+        "precision": 0.09288285150354116,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.19912162162162161,
+          0.3391587837837837
+        ],
+        "precision_ci95": [
+          0.07380686612861796,
+          0.11951000896325067
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 231,
+        "fn": 0,
+        "tn": 1249,
+        "fpr": 0.15608108108108107,
+        "precision": 0.14760147601476015,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.04256756756756757,
+          0.30743243243243246
+        ],
+        "precision_ci95": [
+          0.08080808080808081,
+          0.3883495145631068
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 34,
+        "fp": 84,
+        "fn": 6,
+        "tn": 1396,
+        "fpr": 0.05675675675675676,
+        "precision": 0.288135593220339,
+        "recall": 0.85,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.008108108108108109,
+          0.11689189189189189
+        ],
+        "precision_ci95": [
+          0.1339712918660287,
+          0.7648190045248852
+        ],
+        "recall_ci95": [
+          0.675,
+          0.975
+        ],
+        "exact_windows": 2
+      },
+      "first_probe_per_flush": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "tn": 46,
+        "fpr": 0.041666666666666664,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.04
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 4,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 160,
+        "fp": 2250,
+        "fn": 0,
+        "tn": 3670,
+        "fpr": 0.38006756756756754,
+        "precision": 0.06639004149377593,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.28040118243243245,
+          0.4783826013513513
+        ],
+        "precision_ci95": [
+          0.05347548915383667,
+          0.08791329615958532
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 705,
+        "fn": 0,
+        "tn": 775,
+        "fpr": 0.47635135135135137,
+        "precision": 0.053691275167785234,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.31351351351351353,
+          0.6310810810810811
+        ],
+        "precision_ci95": [
+          0.04106776180698152,
+          0.07936507936507936
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 20,
+        "fp": 274,
+        "fn": 20,
+        "tn": 1206,
+        "fpr": 0.18513513513513513,
+        "precision": 0.06802721088435375,
+        "recall": 0.5,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.14054054054054055,
+          0.22635135135135134
+        ],
+        "precision_ci95": [
+          0.04242183742183742,
+          0.10630130675154965
+        ],
+        "recall_ci95": [
+          0.325,
+          0.675
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 9,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.1
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 4,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 800,
+        "fp": 2478,
+        "fn": 0,
+        "tn": 27122,
+        "fpr": 0.08371621621621622,
+        "precision": 0.24405125076266015,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.07972888513513514,
+          0.08773648648648649
+        ],
+        "precision_ci95": [
+          0.2355019134530468,
+          0.25316656048020325
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 11,
+        "fn": 0,
+        "tn": 1469,
+        "fpr": 0.007432432432432433,
+        "precision": 0.7843137254901961,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.004054054054054054,
+          0.011486486486486487
+        ],
+        "precision_ci95": [
+          0.7017543859649122,
+          0.8695652173913043
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 2
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1480,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 8,
+        "fp": 1,
+        "fn": 0,
+        "tn": 241,
+        "fpr": 0.004132231404958678,
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "prevalence": 0.032
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 16,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 3200,
+        "fp": 40177,
+        "fn": 0,
+        "tn": 78223,
+        "fpr": 0.33933277027027026,
+        "precision": 0.07377181455610116,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.3149239864864865,
+          0.3691921452702702
+        ],
+        "precision_ci95": [
+          0.06821231524203532,
+          0.07903771581001309
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 51,
+        "fn": 0,
+        "tn": 1429,
+        "fpr": 0.03445945945945946,
+        "precision": 0.43956043956043955,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.006756756756756757,
+          0.08108108108108109
+        ],
+        "precision_ci95": [
+          0.25,
+          0.8
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 3
+      },
+      "filtered": {
+        "tp": 37,
+        "fp": 46,
+        "fn": 3,
+        "tn": 1434,
+        "fpr": 0.031081081081081083,
+        "precision": 0.4457831325301205,
+        "recall": 0.925,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.006756756756756757,
+          0.07094594594594594
+        ],
+        "precision_ci95": [
+          0.23741007194244604,
+          0.8
+        ],
+        "recall_ci95": [
+          0.8,
+          1.0
+        ],
+        "exact_windows": 3
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 48,
+        "fpr": 0.02040816326530612,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 16,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 640,
+        "fp": 8881,
+        "fn": 0,
+        "tn": 14799,
+        "fpr": 0.3750422297297297,
+        "precision": 0.06721982984980569,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.3117810388513514,
+          0.43956925675675673
+        ],
+        "precision_ci95": [
+          0.057923794008507556,
+          0.07977090795401764
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 380,
+        "fn": 0,
+        "tn": 1100,
+        "fpr": 0.25675675675675674,
+        "precision": 0.09523809523809523,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.10675675675675676,
+          0.41081081081081083
+        ],
+        "precision_ci95": [
+          0.06172839506172839,
+          0.20202020202020202
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 31,
+        "fp": 220,
+        "fn": 9,
+        "tn": 1260,
+        "fpr": 0.14864864864864866,
+        "precision": 0.12350597609561753,
+        "recall": 0.775,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.07702702702702703,
+          0.225
+        ],
+        "precision_ci95": [
+          0.06906077348066299,
+          0.24489795918367346
+        ],
+        "recall_ci95": [
+          0.6,
+          0.925
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 9,
+        "fpr": 0.1,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 16,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 3200,
+        "fp": 2006,
+        "fn": 0,
+        "tn": 116394,
+        "fpr": 0.016942567567567568,
+        "precision": 0.6146753745678064,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.01516870777027027,
+          0.018961359797297295
+        ],
+        "precision_ci95": [
+          0.5876924353203857,
+          0.6405156156957598
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1480,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1480,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 7,
+        "fp": 2,
+        "fn": 0,
+        "tn": 241,
+        "fpr": 0.00823045267489712,
+        "precision": 0.7777777777777778,
+        "recall": 1.0,
+        "prevalence": 0.028
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 32,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 6399,
+        "fp": 90274,
+        "fn": 1,
+        "tn": 146526,
+        "fpr": 0.38122466216216216,
+        "precision": 0.06619221499281082,
+        "recall": 0.99984375,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.35678114442567566,
+          0.4047303631756756
+        ],
+        "precision_ci95": [
+          0.06258342004337872,
+          0.07041471230609253
+        ],
+        "recall_ci95": [
+          0.99953125,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 55,
+        "fn": 0,
+        "tn": 1425,
+        "fpr": 0.037162162162162164,
+        "precision": 0.42105263157894735,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.013513513513513514,
+          0.062162162162162166
+        ],
+        "precision_ci95": [
+          0.30303030303030304,
+          0.6666666666666666
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 5
+      },
+      "filtered": {
+        "tp": 35,
+        "fp": 48,
+        "fn": 5,
+        "tn": 1432,
+        "fpr": 0.032432432432432434,
+        "precision": 0.42168674698795183,
+        "recall": 0.875,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.012837837837837839,
+          0.05405405405405406
+        ],
+        "precision_ci95": [
+          0.2626179831097864,
+          0.6779661016949152
+        ],
+        "recall_ci95": [
+          0.675,
+          1.0
+        ],
+        "exact_windows": 5
+      },
+      "first_probe_per_flush": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 48,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.04
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 32,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 1280,
+        "fp": 17576,
+        "fn": 0,
+        "tn": 29784,
+        "fpr": 0.3711148648648649,
+        "precision": 0.06788290199406025,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.33105943834459456,
+          0.4202074535472973
+        ],
+        "precision_ci95": [
+          0.060431447489889704,
+          0.0754762596270404
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 246,
+        "fn": 0,
+        "tn": 1234,
+        "fpr": 0.1662162162162162,
+        "precision": 0.13986013986013987,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.051351351351351354,
+          0.31756756756756754
+        ],
+        "precision_ci95": [
+          0.0784313725490196,
+          0.3448275862068966
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 33,
+        "fp": 149,
+        "fn": 7,
+        "tn": 1331,
+        "fpr": 0.10067567567567567,
+        "precision": 0.1813186813186813,
+        "recall": 0.825,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.04864864864864865,
+          0.16486486486486487
+        ],
+        "precision_ci95": [
+          0.0988513363492548,
+          0.34545454545454546
+        ],
+        "recall_ci95": [
+          0.65,
+          0.95
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 4864,
+      "rows": 64,
+      "observed": 32,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 6400,
+        "fp": 1686,
+        "fn": 0,
+        "tn": 235114,
+        "fpr": 0.007119932432432433,
+        "precision": 0.7914914667326243,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.006292124155405405,
+          0.007977195945945946
+        ],
+        "precision_ci95": [
+          0.772107612498492,
+          0.8111559292020896
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1480,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1480,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.02631578947368421,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 9,
+        "fp": 3,
+        "fn": 0,
+        "tn": 238,
+        "fpr": 0.012448132780082987,
+        "precision": 0.75,
+        "recall": 1.0,
+        "prevalence": 0.036
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 5433,
+        "fn": 0,
+        "tn": 7167,
+        "fpr": 0.4311904761904762,
+        "precision": 0.03550505947097461,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.36277777777777775,
+          0.49873015873015875
+        ],
+        "precision_ci95": [
+          0.030845157310302282,
+          0.04191993292810731
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 949,
+        "fn": 0,
+        "tn": 1571,
+        "fpr": 0.3765873015873016,
+        "precision": 0.04044489383215369,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.2623015873015873,
+          0.4936706349206347
+        ],
+        "precision_ci95": [
+          0.031151436752372787,
+          0.05706134094151213
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 25,
+        "fp": 447,
+        "fn": 15,
+        "tn": 2073,
+        "fpr": 0.1773809523809524,
+        "precision": 0.05296610169491525,
+        "recall": 0.625,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.1388888888888889,
+          0.21785714285714286
+        ],
+        "precision_ci95": [
+          0.030194266179922706,
+          0.08355108977922909
+        ],
+        "recall_ci95": [
+          0.425,
+          0.825
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 48,
+        "fpr": 0.02040816326530612,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 40,
+        "fp": 973,
+        "fn": 0,
+        "tn": 1547,
+        "fpr": 0.3861111111111111,
+        "precision": 0.039486673247778874,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.2904662698412699,
+          0.4793650793650794
+        ],
+        "precision_ci95": [
+          0.03205128205128205,
+          0.051815151576245076
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 973,
+        "fn": 0,
+        "tn": 1547,
+        "fpr": 0.3861111111111111,
+        "precision": 0.039486673247778874,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.2904662698412699,
+          0.4793650793650794
+        ],
+        "precision_ci95": [
+          0.03205128205128205,
+          0.051815151576245076
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 25,
+        "fp": 570,
+        "fn": 15,
+        "tn": 1950,
+        "fpr": 0.2261904761904762,
+        "precision": 0.04201680672268908,
+        "recall": 0.625,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.1714186507936508,
+          0.27936507936507937
+        ],
+        "precision_ci95": [
+          0.026461799884767174,
+          0.06438114356915403
+        ],
+        "recall_ci95": [
+          0.475,
+          0.775
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 9,
+        "fpr": 0.1,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 1252,
+        "fn": 0,
+        "tn": 11348,
+        "fpr": 0.09936507936507936,
+        "precision": 0.13774104683195593,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.08452380952380953,
+          0.1130952380952381
+        ],
+        "precision_ci95": [
+          0.12307692307692308,
+          0.15810276679841898
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 58,
+        "fn": 0,
+        "tn": 2462,
+        "fpr": 0.023015873015873017,
+        "precision": 0.40816326530612246,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.015873015873015872,
+          0.030555555555555555
+        ],
+        "precision_ci95": [
+          0.3418803418803419,
+          0.5
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 29,
+        "fn": 0,
+        "tn": 2491,
+        "fpr": 0.011507936507936509,
+        "precision": 0.5797101449275363,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.004365079365079365,
+          0.01984126984126984
+        ],
+        "precision_ci95": [
+          0.4444444444444444,
+          0.7843137254901961
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 4
+      },
+      "first_probe_per_flush": {
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "tn": 242,
+        "fpr": 0.012244897959183673,
+        "precision": 0.625,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 5096,
+        "fn": 0,
+        "tn": 7504,
+        "fpr": 0.40444444444444444,
+        "precision": 0.0377643504531722,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.3223809523809524,
+          0.48912698412698413
+        ],
+        "precision_ci95": [
+          0.031431714600031434,
+          0.04692632566870014
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 876,
+        "fn": 0,
+        "tn": 1644,
+        "fpr": 0.3476190476190476,
+        "precision": 0.043668122270742356,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.21904761904761905,
+          0.48214285714285715
+        ],
+        "precision_ci95": [
+          0.03187250996015936,
+          0.06756756756756757
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 26,
+        "fp": 422,
+        "fn": 14,
+        "tn": 2098,
+        "fpr": 0.16746031746031745,
+        "precision": 0.05803571428571429,
+        "recall": 0.65,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.12419642857142858,
+          0.2126984126984127
+        ],
+        "precision_ci95": [
+          0.03298611111111111,
+          0.09456266673253622
+        ],
+        "recall_ci95": [
+          0.45,
+          0.825
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "tn": 48,
+        "fpr": 0.02040816326530612,
+        "precision": 0.5,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 40,
+        "fp": 1058,
+        "fn": 0,
+        "tn": 1462,
+        "fpr": 0.41984126984126985,
+        "precision": 0.03642987249544627,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.3376884920634921,
+          0.4924603174603175
+        ],
+        "precision_ci95": [
+          0.0312256049960968,
+          0.04489463927666173
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 1058,
+        "fn": 0,
+        "tn": 1462,
+        "fpr": 0.41984126984126985,
+        "precision": 0.03642987249544627,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.3376884920634921,
+          0.4924603174603175
+        ],
+        "precision_ci95": [
+          0.0312256049960968,
+          0.04489463927666173
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 26,
+        "fp": 602,
+        "fn": 14,
+        "tn": 1918,
+        "fpr": 0.2388888888888889,
+        "precision": 0.041401273885350316,
+        "recall": 0.65,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.19246031746031747,
+          0.28253968253968254
+        ],
+        "precision_ci95": [
+          0.026630645600450566,
+          0.060078587407372874
+        ],
+        "recall_ci95": [
+          0.475,
+          0.825
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 9,
+        "fpr": 0.1,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 200,
+        "fp": 1204,
+        "fn": 0,
+        "tn": 11396,
+        "fpr": 0.09555555555555556,
+        "precision": 0.14245014245014245,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.08333333333333333,
+          0.10880952380952381
+        ],
+        "precision_ci95": [
+          0.1273074474856779,
+          0.16
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 58,
+        "fn": 0,
+        "tn": 2462,
+        "fpr": 0.023015873015873017,
+        "precision": 0.40816326530612246,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.01626984126984127,
+          0.030555555555555555
+        ],
+        "precision_ci95": [
+          0.3418803418803419,
+          0.49382716049382713
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 24,
+        "fn": 0,
+        "tn": 2496,
+        "fpr": 0.009523809523809525,
+        "precision": 0.625,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0035714285714285713,
+          0.01626984126984127
+        ],
+        "precision_ci95": [
+          0.49382716049382713,
+          0.8163265306122449
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 4
+      },
+      "first_probe_per_flush": {
+        "tp": 5,
+        "fp": 4,
+        "fn": 0,
+        "tn": 241,
+        "fpr": 0.0163265306122449,
+        "precision": 0.5555555555555556,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 4,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 800,
+        "fp": 11388,
+        "fn": 0,
+        "tn": 39012,
+        "fpr": 0.22595238095238096,
+        "precision": 0.06563833278634723,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.19025793650793651,
+          0.2764489087301587
+        ],
+        "precision_ci95": [
+          0.054299778904185005,
+          0.07700452401578593
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 209,
+        "fn": 0,
+        "tn": 2311,
+        "fpr": 0.08293650793650793,
+        "precision": 0.1606425702811245,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.03214285714285714,
+          0.175
+        ],
+        "precision_ci95": [
+          0.08316008316008316,
+          0.3305785123966942
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 33,
+        "fp": 117,
+        "fn": 7,
+        "tn": 2403,
+        "fpr": 0.04642857142857143,
+        "precision": 0.22,
+        "recall": 0.825,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.01626984126984127,
+          0.09801587301587301
+        ],
+        "precision_ci95": [
+          0.10469314079422383,
+          0.48148148148148145
+        ],
+        "recall_ci95": [
+          0.675,
+          0.95
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 49,
+        "fpr": 0.02,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 4,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 160,
+        "fp": 3534,
+        "fn": 0,
+        "tn": 6546,
+        "fpr": 0.35059523809523807,
+        "precision": 0.04331348132106118,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.25753720238095235,
+          0.4439484126984127
+        ],
+        "precision_ci95": [
+          0.034519956850053934,
+          0.058055679211039955
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 1065,
+        "fn": 0,
+        "tn": 1455,
+        "fpr": 0.4226190476190476,
+        "precision": 0.03619909502262444,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.2746031746031746,
+          0.5710416666666664
+        ],
+        "precision_ci95": [
+          0.027044844032673647,
+          0.0546448087431694
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 17,
+        "fp": 521,
+        "fn": 23,
+        "tn": 1999,
+        "fpr": 0.20674603174603173,
+        "precision": 0.031598513011152414,
+        "recall": 0.425,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.16984126984126985,
+          0.24405753968253954
+        ],
+        "precision_ci95": [
+          0.017064581845119983,
+          0.05161390295921086
+        ],
+        "recall_ci95": [
+          0.25,
+          0.6
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 4,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 800,
+        "fp": 2340,
+        "fn": 0,
+        "tn": 48060,
+        "fpr": 0.04642857142857143,
+        "precision": 0.25477707006369427,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.04357142857142857,
+          0.04912698412698413
+        ],
+        "precision_ci95": [
+          0.2442002442002442,
+          0.26702269692923897
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 12,
+        "fn": 0,
+        "tn": 2508,
+        "fpr": 0.004761904761904762,
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.001984126984126984,
+          0.00753968253968254
+        ],
+        "precision_ci95": [
+          0.6779661016949152,
+          0.8888888888888888
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 4
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2520,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 0,
+        "tn": 244,
+        "fpr": 0.008130081300813009,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "prevalence": 0.016
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 16,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 3194,
+        "fp": 72351,
+        "fn": 6,
+        "tn": 129249,
+        "fpr": 0.3588839285714286,
+        "precision": 0.042279436097690117,
+        "recall": 0.998125,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.3417013888888889,
+          0.3795970982142856
+        ],
+        "precision_ci95": [
+          0.04008387729296513,
+          0.044310698971891514
+        ],
+        "recall_ci95": [
+          0.995,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 118,
+        "fn": 0,
+        "tn": 2402,
+        "fpr": 0.046825396825396826,
+        "precision": 0.25316455696202533,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.021031746031746033,
+          0.08095238095238096
+        ],
+        "precision_ci95": [
+          0.16393442622950818,
+          0.43010752688172044
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 39,
+        "fp": 101,
+        "fn": 1,
+        "tn": 2419,
+        "fpr": 0.04007936507936508,
+        "precision": 0.2785714285714286,
+        "recall": 0.975,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.019444444444444445,
+          0.06626984126984127
+        ],
+        "precision_ci95": [
+          0.18974358974358974,
+          0.4444444444444444
+        ],
+        "recall_ci95": [
+          0.925,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 49,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.02
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 16,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 638,
+        "fp": 13548,
+        "fn": 2,
+        "tn": 26772,
+        "fpr": 0.3360119047619048,
+        "precision": 0.04497391794727196,
+        "recall": 0.996875,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.31567460317460316,
+          0.3742559523809524
+        ],
+        "precision_ci95": [
+          0.04056635376019192,
+          0.04779687731844486
+        ],
+        "recall_ci95": [
+          0.990625,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 406,
+        "fn": 0,
+        "tn": 2114,
+        "fpr": 0.16111111111111112,
+        "precision": 0.08968609865470852,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.10357142857142858,
+          0.26746031746031745
+        ],
+        "precision_ci95": [
+          0.056022408963585436,
+          0.132890365448505
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 31,
+        "fp": 308,
+        "fn": 9,
+        "tn": 2212,
+        "fpr": 0.12222222222222222,
+        "precision": 0.09144542772861357,
+        "recall": 0.775,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.10277777777777777,
+          0.1523908730158729
+        ],
+        "precision_ci95": [
+          0.06265649062415074,
+          0.11824768847795157
+        ],
+        "recall_ci95": [
+          0.625,
+          0.9
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 16,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 3195,
+        "fp": 1777,
+        "fn": 5,
+        "tn": 199823,
+        "fpr": 0.008814484126984127,
+        "precision": 0.6425985518905873,
+        "recall": 0.9984375,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.008115079365079365,
+          0.009494047619047619
+        ],
+        "precision_ci95": [
+          0.6252924310432811,
+          0.6614939763536357
+        ],
+        "recall_ci95": [
+          0.9965625,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2520,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2520,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 4,
+        "fp": 5,
+        "fn": 0,
+        "tn": 241,
+        "fpr": 0.02032520325203252,
+        "precision": 0.4444444444444444,
+        "recall": 1.0,
+        "prevalence": 0.016
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 32,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 6397,
+        "fp": 164495,
+        "fn": 3,
+        "tn": 238705,
+        "fpr": 0.4079737103174603,
+        "precision": 0.03743299861901084,
+        "recall": 0.99953125,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.3865012400793651,
+          0.428711433531746
+        ],
+        "precision_ci95": [
+          0.0356913354120417,
+          0.03942937886313796
+        ],
+        "recall_ci95": [
+          0.9990625,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 202,
+        "fn": 0,
+        "tn": 2318,
+        "fpr": 0.08015873015873017,
+        "precision": 0.1652892561983471,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.036904761904761905,
+          0.1377083333333332
+        ],
+        "precision_ci95": [
+          0.10335251338607847,
+          0.3007518796992481
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 1
+      },
+      "filtered": {
+        "tp": 34,
+        "fp": 174,
+        "fn": 6,
+        "tn": 2346,
+        "fpr": 0.06904761904761905,
+        "precision": 0.16346153846153846,
+        "recall": 0.85,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.03531746031746032,
+          0.11428571428571428
+        ],
+        "precision_ci95": [
+          0.0880503144654088,
+          0.30401718749999973
+        ],
+        "recall_ci95": [
+          0.6993750000000002,
+          0.975
+        ],
+        "exact_windows": 1
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 32,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 1276,
+        "fp": 33104,
+        "fn": 4,
+        "tn": 47536,
+        "fpr": 0.410515873015873,
+        "precision": 0.03711460151250727,
+        "recall": 0.996875,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.374987289186508,
+          0.44587363591269835
+        ],
+        "precision_ci95": [
+          0.034244204009176174,
+          0.04048205356488376
+        ],
+        "recall_ci95": [
+          0.9921875,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 657,
+        "fn": 0,
+        "tn": 1863,
+        "fpr": 0.26071428571428573,
+        "precision": 0.05738880918220947,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.1579265873015873,
+          0.36667658730158714
+        ],
+        "precision_ci95": [
+          0.041492700965321525,
+          0.09132942540986168
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 27,
+        "fp": 491,
+        "fn": 13,
+        "tn": 2029,
+        "fpr": 0.19484126984126984,
+        "precision": 0.052123552123552123,
+        "recall": 0.675,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.12896825396825398,
+          0.25992063492063494
+        ],
+        "precision_ci95": [
+          0.035168195718654434,
+          0.08516639610389608
+        ],
+        "recall_ci95": [
+          0.575,
+          0.775
+        ],
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "fixed_columns",
+      "width": 8192,
+      "rows": 64,
+      "observed": 32,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 0,
+      "raw": {
+        "tp": 6394,
+        "fp": 1397,
+        "fn": 6,
+        "tn": 401803,
+        "fpr": 0.003464781746031746,
+        "precision": 0.8206905403670902,
+        "recall": 0.9990625,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0031498015873015874,
+          0.003787202380952381
+        ],
+        "precision_ci95": [
+          0.8072200932497337,
+          0.8342692960689565
+        ],
+        "recall_ci95": [
+          0.9975,
+          1.0
+        ]
+      },
+      "consensus": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2520,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 40,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2520,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.015625,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": [
+          1.0,
+          1.0
+        ],
+        "recall_ci95": [
+          1.0,
+          1.0
+        ],
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 246,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "prevalence": 0.016
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "fresh_target",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 3658,
+        "fn": 0,
+        "tn": 3942,
+        "fpr": 0.4813157894736842,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.42289144736842105,
+          0.5376315789473685
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 726,
+        "fn": 0,
+        "tn": 794,
+        "fpr": 0.4776315789473684,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.36575657894736846,
+          0.5828947368421052
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 293,
+        "fn": 0,
+        "tn": 1227,
+        "fpr": 0.19276315789473683,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.16643092105263158,
+          0.2125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 406,
+        "fn": 0,
+        "tn": 1114,
+        "fpr": 0.26710526315789473,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.21842105263157896,
+          0.3256578947368421
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 406,
+        "fn": 0,
+        "tn": 1114,
+        "fpr": 0.26710526315789473,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.21842105263157896,
+          0.3256578947368421
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 251,
+        "fn": 0,
+        "tn": 1269,
+        "fpr": 0.16513157894736843,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.1361842105263158,
+          0.20657894736842106
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 1,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 1048,
+        "fn": 0,
+        "tn": 6552,
+        "fpr": 0.13789473684210526,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.12328618421052633,
+          0.15223684210526317
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 37,
+        "fn": 0,
+        "tn": 1483,
+        "fpr": 0.024342105263157894,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.01381578947368421,
+          0.035526315789473684
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 2
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 36,
+        "fn": 0,
+        "tn": 1484,
+        "fpr": 0.02368421052631579,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.01381578947368421,
+          0.034210526315789476
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 2
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 4065,
+        "fn": 0,
+        "tn": 3535,
+        "fpr": 0.5348684210526315,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.46841776315789474,
+          0.5915789473684211
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 852,
+        "fn": 0,
+        "tn": 668,
+        "fpr": 0.5605263157894737,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.4355263157894737,
+          0.6677631578947368
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 325,
+        "fn": 0,
+        "tn": 1195,
+        "fpr": 0.2138157894736842,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.19013157894736843,
+          0.2388157894736842
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 500,
+        "fn": 0,
+        "tn": 1020,
+        "fpr": 0.32894736842105265,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.275,
+          0.3894736842105263
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 500,
+        "fn": 0,
+        "tn": 1020,
+        "fpr": 0.32894736842105265,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.275,
+          0.3894736842105263
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 296,
+        "fn": 0,
+        "tn": 1224,
+        "fpr": 0.19473684210526315,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.1618421052631579,
+          0.23620065789473663
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 1164,
+        "fn": 0,
+        "tn": 6436,
+        "fpr": 0.1531578947368421,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.14144736842105263,
+          0.16447368421052633
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 1460,
+        "fpr": 0.039473684210526314,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.02631578947368421,
+          0.05263157894736842
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 1
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 58,
+        "fn": 0,
+        "tn": 1462,
+        "fpr": 0.038157894736842106,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.025657894736842105,
+          0.05
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 1
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 4,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 7668,
+        "fn": 0,
+        "tn": 22732,
+        "fpr": 0.25223684210526315,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.18085279605263158,
+          0.3337828947368421
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 227,
+        "fn": 0,
+        "tn": 1293,
+        "fpr": 0.1493421052631579,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.034868421052631576,
+          0.29935855263157873
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 4
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 141,
+        "fn": 0,
+        "tn": 1379,
+        "fpr": 0.09276315789473684,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.029605263157894735,
+          0.16513157894736843
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 4
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 4,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 2208,
+        "fn": 0,
+        "tn": 3872,
+        "fpr": 0.3631578947368421,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.254765625,
+          0.46793174342105254
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 698,
+        "fn": 0,
+        "tn": 822,
+        "fpr": 0.45921052631578946,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.28157894736842104,
+          0.6282894736842105
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 289,
+        "fn": 0,
+        "tn": 1231,
+        "fpr": 0.19013157894736843,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.14407894736842106,
+          0.23355263157894737
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 4,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 2516,
+        "fn": 0,
+        "tn": 27884,
+        "fpr": 0.08276315789473684,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.07585526315789473,
+          0.08884868421052632
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 1519,
+        "fpr": 0.0006578947368421052,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.001973684210526316
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 9
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 1519,
+        "fpr": 0.0006578947368421052,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.001973684210526316
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 9
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 16,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 43828,
+        "fn": 0,
+        "tn": 77772,
+        "fpr": 0.36042763157894736,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.3269886924342105,
+          0.3959134457236842
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 126,
+        "fn": 0,
+        "tn": 1394,
+        "fpr": 0.08289473684210526,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.018421052631578946,
+          0.17830592105263135
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 2
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 99,
+        "fn": 0,
+        "tn": 1421,
+        "fpr": 0.06513157894736842,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.017763157894736842,
+          0.12764802631578925
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 2
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 16,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 8770,
+        "fn": 0,
+        "tn": 15550,
+        "fpr": 0.3606085526315789,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.3017680921052632,
+          0.4199434621710526
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 374,
+        "fn": 0,
+        "tn": 1146,
+        "fpr": 0.24605263157894736,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.10263157894736842,
+          0.3907894736842105
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 246,
+        "fn": 0,
+        "tn": 1274,
+        "fpr": 0.1618421052631579,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.08223684210526316,
+          0.24144736842105263
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 16,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 977,
+        "fn": 0,
+        "tn": 120623,
+        "fpr": 0.00803453947368421,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.006981702302631579,
+          0.009029810855263155
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 32,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 95411,
+        "fn": 0,
+        "tn": 147789,
+        "fpr": 0.39231496710526315,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.37073129111842107,
+          0.41279738898026314
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 68,
+        "fn": 0,
+        "tn": 1452,
+        "fpr": 0.04473684210526316,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.014473684210526316,
+          0.08092105263157895
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 1
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 67,
+        "fn": 0,
+        "tn": 1453,
+        "fpr": 0.04407894736842105,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.014473684210526316,
+          0.07894736842105263
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 1
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 32,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 18343,
+        "fn": 0,
+        "tn": 30297,
+        "fpr": 0.3771175986842105,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.32984477796052636,
+          0.4277780633223684
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 284,
+        "fn": 0,
+        "tn": 1236,
+        "fpr": 0.1868421052631579,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.03881578947368421,
+          0.3460690789473682
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 169,
+        "fn": 0,
+        "tn": 1351,
+        "fpr": 0.11118421052631579,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.03881578947368421,
+          0.19342105263157894
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 4864,
+      "rows": 64,
+      "observed": 32,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 295,
+        "fn": 0,
+        "tn": 242905,
+        "fpr": 0.0012129934210526317,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.000884046052631579,
+          0.001533717105263158
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1520,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "fresh_target",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 5447,
+        "fn": 0,
+        "tn": 7353,
+        "fpr": 0.425546875,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.367732421875,
+          0.4864980468749998
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 944,
+        "fn": 0,
+        "tn": 1616,
+        "fpr": 0.36875,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.269140625,
+          0.4754101562499997
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 503,
+        "fn": 0,
+        "tn": 2057,
+        "fpr": 0.196484375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.16015625,
+          0.234765625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 996,
+        "fn": 0,
+        "tn": 1564,
+        "fpr": 0.3890625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.282412109375,
+          0.48515625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 996,
+        "fn": 0,
+        "tn": 1564,
+        "fpr": 0.3890625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.282412109375,
+          0.48515625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 584,
+        "fn": 0,
+        "tn": 1976,
+        "fpr": 0.228125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.168359375,
+          0.28203125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 1,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 1148,
+        "fn": 0,
+        "tn": 11652,
+        "fpr": 0.0896875,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.07640625,
+          0.103671875
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 25,
+        "fn": 0,
+        "tn": 2535,
+        "fpr": 0.009765625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.003515625,
+          0.017578125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 3
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 25,
+        "fn": 0,
+        "tn": 2535,
+        "fpr": 0.009765625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.003515625,
+          0.017578125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 3
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 1,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 4909,
+        "fn": 0,
+        "tn": 7891,
+        "fpr": 0.383515625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.31694726562500003,
+          0.45211132812499993
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 772,
+        "fn": 0,
+        "tn": 1788,
+        "fpr": 0.3015625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.18241210937500002,
+          0.4293066406249999
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 442,
+        "fn": 0,
+        "tn": 2118,
+        "fpr": 0.17265625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.125390625,
+          0.22109375
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 1,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 864,
+        "fn": 0,
+        "tn": 1696,
+        "fpr": 0.3375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.23515625,
+          0.438671875
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 864,
+        "fn": 0,
+        "tn": 1696,
+        "fpr": 0.3375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.23515625,
+          0.438671875
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 513,
+        "fn": 0,
+        "tn": 2047,
+        "fpr": 0.200390625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.1484375,
+          0.252734375
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 1,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 1155,
+        "fn": 0,
+        "tn": 11645,
+        "fpr": 0.090234375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.077890625,
+          0.102734375
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 23,
+        "fn": 0,
+        "tn": 2537,
+        "fpr": 0.008984375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.003125,
+          0.016015625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 4
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 23,
+        "fn": 0,
+        "tn": 2537,
+        "fpr": 0.008984375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.003125,
+          0.016015625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 4
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 4,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 12956,
+        "fn": 0,
+        "tn": 38244,
+        "fpr": 0.253046875,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.20833935546875001,
+          0.31533300781249995
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 278,
+        "fn": 0,
+        "tn": 2282,
+        "fpr": 0.10859375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.030078125,
+          0.24766601562499985
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 153,
+        "fn": 0,
+        "tn": 2407,
+        "fpr": 0.059765625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0296875,
+          0.103515625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 4,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 4053,
+        "fn": 0,
+        "tn": 6187,
+        "fpr": 0.39580078125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.30370849609375,
+          0.48603515625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 1317,
+        "fn": 0,
+        "tn": 1243,
+        "fpr": 0.514453125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.362109375,
+          0.661328125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 592,
+        "fn": 0,
+        "tn": 1968,
+        "fpr": 0.23125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.19375,
+          0.26640625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 4,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 2185,
+        "fn": 0,
+        "tn": 49015,
+        "fpr": 0.04267578125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.03857373046875,
+          0.046953613281249994
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 16,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 72218,
+        "fn": 0,
+        "tn": 132582,
+        "fpr": 0.352626953125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.33980920410156246,
+          0.370533447265625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 105,
+        "fn": 0,
+        "tn": 2455,
+        "fpr": 0.041015625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.018359375,
+          0.07735351562499986
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 99,
+        "fn": 0,
+        "tn": 2461,
+        "fpr": 0.038671875,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.018359375,
+          0.07032226562499985
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 16,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 14434,
+        "fn": 0,
+        "tn": 26526,
+        "fpr": 0.352392578125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.3196044921875,
+          0.39373046874999995
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 537,
+        "fn": 0,
+        "tn": 2023,
+        "fpr": 0.209765625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.11953125,
+          0.3234375
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 418,
+        "fn": 0,
+        "tn": 2142,
+        "fpr": 0.16328125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.11875,
+          0.21328125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 16,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 481,
+        "fn": 0,
+        "tn": 204319,
+        "fpr": 0.0023486328125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0016453857421875001,
+          0.0030322265625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 32,
+      "condition": "full_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 164826,
+        "fn": 0,
+        "tn": 244774,
+        "fpr": 0.4024072265625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.38427978515625,
+          0.42115509033203125
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 170,
+        "fn": 0,
+        "tn": 2390,
+        "fpr": 0.06640625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.01875,
+          0.12930664062499986
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 148,
+        "fn": 0,
+        "tn": 2412,
+        "fpr": 0.0578125,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.01875,
+          0.109765625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 50,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 32,
+      "condition": "single_execution",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 33917,
+        "fn": 0,
+        "tn": 48003,
+        "fpr": 0.41402587890625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.36442840576171875,
+          0.47336486816406254
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 740,
+        "fn": 0,
+        "tn": 1820,
+        "fpr": 0.2890625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.129267578125,
+          0.4742480468749996
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 393,
+        "fn": 0,
+        "tn": 2167,
+        "fpr": 0.153515625,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.08709960937500001,
+          0.225390625
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null,
+        "exact_windows": 0
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    },
+    {
+      "kind": "no_gather",
+      "width": 8192,
+      "rows": 64,
+      "observed": 32,
+      "condition": "stride_replay",
+      "windows": 10,
+      "empty_windows": 10,
+      "raw": {
+        "tp": 0,
+        "fp": 88,
+        "fn": 0,
+        "tn": 409512,
+        "fpr": 0.00021484375,
+        "precision": 0.0,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.00013916015625,
+          0.00029052734375
+        ],
+        "precision_ci95": [
+          0.0,
+          0.0
+        ],
+        "recall_ci95": null
+      },
+      "consensus": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "filtered": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2560,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.0
+        ],
+        "precision_ci95": null,
+        "recall_ci95": null,
+        "exact_windows": 10
+      },
+      "first_probe_per_flush": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 250,
+        "fpr": 0.0,
+        "precision": null,
+        "recall": null,
+        "prevalence": 0.0
+      },
+      "independent_clusters": 10
+    }
+  ],
+  "threshold": 295,
+  "calibration": {
+    "tp": 507,
+    "fp": 0,
+    "fn": 0,
+    "tn": 493,
+    "fpr": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "prevalence": 0.507
+  },
+  "contrasts": [],
+  "validation": {
+    "record_count": 620,
+    "bit_identical_forwards": 0
+  }
+}

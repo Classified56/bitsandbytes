@@ -1,0 +1,16 @@
+{
+  "qwen": {
+    "code/common.py": "code/common.py",
+    "code/direct.py": "diagnostics/direct-before-output-lock.py",
+    "code/classification.py": "code/classification.py",
+    "code/dependencies/linear_backends.py": "code/dependencies/linear_backends.py",
+    "code/dependencies/benchmark_worker.py": "code/dependencies/benchmark_worker.py"
+  },
+  "llama": {
+    "code/common.py": "code/common.py",
+    "code/direct.py": "code/direct.py",
+    "code/classification.py": "code/classification.py",
+    "code/dependencies/linear_backends.py": "code/dependencies/linear_backends.py",
+    "code/dependencies/benchmark_worker.py": "code/dependencies/benchmark_worker.py"
+  }
+}

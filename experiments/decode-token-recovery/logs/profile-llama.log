@@ -1,0 +1,23 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+`torch_dtype` is deprecated! Use `dtype` instead!
+profile llama 0 1.4
+profile llama 1 2.79
+profile llama 2 4.2
+profile llama 3 5.59
+profile llama 4 6.98
+profile llama 5 8.37
+profile llama 6 9.76
+profile llama 7 11.15
+profile llama 8 12.53
+profile llama 9 13.93
+profile llama 10 15.33
+profile llama 11 16.73
+profile llama 12 18.12
+profile llama 13 19.5
+profile llama 14 20.91
+profile llama 15 22.29
+FROZEN_PROFILE profiles/llama.json

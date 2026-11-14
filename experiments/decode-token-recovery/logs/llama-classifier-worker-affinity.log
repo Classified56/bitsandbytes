@@ -1,0 +1,9 @@
+2026-11-14T01:40:02-05:00
+pid 140643's current affinity list: 0-3,8-15
+pid 140643's new affinity list: 0
+pid 140668's current affinity list: 0-3,8-15
+pid 140668's new affinity list: 1
+pid 140669's current affinity list: 0-3,8-15
+pid 140669's new affinity list: 2
+pid 140670's current affinity list: 0-3,8-15
+pid 140670's new affinity list: 3

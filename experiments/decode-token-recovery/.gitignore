@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.so
+*.lock
+*.pt
+*.npz
+.artifacts/
+.venv/
+.matplotlib/
+checkpoint/
+checkpoints/
+rerun/
+# Preserve measured logs and the exact model wrapper despite parent ignore rules.
+!*.log
+!code/dependencies/
+!code/dependencies/**

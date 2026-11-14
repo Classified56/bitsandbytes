@@ -1,0 +1,10 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"id": 0, "split": "train", "positions": 4, "selected_columns": 183.75, "seconds": 1.6}
+{"id": 1, "split": "train", "positions": 4, "selected_columns": 176.0, "seconds": 3.2}
+{"id": 2, "split": "dev", "positions": 4, "selected_columns": 157.75, "seconds": 4.01}
+{"id": 3, "split": "test", "positions": 4, "selected_columns": 172.25, "seconds": 4.81}

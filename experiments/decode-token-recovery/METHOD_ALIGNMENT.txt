@@ -1,0 +1,34 @@
+MANUSCRIPT ALIGNMENT AND UNRESOLVED DETAILS
+Source: https://www.overleaf.com/project/6ae4deb5374fe1802d10d422
+Read: 2026-11-14, live source editor; no manuscript changes.
+
+Background excerpt:
+"Our flow mirrors this by profiling each model to obtain a 99.9% threshold per
+layer as a baseline for determining which columns should be quantized separately."
+
+Results-method excerpt:
+"Dynamic outlier-aware quantization (DQ) in LLM.int8() ranks activation columns
+by their maximum absolute values and selects those that satisfy either a top-k
+threshold rule or a robust-z threshold score."
+
+The source does not define k, the robust-z cutoff, calibration inputs, or the
+population over which the layer percentile is calculated. The code branch
+shadow_outlier at 7488940b717c3247cb78ad9df52c5069514867a8 provides the native
+cache probe and scheduler, but not the original classifier/selector setup.
+
+This experiment follows the numerically specified P99.9 baseline. It explicitly
+defines the missing percentile population as absolute FP16 activation elements
+from the first 16 TRAIN prompt prefills, with a scalar per projection input.
+This assumption is fixed before acquisition. It is not an exact reproduction
+of an unspecified top-k or robust-z rule, nor proof that the original paper
+used this percentile population. All figures/tables must identify this setup.
+
+The manuscript's performance subsection separately specifies threshold6.0.
+That setting is not silently substituted for the profiled classification
+baseline. Old fixed6 FP32-gather results and new P99.9 FP16-gather results must
+remain separate; their difference cannot be attributed to the threshold alone.
+
+Labels are generated tokens consumed by decode forwards. The primary classifier
+uses direct down_proj selection features. The bridge separately evaluates
+measured cache masks on the same held-out decode cohort. Prompt classification,
+token classification, and complete response reconstruction are distinct tasks.

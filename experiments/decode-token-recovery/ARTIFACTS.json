@@ -1,0 +1,21 @@
+{
+  "release": "https://github.com/Classified56/bitsandbytes/releases/tag/decode-token-recovery-20261114",
+  "assets": [
+    {
+      "name": "decode-observations-20261114.tar.gz",
+      "kind": "observations",
+      "bytes": 588852505,
+      "sha256": "f00cd146d58186339b3ebffce950239ab2a13358c28857c5a481aa53c9aa7b90",
+      "files": 62946,
+      "url": "https://github.com/Classified56/bitsandbytes/releases/download/decode-token-recovery-20261114/decode-observations-20261114.tar.gz"
+    },
+    {
+      "name": "decode-classifiers-20261114.tar.gz",
+      "kind": "classifiers",
+      "bytes": 724657991,
+      "sha256": "73fe1459f23eaf4ab639de07189bee88c42eb183b40d3b5deb8d5cfc82918489",
+      "files": 8,
+      "url": "https://github.com/Classified56/bitsandbytes/releases/download/decode-token-recovery-20261114/decode-classifiers-20261114.tar.gz"
+    }
+  ]
+}

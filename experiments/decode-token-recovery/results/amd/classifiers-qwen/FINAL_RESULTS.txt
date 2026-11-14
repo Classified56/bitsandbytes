@@ -1,0 +1,15 @@
+Qwen/Qwen2.5-0.5B: DIRECT-CHANNEL DECODE TOKEN CLASSIFICATION
+
+Features: actual DQ-selected columns, frozen per-layer P99.9 thresholds; test OOV tokens count as errors.
+Scope   Group   Correct/N      Acc.%   Balanced Acc.%   Top5%   Exact prefixes
+down        1    1156/1536     75.26            42.67    77.80      0/48
+down        4    1146/1536     74.61            41.45    77.28      0/48
+down       16    1151/1536     74.93            42.21    77.54      0/48
+down       32    1151/1536     74.93            42.41    77.21      0/48
+
+Baseline       Acc.%    Top5%
+frequency         4.62    21.55
+position          7.88    25.59
+
+Training token types: 1203; test coverage: 80.60%.
+Direct classifier only; no cache noise, LM fusion, or one-shot side-channel claim.

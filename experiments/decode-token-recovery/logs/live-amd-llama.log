@@ -1,0 +1,22 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "llama", "prompt": 0, "windows": 576, "seconds": 7.44}
+{"model": "llama", "prompt": 1, "windows": 1152, "seconds": 14.84}
+{"model": "llama", "prompt": 2, "windows": 1728, "seconds": 22.29}
+{"model": "llama", "prompt": 3, "windows": 2304, "seconds": 29.58}
+{"model": "llama", "prompt": 4, "windows": 2880, "seconds": 37.04}
+{"model": "llama", "prompt": 5, "windows": 3456, "seconds": 44.52}
+{"model": "llama", "prompt": 6, "windows": 4032, "seconds": 51.97}
+{"model": "llama", "prompt": 7, "windows": 4608, "seconds": 59.43}
+{"model": "llama", "prompt": 8, "windows": 5184, "seconds": 66.81}
+{"model": "llama", "prompt": 9, "windows": 5760, "seconds": 74.24}
+{"model": "llama", "prompt": 10, "windows": 6336, "seconds": 81.68}
+{"model": "llama", "prompt": 11, "windows": 6912, "seconds": 89.16}
+{"model": "llama", "prompt": 12, "windows": 7488, "seconds": 96.65}
+{"model": "llama", "prompt": 13, "windows": 8064, "seconds": 104.11}
+{"model": "llama", "prompt": 14, "windows": 8640, "seconds": 111.57}
+{"model": "llama", "prompt": 15, "windows": 9216, "seconds": 119.02}

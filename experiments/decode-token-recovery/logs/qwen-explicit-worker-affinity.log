@@ -1,0 +1,9 @@
+2026-11-14T01:35:22-05:00
+pid 138864's current affinity list: 4-7
+pid 138864's new affinity list: 4
+pid 138884's current affinity list: 4-7
+pid 138884's new affinity list: 5
+pid 138885's current affinity list: 4-7
+pid 138885's new affinity list: 6
+pid 138886's current affinity list: 4-7
+pid 138886's new affinity list: 7

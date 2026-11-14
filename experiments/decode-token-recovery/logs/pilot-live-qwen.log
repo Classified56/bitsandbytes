@@ -1,0 +1,2 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "qwen", "prompt": 0, "windows": 432, "seconds": 6.56}

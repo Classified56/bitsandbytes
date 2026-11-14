@@ -1,0 +1,72 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "model_key": "llama",
+  "train": 2,
+  "dev": 1,
+  "test": 1,
+  "steps": 4,
+  "pilot": true,
+  "cpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "module_names": [
+    "model.layers.0.mlp.down_proj",
+    "model.layers.1.mlp.down_proj",
+    "model.layers.2.mlp.down_proj",
+    "model.layers.3.mlp.down_proj",
+    "model.layers.4.mlp.down_proj",
+    "model.layers.5.mlp.down_proj",
+    "model.layers.6.mlp.down_proj",
+    "model.layers.7.mlp.down_proj",
+    "model.layers.8.mlp.down_proj",
+    "model.layers.9.mlp.down_proj",
+    "model.layers.10.mlp.down_proj",
+    "model.layers.11.mlp.down_proj",
+    "model.layers.12.mlp.down_proj",
+    "model.layers.13.mlp.down_proj",
+    "model.layers.14.mlp.down_proj",
+    "model.layers.15.mlp.down_proj"
+  ],
+  "dimensions": [
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192,
+    8192
+  ],
+  "stopping_token_ids": [
+    128001,
+    128008,
+    128009
+  ],
+  "profile_sha256": "137e8d72c4614e5a24ddb5b18af74d877daf87dde8b9fab21fb25a8fb873d70f",
+  "protocol_sha256": "44e76aa1e209aabc2b56816e6558cf338fbd4cf1e6b03e1ef0fcb2507c5dfb82",
+  "dtype": "float16",
+  "feature_source": "actual operator-selected columns",
+  "source_sha256": {
+    "code/live.py": "09abfd1cef146c9c2880d145df3d4df47fdce921752922d84794230e41c641ea",
+    "code/classification.py": "686fc3b836ae354a98cf3e3dd42f5e2f196e711771284a1bbf8e5c0504a0c2dc",
+    "code/probes.py": "0609865649cae02378a15575f6de1210fe19396ec55436fbe5eafe0a4e0deb9d",
+    "code/controls.py": "61364fbc04232512b8ea93f964eb6ec198c5ba5df3625fc3f83efdccd9e9211e",
+    "code/direct.py": "1dd1f1104d36773dbf1d34d58eeacb40f86b91ce78a3a18f353ae12bf97d2184",
+    "code/calibrate_model.py": "876b67000acf7b014c9e113614005b1ad5e18070579f35abc0865b1e0cd3800d",
+    "code/common.py": "d440fc8447cf62e6ad9a5c261b656a6065a32fda4d6de9256f215f9b50fbbe2a",
+    "code/dependencies/linear_backends.py": "d835631a9245aaf991c2f140d9ae153bdb5d9dd34a95f7e29cd41495b678a83e",
+    "code/dependencies/benchmark_worker.py": "0ac1aaf700061f17ddce89b28d19e583d815b9c82933bc48e29b1178bcb015c9",
+    "code/dependencies/single_core.py": "8ec3428fbece5ea4faa03360df4cf434c5afd016618930347ff9ead34c2567f2"
+  }
+}

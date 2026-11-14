@@ -1,0 +1,9 @@
+*.json linguist-generated
+*.jsonl linguist-generated
+*.log linguist-generated
+# Preserve the original trailing blank line in measured stdout logs.
+*.log whitespace=-blank-at-eof
+SHA256SUMS linguist-generated
+ARTIFACT_SHA256SUMS linguist-generated
+runtime/vendor/** linguist-vendored
+vendor/** linguist-vendored

@@ -1,0 +1,33 @@
+"""Training-only reconstruction of the manuscript's per-layer 99.9% baseline."""
+import argparse,time
+from collections import defaultdict
+from common import *
+
+@torch.inference_mode()
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--model',choices=['qwen','llama'],required=True);p.add_argument('--checkpoint',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+    assert not a.output.exists();a.output.parent.mkdir(parents=True,exist_ok=True);cpus=setup(4)
+    tok,model=load(a.model,a.checkpoint);samples=defaultdict(list);hooks=[]
+    def hook(name):
+        def record(module,args):samples[name].append(args[0].detach().abs().reshape(-1).numpy().copy())
+        return record
+    for n,m in model.named_modules():
+        if isinstance(m,torch.nn.Linear) and n.startswith('model.layers.') and n.endswith(('q_proj','o_proj','gate_proj','down_proj')):
+            hooks.append(m.register_forward_pre_hook(hook(n)))
+    evidence=[];start=time.monotonic()
+    for i,topic in enumerate(topics()[:16]):
+        prompt,ids=inputs(tok,a.model,topic);out=model(input_ids=ids,use_cache=False,logits_to_keep=1)
+        assert torch.isfinite(out.logits).all()
+        evidence.append(dict(id=i,topic=topic,input_ids=ids[0].tolist(),logits_sha256=sha(out.logits)))
+        print('profile',a.model,i,round(time.monotonic()-start,2),flush=True)
+    for h in hooks:h.remove()
+    thresholds={};sizes={}
+    for name,parts in samples.items():
+        values=np.concatenate(parts).astype(np.float32);thresholds[name]=float(np.quantile(values,.999,method='linear'));sizes[name]=len(values)
+        assert np.isfinite(thresholds[name]) and thresholds[name]>0
+    save(a.output,dict(model=a.model,quantile=.999,statistic='absolute FP16 activation elements; scalar per projection input',
+        thresholds=thresholds,sample_counts=sizes,calibration_responses=evidence,cpus=cpus,seconds=time.monotonic()-start,
+        protocol_sha256=digest(ROOT/'PROTOCOL.json'),source_sha256=digest(Path(__file__)),test_used=False))
+    print('FROZEN_PROFILE',a.output,flush=True)
+
+if __name__=='__main__':main()

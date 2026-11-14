@@ -1,0 +1,154 @@
+\section{Additional Results During Decoding}
+\label{sec:decoding-appendix}
+\raggedbottom
+
+We extend the direct-channel and side-channel experiments to generated tokens during decoding, using Qwen2.5-0.5B and Llama-3.2-1B-Instruct.
+The classification label is the generated token consumed by the measured transformer execution, which predicts the next token.
+We use the Intel Core i7-10700 and AMD Ryzen 7 8700G platforms from Section~\ref{sec:architecture-results}.
+All computations in this appendix run on the CPU, with INT8 matrix multiplication and FP16 outlier gathering and correction.
+
+We use the 99.9\% profiling baseline described in Section~\ref{sec:background:quantization}.
+For each projection input, we compute one threshold from the absolute FP16 activation values in the first 16 training-prompt prefills of the unquantized model.
+These thresholds are fixed before quantized inference and shared across both CPUs.
+At runtime, a column is selected when its maximum absolute value across token rows reaches the threshold.
+We report this specified percentile setting separately from the top-k and robust-$z$ results in Section~\ref{sec:direct-results}.
+
+\subsection{Direct-Channel Classification}
+\label{sec:decoding-direct}
+
+We use 200 encyclopedia prompts with different topics: 128 for training, 24 for validation, and 48 for testing.
+Both models use greedy decoding; Qwen uses plain prompts and Llama its official chat template.
+We record 32 generated tokens per response as they enter decoding, giving 4,096 training, 768 validation, and 1,536 test samples per model.
+Features record selected columns in all FFN \texttt{down\_proj} layers, grouped at widths $g=1,4,16,32$.
+We train a classifier with one hidden layer of 1,024 ReLU units using AdamW for 40 epochs, with learning rate $10^{-3}$ and batch size 128.
+Feature selection uses training data only; validation accuracy selects the saved classifier before testing.
+Tokens absent from the training vocabulary count as errors.
+
+\begin{table}[H]
+    \centering\footnotesize\setlength{\tabcolsep}{3pt}
+    \caption{Direct-channel classification of 1,536 decoding tokens per model. Group size is measured in columns. Balanced accuracy averages recall over test token types.}
+    \label{tab:decoding-direct}
+    \begin{tabular}{@{}lrrrr@{}}
+        \hline
+        Model & Group & Correct & Acc. (\%) & Balanced (\%) \\\hline
+        Qwen2.5-0.5B & 1 & 1156/1536 & 75.26 & 42.67 \\
+        Qwen2.5-0.5B & 4 & 1146/1536 & 74.61 & 41.45 \\
+        Qwen2.5-0.5B & 16 & 1151/1536 & 74.93 & 42.21 \\
+        Qwen2.5-0.5B & 32 & 1151/1536 & 74.93 & 42.41 \\
+        Llama-3.2-1B & 1 & 1021/1536 & 66.47 & 36.30 \\
+        Llama-3.2-1B & 4 & 1020/1536 & 66.41 & 36.35 \\
+        Llama-3.2-1B & 16 & 1018/1536 & 66.28 & 35.56 \\
+        Llama-3.2-1B & 32 & 1012/1536 & 65.89 & 35.15 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Table~\ref{tab:decoding-direct} shows that grouping preserves most of the token-classification accuracy.
+At $g=32$, accuracy is 74.93\% for Qwen and 65.89\% for Llama.
+Predicting the most frequent training token gives 4.62\% and 6.58\%; predicting the most frequent token at each response position gives 7.88\% and 9.18\%.
+The training sets contain 1,203 and 1,421 token types, covering 80.60\% and 73.96\% of the test tokens, respectively.
+Neither model recovers a complete 32-token test prefix.
+
+\subsection{Side-Channel Fidelity}
+\label{sec:decoding-fidelity}
+
+We measure the prefill and first eight decoding steps of 16 test responses, yielding 128 decoding tokens per model and platform.
+The original Flush+Reload timer and scan code surround the actual FP16 gather within the model process; gathered values feed the outlier correction.
+Every measured response produces the same logits and generated tokens with and without the probes.
+A separate cache-hit calibration uses 1,000 samples to select a timing threshold and 1,000 to check it on each model and platform.
+
+Decoding provides one activation row, with 32 FP16 columns per cache line.
+We test one full scan with one gather, five full scans with five gathers, and stride-5 scans with 25 gathers.
+The last setting probes every fifth cache line from each of five starting positions and repeats this process five times.
+Thus, it changes both the scan method and the number of repeated gathers.
+All three conditions are tested on each activation; the one-gather result counts one execution within that condition.
+A group is positive when at least 60\% of its repeated probes indicate a hit, with votes from at least half the observed rows.
+Filtering keeps the first group in each consecutive run of positive groups.
+
+\begin{table}[H]
+    \centering\footnotesize\setlength{\tabcolsep}{3pt}
+    \caption{Decoding side-channel fidelity with one observed row and $g=32$. All rates are percentages. FPR precedes consensus and filtering; precision and recall follow filtering. One or five gathers use full scans; 25 gathers use repeated stride-5 scans.}
+    \label{tab:decoding-cache}
+    \begin{tabular}{@{}llrrrr@{}}
+        \hline
+        CPU & Model & Gathers & Raw FPR & Precision & Recall \\\hline
+        Intel & Qwen & 1 & 68.64 & 2.96 & 20.93 \\
+        Intel & Qwen & 5 & 68.51 & 3.16 & 15.67 \\
+        Intel & Qwen & 25 & 9.08 & 60.07 & 55.62 \\
+        Intel & Llama & 1 & 70.15 & 4.03 & 23.46 \\
+        Intel & Llama & 5 & 70.01 & 4.05 & 15.57 \\
+        Intel & Llama & 25 & 10.28 & 69.54 & 66.18 \\
+        AMD & Qwen & 1 & 43.32 & 7.95 & 41.54 \\
+        AMD & Qwen & 5 & 32.81 & 18.18 & 71.94 \\
+        AMD & Qwen & 25 & 2.51 & 98.63 & 94.00 \\
+        AMD & Llama & 1 & 29.88 & 15.05 & 58.19 \\
+        AMD & Llama & 5 & 37.33 & 16.95 & 66.03 \\
+        AMD & Llama & 25 & 7.85 & 91.42 & 93.59 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Table~\ref{tab:decoding-cache} reports column-group recovery.
+Table~\ref{tab:decoding-classification} applies the trained $g=32$ classifier directly to these measured groups without retraining, using the same 128 tokens for its direct and side-channel results.
+With 25 gathers, side-channel accuracy is 0.78--3.12 percentage points below the direct-channel result on the same tokens.
+For AMD/Qwen, the 0.78-point loss has a 95\% interval of 0--2.34 points when resampling whole responses; the accuracy loss is not always below one percentage point.
+One-gather accuracy is much lower, ranging from 3.91\% to 33.59\%.
+No complete eight-token test prefix is recovered from the cache traces.
+Small differences in CPU arithmetic change some Llama outputs across platforms, so each platform is scored against its own generated tokens.
+
+\begin{table}[H]
+    \centering\footnotesize\setlength{\tabcolsep}{4pt}
+    \caption{Token classification accuracy (\%) on the same 128 decoding tokens per model and platform. Side-channel columns use filtered groups and the stated number of gathers.}
+    \label{tab:decoding-classification}
+    \begin{tabular}{llrrrr}
+        \hline
+        & & & \multicolumn{3}{c}{Side-Channel Acc.} \\
+        CPU & Model & Direct & 1 & 5 & 25 \\\hline
+        Intel & Qwen & 66.41 & 3.91 & 6.25 & 63.28 \\
+        Intel & Llama & 60.94 & 6.25 & 3.91 & 59.38 \\
+        AMD & Qwen & 66.41 & 14.06 & 39.06 & 65.62 \\
+        AMD & Llama & 63.28 & 33.59 & 36.72 & 61.72 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering\footnotesize\setlength{\tabcolsep}{4pt}
+    \caption{FPR (\%) with gather disabled, one observed row, and ten measurement blocks. Full scan uses one scan; stride-5 uses five repetitions. Fresh flush flushes the target before each individual probe.}
+    \label{tab:decoding-no-gather}
+    \begin{tabular}{lrrrr}
+        \hline
+        CPU & Columns & Full scan & Stride-5 & Fresh flush \\\hline
+        Intel & 4,864 & 67.11 & 3.24 & 0.00 \\
+        Intel & 8,192 & 67.73 & 2.99 & 0.04 \\
+        AMD & 4,864 & 32.96 & 14.50 & 0.00 \\
+        AMD & 8,192 & 40.94 & 10.02 & 0.00 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Table~\ref{tab:decoding-no-gather} shows high false-positive rates even when no gather occurs.
+Flushing each target again before probing reduces the FPR to 0--0.04\%, indicating that the scan itself contributes to false positives.
+With four fixed selected columns, changing the input from one to 64 rows gives filtered recall of 92.5--100\% under repeated stride-5 scans on the two CPUs.
+The error therefore cannot be attributed to decoding alone.
+
+\begin{table}[H]
+    \centering\footnotesize\setlength{\tabcolsep}{3pt}
+    \caption{Prefill fidelity under the same percentile thresholds, one observed row, and 25 gathers. All rates are percentages; precision and recall follow filtering. The corresponding decoding results are in Table~\ref{tab:decoding-cache}.}
+    \label{tab:decoding-prefill}
+    \begin{tabular}{llrrr}
+        \hline
+        CPU & Model & Raw FPR & Precision & Recall \\\hline
+        Intel & Qwen2.5-0.5B & 94.24 & 62.93 & 1.77 \\
+        Intel & Llama-3.2-1B & 97.19 & 71.35 & 0.83 \\
+        AMD & Qwen2.5-0.5B & 91.65 & 86.10 & 3.14 \\
+        AMD & Llama-3.2-1B & 93.51 & 92.53 & 2.16 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Real prefill accesses are much denser under this threshold setting, and consecutive-group filtering removes many true groups (Table~\ref{tab:decoding-prefill}).
+Observing 4--32 prefill rows still gives only 0.47--2.03\% filtered recall with 25 gathers.
+These results use the percentile setting specified above and do not repeat the sparse setting in Table~\ref{tab:recovery}.
+Overall, decoding outlier accesses contain token information, but measured classification depends on the scan method and repeated execution.
+These synchronized, in-process measurements do not demonstrate recovery from an independently running victim.

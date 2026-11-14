@@ -1,0 +1,32 @@
+REVIEW MATERIAL ONLY: THE OVERLEAF PROJECT IS UNCHANGED
+
+V-A placement:
+Add a separate decode-token subsection/table. The target is the generated token
+consumed by the measured forward, not a prompt/topic class. Report the group
+width, Top-1, balanced accuracy, Top-5, test vocabulary coverage, and baselines.
+These are direct-feature results, not measured-cache classification results.
+
+V-B placement:
+Report Intel and AMD with the same frozen profile and FP16 storage. Distinguish
+one gather from five- and twenty-five-gather replay, and report raw/consensus/
+filtered stages. Decode observes one activation row; extra prefill rows provide
+additional observations and must not be described as matched sample budgets.
+Use the matched one-row conditions and fixed-column controls for phase claims.
+
+Paired classification:
+Use the same-cohort direct-to-cache bridge when discussing loss in classifier
+accuracy. Do not subtract the full 48-response direct score from the smaller
+16-response cache-cohort score. Do not infer token recovery from high recall
+alone, and do not label an eight-token prefix as a complete response.
+
+Required method disclosure:
+P99.9 is reconstructed as an element-wise training activation percentile;
+unspecified original top-k/robust-z parameters were not guessed. Cache traces
+are synchronized in-process measurements on owned storage. "One gather" means
+one condition within a run that also evaluates replay conditions. All compute
+in this extension uses CPUs. Cross-platform FP16 arithmetic may change live
+activations or generated tokens; verification.json quantifies these changes.
+
+Generated .tex files contain numerical tables for review, not full replacement
+sections or automatic manuscript edits. FINAL_RESULTS.txt and DIAGNOSTICS.txt
+are generated only after all experiments pass independent verification.

@@ -1,0 +1,46 @@
+{
+  "positions": 1536,
+  "correct": 1021,
+  "top1": 0.6647135416666666,
+  "top5": 0.6979166666666666,
+  "balanced_accuracy": 0.3629892131813889,
+  "test_token_types": 705,
+  "known_fraction": 0.7395833333333334,
+  "known_top1": 0.8987676056338029,
+  "unseen_positions": 400,
+  "unseen_correct": 0,
+  "exact_response_prefixes": 0,
+  "responses": 48,
+  "ci95_response_bootstrap": [
+    0.6373697916666666,
+    0.69140625
+  ],
+  "outside_training_top20_positions": 960,
+  "outside_training_top20_top1": 0.4708333333333333,
+  "correct_from_training_top20": 569,
+  "scope": "down",
+  "group_width": 1,
+  "best_epoch": 6,
+  "dev_top1": 0.65234375,
+  "shuffled_test_features": {
+    "positions": 1536,
+    "correct": 26,
+    "top1": 0.016927083333333332,
+    "top5": 0.054036458333333336,
+    "balanced_accuracy": 0.0008108693643941358,
+    "test_token_types": 705,
+    "known_fraction": 0.7395833333333334,
+    "known_top1": 0.022887323943661973,
+    "unseen_positions": 400,
+    "unseen_correct": 0,
+    "exact_response_prefixes": 0,
+    "responses": 48,
+    "ci95_response_bootstrap": [
+      0.011067708333333334,
+      0.0234375
+    ],
+    "outside_training_top20_positions": 960,
+    "outside_training_top20_top1": 0.0010416666666666667,
+    "correct_from_training_top20": 25
+  }
+}

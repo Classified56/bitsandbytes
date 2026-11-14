@@ -1,0 +1,2 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "llama", "prompt": 0, "windows": 288, "seconds": 14.56}

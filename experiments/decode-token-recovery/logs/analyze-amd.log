@@ -1,0 +1,10 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+results/amd/controls PASS 620 records
+results/amd/live-qwen PASS 13824 records
+results/amd/live-llama PASS 9216 records
+diagnostics/amd-controls-before-quiet-repeat PASS 620 records
+diagnostics/amd-qwen-during-artifact-copy PASS 13824 records

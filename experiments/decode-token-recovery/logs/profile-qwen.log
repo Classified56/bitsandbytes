@@ -1,0 +1,23 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+`torch_dtype` is deprecated! Use `dtype` instead!
+profile qwen 0 0.34
+profile qwen 1 0.69
+profile qwen 2 1.04
+profile qwen 3 1.38
+profile qwen 4 1.73
+profile qwen 5 2.07
+profile qwen 6 2.41
+profile qwen 7 2.77
+profile qwen 8 3.11
+profile qwen 9 3.45
+profile qwen 10 3.8
+profile qwen 11 4.15
+profile qwen 12 4.49
+profile qwen 13 4.83
+profile qwen 14 5.17
+profile qwen 15 5.51
+FROZEN_PROFILE profiles/qwen.json

@@ -1,0 +1,17 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "qwen", "prompt": 0, "windows": 864, "seconds": 10.25}
+{"model": "qwen", "prompt": 1, "windows": 1728, "seconds": 20.53}
+{"model": "qwen", "prompt": 2, "windows": 2592, "seconds": 30.84}
+{"model": "qwen", "prompt": 3, "windows": 3456, "seconds": 41.24}
+{"model": "qwen", "prompt": 4, "windows": 4320, "seconds": 51.9}
+{"model": "qwen", "prompt": 5, "windows": 5184, "seconds": 62.38}
+{"model": "qwen", "prompt": 6, "windows": 6048, "seconds": 72.76}
+{"model": "qwen", "prompt": 7, "windows": 6912, "seconds": 83.2}
+{"model": "qwen", "prompt": 8, "windows": 7776, "seconds": 93.49}
+{"model": "qwen", "prompt": 9, "windows": 8640, "seconds": 103.81}
+{"model": "qwen", "prompt": 10, "windows": 9504, "seconds": 114.21}
+{"model": "qwen", "prompt": 11, "windows": 10368, "seconds": 124.66}
+{"model": "qwen", "prompt": 12, "windows": 11232, "seconds": 135.06}
+{"model": "qwen", "prompt": 13, "windows": 12096, "seconds": 145.55}
+{"model": "qwen", "prompt": 14, "windows": 12960, "seconds": 156.02}
+{"model": "qwen", "prompt": 15, "windows": 13824, "seconds": 166.58}

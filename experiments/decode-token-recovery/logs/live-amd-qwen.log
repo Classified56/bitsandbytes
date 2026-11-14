@@ -1,0 +1,22 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "qwen", "prompt": 0, "windows": 864, "seconds": 4.21}
+{"model": "qwen", "prompt": 1, "windows": 1728, "seconds": 8.39}
+{"model": "qwen", "prompt": 2, "windows": 2592, "seconds": 12.59}
+{"model": "qwen", "prompt": 3, "windows": 3456, "seconds": 16.77}
+{"model": "qwen", "prompt": 4, "windows": 4320, "seconds": 21.01}
+{"model": "qwen", "prompt": 5, "windows": 5184, "seconds": 25.26}
+{"model": "qwen", "prompt": 6, "windows": 6048, "seconds": 29.5}
+{"model": "qwen", "prompt": 7, "windows": 6912, "seconds": 33.75}
+{"model": "qwen", "prompt": 8, "windows": 7776, "seconds": 37.99}
+{"model": "qwen", "prompt": 9, "windows": 8640, "seconds": 42.24}
+{"model": "qwen", "prompt": 10, "windows": 9504, "seconds": 46.47}
+{"model": "qwen", "prompt": 11, "windows": 10368, "seconds": 50.72}
+{"model": "qwen", "prompt": 12, "windows": 11232, "seconds": 54.99}
+{"model": "qwen", "prompt": 13, "windows": 12096, "seconds": 59.26}
+{"model": "qwen", "prompt": 14, "windows": 12960, "seconds": 63.52}
+{"model": "qwen", "prompt": 15, "windows": 13824, "seconds": 67.79}

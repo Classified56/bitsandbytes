@@ -1,0 +1,17 @@
+Autocomplete enabled for the xrt-smi command
+XILINX_XRT        : /opt/xilinx/xrt
+PATH              : /opt/xilinx/xrt/bin:/home/tianhong/npu-activity-experiment/cnn-venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH   : /opt/xilinx/xrt/lib
+PYTHONPATH        : /opt/xilinx/xrt/python:/home/tianhong/qwen-performance-20261111/python-deps:/home/tianhong/qwen-performance-20261111/vendor:/home/tianhong/qwen-performance-20261111/code:
+controls 50 / 620 0.38
+controls 100 / 620 0.76
+controls 150 / 620 1.14
+controls 200 / 620 1.62
+controls 250 / 620 2.04
+controls 300 / 620 2.28
+controls 350 / 620 2.64
+controls 400 / 620 3.1
+controls 450 / 620 3.6
+controls 500 / 620 3.97
+controls 550 / 620 4.38
+controls 600 / 620 4.8

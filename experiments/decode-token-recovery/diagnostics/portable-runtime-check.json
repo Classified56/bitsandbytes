@@ -1,0 +1,7 @@
+{
+  "checks": "PASS",
+  "backend_files": 47,
+  "bit_identical_prefill_logits": true,
+  "model": "qwen",
+  "backend": "/home/tianhong/decode-extension-20261114/runtime/vendor/bitsandbytes"
+}

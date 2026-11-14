@@ -1,0 +1,113 @@
+{
+  "checks": "PASS",
+  "direct": {
+    "qwen": {
+      "train": {
+        "responses": 128,
+        "positions": 4096,
+        "empty_positions": 0,
+        "mean_columns": 125.72119140625
+      },
+      "dev": {
+        "responses": 24,
+        "positions": 768,
+        "empty_positions": 0,
+        "mean_columns": 132.67057291666666
+      },
+      "test": {
+        "responses": 48,
+        "positions": 1536,
+        "empty_positions": 0,
+        "mean_columns": 125.12890625
+      }
+    },
+    "llama": {
+      "train": {
+        "responses": 128,
+        "positions": 4096,
+        "empty_positions": 0,
+        "mean_columns": 172.893310546875
+      },
+      "dev": {
+        "responses": 24,
+        "positions": 768,
+        "empty_positions": 0,
+        "mean_columns": 173.85286458333334
+      },
+      "test": {
+        "responses": 48,
+        "positions": 1536,
+        "empty_positions": 0,
+        "mean_columns": 171.36263020833334
+      }
+    }
+  },
+  "cross_platform": {
+    "qwen": {
+      "identical_input_sequences": true,
+      "matching_generated_ids": 144,
+      "compared_generated_ids": 144,
+      "matching_column_sets": 3262,
+      "compared_windows": 3456,
+      "bit_identical_activation_windows": 2865,
+      "interpretation": "Live CPU numerical paths may differ; fixed-column synthetic controls isolate the platform with identical truth."
+    },
+    "llama": {
+      "identical_input_sequences": true,
+      "matching_generated_ids": 135,
+      "compared_generated_ids": 144,
+      "matching_column_sets": 1503,
+      "compared_windows": 2304,
+      "bit_identical_activation_windows": 626,
+      "interpretation": "Live CPU numerical paths may differ; fixed-column synthetic controls isolate the platform with identical truth."
+    }
+  },
+  "bridge": {
+    "intel-qwen": {
+      "conditions": 9,
+      "positions": 128
+    },
+    "amd-qwen": {
+      "conditions": 9,
+      "positions": 128
+    },
+    "intel-llama": {
+      "conditions": 9,
+      "positions": 128
+    },
+    "amd-llama": {
+      "conditions": 9,
+      "positions": 128
+    }
+  },
+  "provenance": {
+    "unmodified_probe_files": 17,
+    "identical_backend_files": 47
+  },
+  "upstream_scoring": {
+    "intel-controls": {
+      "records": 620,
+      "exact_match": true
+    },
+    "intel-live-qwen": {
+      "records": 13824,
+      "exact_match": true
+    },
+    "intel-live-llama": {
+      "records": 9216,
+      "exact_match": true
+    },
+    "amd-controls": {
+      "records": 620,
+      "exact_match": true
+    },
+    "amd-live-qwen": {
+      "records": 13824,
+      "exact_match": true
+    },
+    "amd-live-llama": {
+      "records": 9216,
+      "exact_match": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+meta-llama/Llama-3.2-1B-Instruct: DIRECT-CHANNEL DECODE TOKEN CLASSIFICATION
+
+Features: actual DQ-selected columns, frozen per-layer P99.9 thresholds; test OOV tokens count as errors.
+Scope   Group   Correct/N      Acc.%   Balanced Acc.%   Top5%   Exact prefixes
+down        1    1021/1536     66.47            36.30    69.79      0/48
+down        4    1020/1536     66.41            36.35    69.66      0/48
+down       16    1018/1536     66.28            35.56    69.47      0/48
+down       32    1012/1536     65.89            35.15    69.47      0/48
+
+Baseline       Acc.%    Top5%
+frequency         6.58    20.57
+position          9.18    24.09
+
+Training token types: 1421; test coverage: 73.96%.
+Direct classifier only; no cache noise, LM fusion, or one-shot side-channel claim.

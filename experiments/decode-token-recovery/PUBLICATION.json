@@ -1,0 +1,25 @@
+{
+  "experiment_date": "2026-11-14",
+  "source_archive": "decode-extension-20261114",
+  "source_manifest_sha256": "a0ff87b32d9606d33a271b7d034ad64ffdbf23e26cf4d8fb3b94ce0d9a155606",
+  "upstream_commit": "7488940b717c3247cb78ad9df52c5069514867a8",
+  "release_tag": "decode-token-recovery-20261114",
+  "excluded": {
+    "SHA256SUMS": "Replaced by publication checksums.",
+    "diagnostics/work-status-before-finalization.txt": "Obsolete coordination note with private network addresses.",
+    "*.lock": "Transient process lock."
+  },
+  "measurement_changes": "No numerical measurements, token IDs, probe code, frozen profiles, or classifier weights were changed.",
+  "publication_changes": [
+    "New portable documentation and artifact downloader.",
+    "Result report includes all measured conditions in table form.",
+    "The appended Overleaf section is included without the rest of the manuscript.",
+    "Redundant decoded response strings are replaced by their SHA256 hashes to keep published text English-only. Exact input/generated/observed token IDs and all numeric measurements are unchanged.",
+    "Repository and binary release checksums are separated; the original manifest tool is retained in provenance/."
+  ],
+  "llm_checkpoints_included": false,
+  "payload_counts": {
+    "observations": 62946,
+    "classifiers": 8
+  }
+}

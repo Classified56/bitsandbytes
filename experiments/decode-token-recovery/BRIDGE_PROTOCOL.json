@@ -1,0 +1,11 @@
+{
+  "purpose":"Evaluate the direct-to-cache classification gap on the SAME held-out decode executions",
+  "predeclared_before":"Any test evaluation of the new paper-profiled classifiers; no additional selection or tuning",
+  "classifier":"Frozen development-selected AMD down_proj group32 direct-feature classifier; no cache retraining",
+  "cohort":"All decode positions from the predefined first16 test topics in each platform/model live fidelity dataset; maximum8 per response",
+  "inputs":["Actual selected-column group truth from that execution", "Measured repeat/row consensus group mask", "Measured consecutive-group-filtered mask"],
+  "regimes":["single_execution","full_replay","stride_replay"],
+  "labels":"Generated token consumed at that decode step; recorded generated_ids[step-1]",
+  "metrics":["positions","correct","top1","top5","balanced accuracy including OOV","known-vocabulary coverage","exact observed prefixes","paired response-bootstrap interval for observed-minus-direct top1"],
+  "restrictions":["All conditions and processing stages retained", "No thresholds, model parameters, feature masks or profiles chosen from these labels", "Same 16-topic subset across conditions, not a new independent full1536-token test", "An 8-token prefix is not a complete response", "Supplied synchronization and observation storage remain assumptions"]
+}

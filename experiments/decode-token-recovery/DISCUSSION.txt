@@ -1,0 +1,42 @@
+INTERPRETATION FOR THE DECODE EXTENSION
+
+Direct features support generated-token classification on both models. With
+32-column groups, Top-1 is 74.93% for Qwen and 65.89% for Llama on 1536 test tokens
+each; balanced accuracy is 42.41% and 35.15%. These scores exceed the frequency,
+position, and permuted-feature baselines. No full 32-token test prefix is exact.
+
+Real cache recovery depends strongly on the measurement regime. With 25 gathers
+(stride5 x5 repeats), filtered decode precision/recall is 98.63/94.00% for AMD
+Qwen and 91.42/93.59% for AMD Llama, versus 60.07/55.62% and 69.54/66.18% on Intel.
+One-gather full scans are much noisier. Changing 1/5 to 25 gathers changes both
+the scan schedule and replay budget; this is not a repeat-count-only ablation.
+
+The paired classifier bridge uses 128 token positions per model/platform and
+the frozen direct-trained group32 classifier, without cache-specific retraining.
+Filtered 25-gather Top-1 losses relative to direct features on the SAME cohort
+are 0.78/1.56 percentage points on AMD and 3.12/1.56 on Intel (Qwen/Llama).
+Response-bootstrap intervals are in DIAGNOSTICS.txt and results.json. These
+small cohorts do not establish a universal within 1-percentage-point guarantee.
+No measured eight-token response prefix is completely recovered by the bridge.
+
+High false-positive rates also occur with gather disabled. Fresh flush/reload
+per target reduces them to 0-0.04%, while full scans remain much noisier. This
+supports measurement-induced contamination; it does not identify a specific
+hardware prefetcher. Fixed four-column controls distinguish input shape effects
+from changing live activation footprints. Real prefill footprints are dense
+under this P99.9 interpretation, and consecutive-group filtering suppresses
+many true groups. New prefill results do not reproduce the paper's sparse,
+high-recall setting and should not be silently substituted into its old table.
+
+Cross-platform comparisons use identical checkpoints, inputs, thresholds, and
+probe code, but FP16 CPU arithmetic is not bit-identical. All 144 generated IDs
+match for Qwen; 135/144 match for Llama, including the unconsumed next outputs.
+Live-mask differences are quantified in verification.json. Synthetic fixed-
+column controls provide the comparison with exactly identical ground truth.
+
+Publication scope: add a separately labeled reconstructed-P99.9 decode study,
+with direct classification, real fidelity, and paired classification distinguished.
+Disclose in-process synchronization and replay. Do not claim an unmodified,
+independent victim attack, NPU acceleration, complete response recovery, or
+exact reproduction of unspecified original top-k/robust-z settings. The current
+Overleaf manuscript and GitHub repository have not been modified in this task.
